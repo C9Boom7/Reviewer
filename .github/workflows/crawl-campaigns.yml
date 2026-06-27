@@ -1,0 +1,51 @@
+name: Crawl campaign sources
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */2 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: crawl-campaign-sources
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Crawl homepage campaign snippets
+        run: |
+          python3 crawler/crawl_sample.py \
+            --out data/samples/campaigns.latest.json \
+            --limit-per-source 30 \
+            --sleep 2.0
+
+      - name: Sync to Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          python3 crawler/sync_supabase.py \
+            --input data/samples/campaigns.latest.json
+
+      - name: Upload crawl output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: campaign-crawl-output
+          path: data/samples/campaigns.latest.json
+          if-no-files-found: ignore
+          retention-days: 7

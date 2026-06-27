@@ -1,0 +1,1620 @@
+{
+  "generated_at": "2026-06-27T02:44:18.206888+00:00",
+  "crawl_mode": "homepage_only_no_detail_fetch",
+  "source_summaries": [
+    {
+      "source_code": "reviewnote",
+      "status": "ok",
+      "reason": null,
+      "started_at": "2026-06-27T02:44:09.981962+00:00",
+      "finished_at": "2026-06-27T02:44:10.252123+00:00",
+      "fetched_url": "https://www.reviewnote.co.kr/",
+      "item_count": 12
+    },
+    {
+      "source_code": "gangnammatzip",
+      "status": "ok",
+      "reason": null,
+      "started_at": "2026-06-27T02:44:11.757246+00:00",
+      "finished_at": "2026-06-27T02:44:12.195889+00:00",
+      "fetched_url": "https://xn--939au0g4vj8sq.net/",
+      "item_count": 12
+    },
+    {
+      "source_code": "ringble",
+      "status": "ok",
+      "reason": null,
+      "started_at": "2026-06-27T02:44:13.701002+00:00",
+      "finished_at": "2026-06-27T02:44:14.698674+00:00",
+      "fetched_url": "https://www.ringble.co.kr/",
+      "item_count": 12
+    },
+    {
+      "source_code": "reviewplace",
+      "status": "ok",
+      "reason": null,
+      "started_at": "2026-06-27T02:44:16.203819+00:00",
+      "finished_at": "2026-06-27T02:44:16.444061+00:00",
+      "fetched_url": "https://www.reviewplace.co.kr/",
+      "item_count": 12
+    },
+    {
+      "source_code": "tble",
+      "status": "ok",
+      "reason": null,
+      "started_at": "2026-06-27T02:44:17.949213+00:00",
+      "finished_at": "2026-06-27T02:44:18.206866+00:00",
+      "fetched_url": "https://tble.kr/",
+      "item_count": 12
+    }
+  ],
+  "campaigns": [
+    {
+      "source_code": "reviewnote",
+      "source_name": "리뷰노트",
+      "external_id": "1258717",
+      "source_url": "https://www.reviewnote.co.kr/campaigns/1258717",
+      "normalized_url": "https://www.reviewnote.co.kr/campaigns/1258717",
+      "title": "다이슨 에어 멀티플라이어 선풍기",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "4285874f64088dc7f5054dbb545c13fdd6c093f1d82017371b2090b16188cef8",
+      "dedup_key": "dc825bcc448a206998af5b18af79be3281d3e5452aaae88068bad1ac8ce2ecf1",
+      "raw_payload": {
+        "homepage_text": "[재택] 다이슨 에어 멀티플라이어 선풍기",
+        "homepage_url": "https://www.reviewnote.co.kr/",
+        "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "reviewnote",
+      "source_name": "리뷰노트",
+      "external_id": "1291143",
+      "source_url": "https://www.reviewnote.co.kr/campaigns/1291143",
+      "normalized_url": "https://www.reviewnote.co.kr/campaigns/1291143",
+      "title": "탐라육해 인계점",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": "경기",
+      "content_hash": "3e87c2de33f23094565d56ab58c91a9ea15886c8e746e5e489333684880e5c70",
+      "dedup_key": "41f3cd2effc25d9228411a601b001461eee605030d2cb25b9db4a7ec02402af8",
+      "raw_payload": {
+        "homepage_text": "[경기/수원시] 탐라육해 인계점",
+        "homepage_url": "https://www.reviewnote.co.kr/",
+        "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "경기"
+        ],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewnote",
+      "source_name": "리뷰노트",
+      "external_id": "1298515",
+      "source_url": "https://www.reviewnote.co.kr/campaigns/1298515",
+      "normalized_url": "https://www.reviewnote.co.kr/campaigns/1298515",
+      "title": "반포로스",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": "서울",
+      "content_hash": "106dd5b1fd3117ad4db496cecd1f5864e9e245ef30ad5ccf3706429cb0c2c25d",
+      "dedup_key": "b7c778fd7cc7a13443421700de6aa9facd5ac01c29728278eb91e77b6e2e51ab",
+      "raw_payload": {
+        "homepage_text": "[서울/서초구] 반포로스",
+        "homepage_url": "https://www.reviewnote.co.kr/",
+        "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "서울"
+        ],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewnote",
+      "source_name": "리뷰노트",
+      "external_id": "1297227",
+      "source_url": "https://www.reviewnote.co.kr/campaigns/1297227",
+      "normalized_url": "https://www.reviewnote.co.kr/campaigns/1297227",
+      "title": "마장동한우 우하라",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "54503950f636b42a9a8b52cdd2b7b80441bda1b8b47fa9c920df94ff6cde0239",
+      "dedup_key": "c6b3d7a149f13f9b34a0b2c241edec7ffe5da35142df820c8f3d62e63ce914b3",
+      "raw_payload": {
+        "homepage_text": "[재택] 마장동한우 우하라",
+        "homepage_url": "https://www.reviewnote.co.kr/",
+        "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "reviewnote",
+      "source_name": "리뷰노트",
+      "external_id": "1293384",
+      "source_url": "https://www.reviewnote.co.kr/campaigns/1293384",
+      "normalized_url": "https://www.reviewnote.co.kr/campaigns/1293384",
+      "title": "베노프",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "46fb11720c4eb2dc65597e35f37f3ca9a600d00f2fd43918ececd73016e5cefd",
+      "dedup_key": "bb0beae11df00eca92bd40a7921371f60ceda3ec47eaa55a30ac91b84b78e81b",
+      "raw_payload": {
+        "homepage_text": "[재택] 베노프",
+        "homepage_url": "https://www.reviewnote.co.kr/",
+        "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "reviewnote",
+      "source_name": "리뷰노트",
+      "external_id": "1300599",
+      "source_url": "https://www.reviewnote.co.kr/campaigns/1300599",
+      "normalized_url": "https://www.reviewnote.co.kr/campaigns/1300599",
+      "title": "(주)자연의모든것",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "cf9ddeb07f8ddb2253b6da64a0c11354a43ab2e9df6e77da2e1b63f182ff8672",
+      "dedup_key": "63ddfd394891667a2b5a8b8bbc9ed0176120473ff9e8ebbfed9d2707d393642e",
+      "raw_payload": {
+        "homepage_text": "[재택] (주)자연의모든것",
+        "homepage_url": "https://www.reviewnote.co.kr/",
+        "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "reviewnote",
+      "source_name": "리뷰노트",
+      "external_id": "1296224",
+      "source_url": "https://www.reviewnote.co.kr/campaigns/1296224",
+      "normalized_url": "https://www.reviewnote.co.kr/campaigns/1296224",
+      "title": "프리미엄과일 한들애",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "91750a9dcb9d6294d9bd3e2e7da21c1dc07cf6b48930134dc8f5bd57c5b2bdfd",
+      "dedup_key": "5fa980dc1db77f91b8e19e66ce3ef835b1920a3546eb860ae5b1189bca09f007",
+      "raw_payload": {
+        "homepage_text": "[재택] 프리미엄과일 한들애",
+        "homepage_url": "https://www.reviewnote.co.kr/",
+        "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "reviewnote",
+      "source_name": "리뷰노트",
+      "external_id": "1300612",
+      "source_url": "https://www.reviewnote.co.kr/campaigns/1300612",
+      "normalized_url": "https://www.reviewnote.co.kr/campaigns/1300612",
+      "title": "(주)자연의모든것",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "cf9ddeb07f8ddb2253b6da64a0c11354a43ab2e9df6e77da2e1b63f182ff8672",
+      "dedup_key": "8fd3d556cbb650d1e3de0d6a5553833f3123224cdf8b9a8bfd87529f73308797",
+      "raw_payload": {
+        "homepage_text": "[재택] (주)자연의모든것",
+        "homepage_url": "https://www.reviewnote.co.kr/",
+        "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "reviewnote",
+      "source_name": "리뷰노트",
+      "external_id": "1293426",
+      "source_url": "https://www.reviewnote.co.kr/campaigns/1293426",
+      "normalized_url": "https://www.reviewnote.co.kr/campaigns/1293426",
+      "title": "베노프",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "46fb11720c4eb2dc65597e35f37f3ca9a600d00f2fd43918ececd73016e5cefd",
+      "dedup_key": "ae6387d7a312ece01f538c9dacb004c2efad384fc31971a01b4cff6727cf0346",
+      "raw_payload": {
+        "homepage_text": "[재택] 베노프",
+        "homepage_url": "https://www.reviewnote.co.kr/",
+        "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "reviewnote",
+      "source_name": "리뷰노트",
+      "external_id": "1294233",
+      "source_url": "https://www.reviewnote.co.kr/campaigns/1294233",
+      "normalized_url": "https://www.reviewnote.co.kr/campaigns/1294233",
+      "title": "아이엠듀",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "144708b6b9519219adcddc50f041e179eb351aa739935457e20d4d3052bce2ea",
+      "dedup_key": "78b270a4b60c06b467eba30aa94cb86f8011a231716699acbe406f9dbd1384e9",
+      "raw_payload": {
+        "homepage_text": "[재택] 아이엠듀",
+        "homepage_url": "https://www.reviewnote.co.kr/",
+        "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "reviewnote",
+      "source_name": "리뷰노트",
+      "external_id": "1293436",
+      "source_url": "https://www.reviewnote.co.kr/campaigns/1293436",
+      "normalized_url": "https://www.reviewnote.co.kr/campaigns/1293436",
+      "title": "베노프",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "46fb11720c4eb2dc65597e35f37f3ca9a600d00f2fd43918ececd73016e5cefd",
+      "dedup_key": "2f1ccab66f112f7c35928f940a36366ac83f17c99638c41feb9dab7cfb8e81d5",
+      "raw_payload": {
+        "homepage_text": "[재택] 베노프",
+        "homepage_url": "https://www.reviewnote.co.kr/",
+        "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "reviewnote",
+      "source_name": "리뷰노트",
+      "external_id": "1289758",
+      "source_url": "https://www.reviewnote.co.kr/campaigns/1289758",
+      "normalized_url": "https://www.reviewnote.co.kr/campaigns/1289758",
+      "title": "약손명가 에스테틱 광명점",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": "경기",
+      "content_hash": "65cdb9bad11fd5174266683195aa1964020c06ffbd192dd84c9c3a5899ce8216",
+      "dedup_key": "90e40bd017060ced3dfd0d37c4caf52f11602b18c9ea792c07cf552331209e0c",
+      "raw_payload": {
+        "homepage_text": "[경기/광명시] 약손명가 에스테틱 광명점",
+        "homepage_url": "https://www.reviewnote.co.kr/",
+        "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "경기"
+        ],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "gangnammatzip",
+      "source_name": "강남맛집 체험단",
+      "external_id": "2184513",
+      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2184513",
+      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2184513",
+      "title": "드롱기 콜드브루 반자동 커피머신",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "4610bbae4ecea9b8285b6eadf8356fb4edc734b8b34b0894989af9857e8f1dda",
+      "dedup_key": "0f187563982bd5fb2289cb17953f6ba3d4596926c625e9d807652b939d5b589c",
+      "raw_payload": {
+        "homepage_text": "드롱기 콜드브루 반자동 커피머신",
+        "homepage_url": "https://xn--939au0g4vj8sq.net/",
+        "policy_note": "Start with homepage snippets only."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "gangnammatzip",
+      "source_name": "강남맛집 체험단",
+      "external_id": "2184514",
+      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2184514",
+      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2184514",
+      "title": "롯데상품권",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "f47ccdc09cd8e85b7ec5a4bd85d0d280fd439815c2d9dc8101f7a640a0ad4597",
+      "dedup_key": "fa36a1a1553c4139057509178d794857e23a9eb3e7e5f522a69e84783a16beab",
+      "raw_payload": {
+        "homepage_text": "롯데상품권",
+        "homepage_url": "https://xn--939au0g4vj8sq.net/",
+        "policy_note": "Start with homepage snippets only."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "gangnammatzip",
+      "source_name": "강남맛집 체험단",
+      "external_id": "2213730",
+      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2213730",
+      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2213730",
+      "title": "통큰장어",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "bcc1885ba982496f6048e60c349029451a70e20f2527559766b7cd718cc2088a",
+      "dedup_key": "3e9963d03ab8bccd6c22fe9372d7e28c630794947295dfcaa7dffb29f66d5318",
+      "raw_payload": {
+        "homepage_text": "통큰장어",
+        "homepage_url": "https://xn--939au0g4vj8sq.net/",
+        "policy_note": "Start with homepage snippets only."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "gangnammatzip",
+      "source_name": "강남맛집 체험단",
+      "external_id": "2215638",
+      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2215638",
+      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2215638",
+      "title": "향담시루",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "5b2b1379e46265c61be2459494a2b4a1660c12aeb7695891d347f1f9fe1c332a",
+      "dedup_key": "cbc51b58a3d3f552d2b48bea3ed1cfcc12bb6c1d6dfadea13a9defc9b4ea0fbf",
+      "raw_payload": {
+        "homepage_text": "향담시루",
+        "homepage_url": "https://xn--939au0g4vj8sq.net/",
+        "policy_note": "Start with homepage snippets only."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "gangnammatzip",
+      "source_name": "강남맛집 체험단",
+      "external_id": "2214844",
+      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2214844",
+      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2214844",
+      "title": "오아스토어",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "81251c4a607ce5c76978bfb270d71b29b436f7669fbfff91ea5abb3a613fa54b",
+      "dedup_key": "910f608ee97d79f3796bd64183be2bd8589cec5430e0be559829a510d0f03939",
+      "raw_payload": {
+        "homepage_text": "오아스토어",
+        "homepage_url": "https://xn--939au0g4vj8sq.net/",
+        "policy_note": "Start with homepage snippets only."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "gangnammatzip",
+      "source_name": "강남맛집 체험단",
+      "external_id": "2214817",
+      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2214817",
+      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2214817",
+      "title": "코끼리만두 부산점",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": "부산",
+      "content_hash": "2f06aadae603b1ac444626ba8d4719d590bd53e40785f5028b7df1ff5c027000",
+      "dedup_key": "5f327cb0f8aebde882557d4bbaf66baf2c3ad24413d14fa4b95164c31e20b83a",
+      "raw_payload": {
+        "homepage_text": "코끼리만두 부산점",
+        "homepage_url": "https://xn--939au0g4vj8sq.net/",
+        "policy_note": "Start with homepage snippets only."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "부산"
+        ],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "gangnammatzip",
+      "source_name": "강남맛집 체험단",
+      "external_id": "2213436",
+      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2213436",
+      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2213436",
+      "title": "설마중",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": "서울",
+      "content_hash": "890f763c3698600ae6fb48e19b228bfe4c259ea16d396cd6baf8cca171ad65aa",
+      "dedup_key": "76e6e0659143be26ab73a8aad3b92471394c524ffeec5be5ff0b4d0e38f2d6dc",
+      "raw_payload": {
+        "homepage_text": "[서울 서초] 설마중",
+        "homepage_url": "https://xn--939au0g4vj8sq.net/",
+        "policy_note": "Start with homepage snippets only."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "서울"
+        ],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "gangnammatzip",
+      "source_name": "강남맛집 체험단",
+      "external_id": "2214578",
+      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2214578",
+      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2214578",
+      "title": "스테이서린",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": "경북",
+      "content_hash": "b483e23c0c15ae5806a3ad6441ac2dc53cc746203eec04d09d2bebd6be83ab5c",
+      "dedup_key": "6c7ed3cf926d70433663a68c3b95950984d481eac23fec63dc3502b9e5be4879",
+      "raw_payload": {
+        "homepage_text": "[경북 경주] 스테이서린",
+        "homepage_url": "https://xn--939au0g4vj8sq.net/",
+        "policy_note": "Start with homepage snippets only."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "경북"
+        ],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "gangnammatzip",
+      "source_name": "강남맛집 체험단",
+      "external_id": "2214872",
+      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2214872",
+      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2214872",
+      "title": "샤브온리원 인계점",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": "경기",
+      "content_hash": "7daf288863a9265bf42764080903a5bed94964973d1716221e1656cb6caa21b6",
+      "dedup_key": "533863379dba136da2f8ca47e106b402abb6dbdb911d53c7b9d401d3f302d73e",
+      "raw_payload": {
+        "homepage_text": "[경기 수원] 샤브온리원 인계점",
+        "homepage_url": "https://xn--939au0g4vj8sq.net/",
+        "policy_note": "Start with homepage snippets only."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "경기"
+        ],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "gangnammatzip",
+      "source_name": "강남맛집 체험단",
+      "external_id": "2217345",
+      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2217345",
+      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2217345",
+      "title": "유산양 해맑은목장",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "aeaded21ea96821dea59604ff782e45f32293ca0fa62ad5a3e854cd69ccc03bf",
+      "dedup_key": "6162ca8f84ecc1dc9275c65c97521f58e40405266ed4cd74542a966c01a5fce9",
+      "raw_payload": {
+        "homepage_text": "유산양 해맑은목장",
+        "homepage_url": "https://xn--939au0g4vj8sq.net/",
+        "policy_note": "Start with homepage snippets only."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "gangnammatzip",
+      "source_name": "강남맛집 체험단",
+      "external_id": "2216345",
+      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2216345",
+      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2216345",
+      "title": "응정헌",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": "서울",
+      "content_hash": "383f570268551fa71522e10c4c56c08567f6d12a03c32c338b90800845d6945c",
+      "dedup_key": "9ad9b51f273ceaebbba061322c7c92ce2cc11b572b222277293e1f0746373b31",
+      "raw_payload": {
+        "homepage_text": "[서울 은평] 응정헌",
+        "homepage_url": "https://xn--939au0g4vj8sq.net/",
+        "policy_note": "Start with homepage snippets only."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "서울"
+        ],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "gangnammatzip",
+      "source_name": "강남맛집 체험단",
+      "external_id": "2216600",
+      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2216600",
+      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2216600",
+      "title": "쿠우쿠우 수성못점",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": "대구",
+      "content_hash": "76163fd848efca677e951084cca4f64081a4f8817b052acfcee0feef94dbcce2",
+      "dedup_key": "d3faca21666dffcec39c31b5c5d23be1eb452a70728f4021bc25d1f629811793",
+      "raw_payload": {
+        "homepage_text": "[대구 수성] 쿠우쿠우 수성못점",
+        "homepage_url": "https://xn--939au0g4vj8sq.net/",
+        "policy_note": "Start with homepage snippets only."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "대구"
+        ],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "275412",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=275412&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=275412&category=",
+      "title": "6월 럭키드로우 (SONY WH-1000XM5)",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "740738adc3383841633dd01c32e8d5b3f3c72316afed247333550c729d9a8202",
+      "dedup_key": "e08edc03032b75fca4eab1484bea268cdad963d13363e313d917685c5c9ffd30",
+      "raw_payload": {
+        "homepage_text": "6월 럭키드로우 (SONY WH-1000XM5)",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "276903",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=276903&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=276903&category=",
+      "title": "청년떡집 피자설기",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "89b07a55ef2e0dd3aebb9db97c4a64f7c36175f83e0f2db7a3641cc580902314",
+      "dedup_key": "c2bc2e71d2173cf92dbffd58e299f079daa97b712456dc0a51f4d106050933f1",
+      "raw_payload": {
+        "homepage_text": "청년떡집 피자설기",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "276902",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=276902&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=276902&category=",
+      "title": "청년떡집 잔기지떡",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "1ae7c33978a64da166374949329dc8f9b4c60257c4c764d76f24163cfee7722b",
+      "dedup_key": "545e6220afa92da66b20d23ca33e786df8a07e9bfb9e4663a6e626bf49257af3",
+      "raw_payload": {
+        "homepage_text": "청년떡집 잔기지떡",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "276768",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=276768&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=276768&category=",
+      "title": "살림백서 구연산 담은 주방세제 (레몬향)",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "7e7080fd63461c2b1f254048a5344e962fd08a2ad8fc48128f4da1b59150562c",
+      "dedup_key": "40d0b191e52b44ec39858d730369e339dc7aa6d04b315ad37005fee5160c0d23",
+      "raw_payload": {
+        "homepage_text": "살림백서 구연산 담은 주방세제 (레몬향)",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "277096",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=277096&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277096&category=",
+      "title": "집에서부터 외출까지 롯데마트에서 찾은 선풍기 시원하게 리뷰",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "e615388c0d15604f7dd8a0c6690813edcef1e1917a8815130af52ae31dc47480",
+      "dedup_key": "3ccbcb177604f61d65a07cf15b281d1c1aad88fe3ad5bfe51afd0270c3a2d0a5",
+      "raw_payload": {
+        "homepage_text": "집에서부터 외출까지 롯데마트에서 찾은 선풍기 시원하게 리뷰",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "276904",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=276904&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=276904&category=",
+      "title": "냉감 애착인형 여름 쿨인형 안고자는 수면인형",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "f8d4c9a9a08284e76d36d23c593ffb3c307f43a49391e870a8bc8828b6972030",
+      "dedup_key": "652a01d405dd2163f3acd2e1a12bc86084870e5ef43f9458d19ce3e5f9076eb7",
+      "raw_payload": {
+        "homepage_text": "냉감 애착인형 여름 쿨인형 안고자는 수면인형",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "276953",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=276953&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=276953&category=",
+      "title": "스플리 에어프레임 마그넷 탁상용 무선 선풍기",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "b51faaa3a45104888466b2d2c42ff8244c97060568c807bf1e16c3ad2d7a42a9",
+      "dedup_key": "a75f7c2712bd27539924adad43f500a6430915452855c5332a3d43664ed6f6cc",
+      "raw_payload": {
+        "homepage_text": "스플리 에어프레임 마그넷 탁상용 무선 선풍기",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "276955",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=276955&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=276955&category=",
+      "title": "스플리 에어필러 미니 탁상용 무선 선풍기",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "bf973ea0313b61d3baef2c1312f8257566a62be99216878d9bedbc819df25e19",
+      "dedup_key": "10b622c717b243a616ea60dfb839b09031b7015af36892c0be1e4b18e86209a5",
+      "raw_payload": {
+        "homepage_text": "스플리 에어필러 미니 탁상용 무선 선풍기",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "276900",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=276900&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=276900&category=",
+      "title": "로제아 코튼 핀턱 스트랩 블라우스",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "ffa4e806227d7db97fba4328dcfe8caf04860b0f517c90d8a172ae7832157024",
+      "dedup_key": "024165a35d07c8ea532e92161450188e63140f53e0e3f76c132822e5829d39dc",
+      "raw_payload": {
+        "homepage_text": "로제아 코튼 핀턱 스트랩 블라우스",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "277069",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=277069&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277069&category=",
+      "title": "로네이즌 코튼 도트 핀턱 블라우스",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "07fab94523523fe67aa66a60ae9beae9b0fbb00d0b456483a82075af74f6f944",
+      "dedup_key": "cdb93192729be3f4575185fc8139c003e2d09ea13e667d32008aa4b579601435",
+      "raw_payload": {
+        "homepage_text": "로네이즌 코튼 도트 핀턱 블라우스",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "277138",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=277138&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277138&category=",
+      "title": "스플리 맥세이프 넥마운트 목걸이 핸드폰 거치대",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "d1144d3d3e8f39f9357ed38f546a9c7c4cb8988e7df73ecb3c737ab2d6e9c109",
+      "dedup_key": "669b07e4178513960b30d30269917dcc77bb4c9891690ed256173614b9ce41c4",
+      "raw_payload": {
+        "homepage_text": "스플리 맥세이프 넥마운트 목걸이 핸드폰 거치대",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "277284",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=277284&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277284&category=",
+      "title": "안녕 공기청정기",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": null,
+      "location_text": null,
+      "content_hash": "832aa7bbc7aa37d586db9bbb87ca73fd343262a26f59822c352780ac02cfa2ce",
+      "dedup_key": "7ab9dd1d793d19e67e8fc83e8c9f7f243de5873bc9155b82011da388c47c8475",
+      "raw_payload": {
+        "homepage_text": "안녕 공기청정기",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "293198",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=293198",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=293198",
+      "title": "삼육두유 100 (32개)",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/18/thumb-31400146_VvLCZleG_ddbbc9b1d48381d2586092a7a16c9a189f51ca85_230x230.png",
+      "reward_summary": "삼육두유 100 (190ml, 32개) * 1개(구매수량)",
+      "location_text": null,
+      "content_hash": "4bc81ee0e58081c19a2b90e27d67deb8f71801ba5a0702eafe9ed8dce9f7c5c6",
+      "dedup_key": "35d15b5962e418fabe866c5c404e74ac28e735f7adb11621d18164ad67dba8a6",
+      "raw_payload": {
+        "homepage_text": "[쿠팡] 삼육두유 100 (32개) 삼육두유 100 (190ml, 32개) * 1개(구매수량) D - 2 신청 1533 / 10명 24,330P",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "293222",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=293222",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=293222",
+      "title": "삼육두유 100 (16개)",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/18/thumb-293222_ddbbc9b1d48381d2586092a7a16c9a189f51ca85_230x230.png",
+      "reward_summary": "삼육두유 100 (190ml, 16개) * 1개(구매수량)",
+      "location_text": null,
+      "content_hash": "ce1fc4f6756b594a9b41e16768d10571d8e8a85059f5c67abdf682a2c8f89845",
+      "dedup_key": "e72cdf57efef6bfb90603156ee1128954b1dc5283b076d727b631be51b377ef7",
+      "raw_payload": {
+        "homepage_text": "[쿠팡] 삼육두유 100 (16개) 삼육두유 100 (190ml, 16개) * 1개(구매수량) D - 2 신청 1246 / 10명 12,900P",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "294524",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=294524",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=294524",
+      "title": "설빙 딸기 & 멜론 구슬 아이스크림 (냉동)",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/24/thumb-31400146_cb7x8poF_06692fcee05f064e6d444935f140f5e4a3ca58f1_230x230.jpg",
+      "reward_summary": "설빙 딸기 & 멜론 구슬 아이스크림 (냉동) * 1개(구매수량)",
+      "location_text": null,
+      "content_hash": "d5f27d5cbb984782c636162fda4c153efd369a2cb01536d9c6afad075017f6e9",
+      "dedup_key": "b701c02a8f2ea885e918a6a969165209fe57b3704e8f75bbd9ec3ebc0dc58f8f",
+      "raw_payload": {
+        "homepage_text": "[쿠팡/로켓프레시] 설빙 딸기 & 멜론 구슬 아이스크림 (냉동) 설빙 딸기 & 멜론 구슬 아이스크림 (냉동) * 1개(구매수량) D - 1 신청 909 / 10명 14,000P",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "294525",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=294525",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=294525",
+      "title": "설빙 짜먹는 쿠키 앤 크림 빙수맛 아이스크림 (냉동)",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/24/thumb-31400146_dy57SmGR_9bed15eb475e17ff0a42827ecbbf8377f322ceab_230x230.jpg",
+      "reward_summary": "설빙 짜먹는 쿠키 앤 크림 빙수맛 아이스크림 (냉동) * 1개(구매수량)",
+      "location_text": null,
+      "content_hash": "61c41df48a4d1e24be45f2b7b46eab5f0f4ce44e5cc0423a683b47a2462f90d4",
+      "dedup_key": "5f8c3abc1e853e104f30132544c3be27787736f64aa2c3a39458344b6b1d3276",
+      "raw_payload": {
+        "homepage_text": "[쿠팡/로켓프레시] 설빙 짜먹는 쿠키 앤 크림 빙수맛 아이스크림 (냉동) 설빙 짜먹는 쿠키 앤 크림 빙수맛 아이스크림 (냉동) * 1개(구매수량) D - 1 신청 850 / 10명 11,900P",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "294118",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=294118",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=294118",
+      "title": "코니야 컬러 디자인 멀티탭 4구",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/23/thumb-294118_ab6583cc6e2dbd2403a69f2df7a8bf691f185d61_230x230.jpg",
+      "reward_summary": "코니야 컬러 디자인 멀티탭 4구 * 1개(구매수량)",
+      "location_text": null,
+      "content_hash": "d84644725523530462a8212738ecb2db7bd8f4f0105d1b3cc4a842e1dfeff7dc",
+      "dedup_key": "125d4b7804360bac765ff9f002c59767dbe62b227098b581e385677a4ebccaa1",
+      "raw_payload": {
+        "homepage_text": "[스마트스토어] 코니야 컬러 디자인 멀티탭 4구 코니야 컬러 디자인 멀티탭 4구 * 1개(구매수량) D - 1 신청 826 / 10명 14,900P",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "292236",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=292236",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=292236",
+      "title": "맛있는 발효차! 마시면 기운차♥",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/12/thumb-292236_1f1a3bdd86b62ad22d6885c276ca3ed12834b083_230x230.jpg",
+      "reward_summary": "마시면 기운차(340ml x 20개 1박스) * 1개(구매수량)",
+      "location_text": null,
+      "content_hash": "0b9e3ba20f7b45a2ac18a37f7ffc8f99337ce08bea9234111d1a1501648b79c5",
+      "dedup_key": "a4533b7d28ca30254b6677034089efbeb45a1aca485d922d8715adb3b08d83ab",
+      "raw_payload": {
+        "homepage_text": "[스마트스토어] 맛있는 발효차! 마시면 기운차♥ 마시면 기운차(340ml x 20개 1박스) * 1개(구매수량) D - 3 신청 790 / 2명 18,000P",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "293678",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=293678",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=293678",
+      "title": "산미없이 꾸덕 담백 그릭요거트+그래놀라",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/19/thumb-31400146_SENJVLnr_94d55ba112540ac76583ac39270dca94f4dd0050_230x230.png",
+      "reward_summary": "그릭구트 산미없이 꾸덕 담백한 친환경 종이팩 그릭요거트 500g & 그래놀라 100g",
+      "location_text": null,
+      "content_hash": "a4e3b92140ad031a5d1caea23279615d9bef2c5c713f6a27aaa0fd6aaea1301c",
+      "dedup_key": "e778981e333352691e94f634037bbee436530c75f4e63ff2af53834dcdc48a5d",
+      "raw_payload": {
+        "homepage_text": "[블] 산미없이 꾸덕 담백 그릭요거트+그래놀라 [친환경 종이팩 포장] 그릭구트 산미없이 꾸덕 담백한 친환경 종이팩 그릭요거트 500g & 그래놀라 100g D - 1 신청 785 / 5명",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "293436",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=293436",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=293436",
+      "title": "아멜리에 라이트 메리제인 플랫 AM268001",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/19/thumb-31400146_r6bFx2eI_2a30217ee93c64213ec3560933e69b566a7ee6da_230x230.jpg",
+      "reward_summary": "아멜리에 라이트 메리제인 플랫 AM268001 (1cm/블랙 or 실버) * 1개",
+      "location_text": null,
+      "content_hash": "efcbdc7724c92495c334f32b2753e0a91a61f08bccf27512bdd3f5971e761ee8",
+      "dedup_key": "2190207f32dd1f044a09edc27969b48438c198d0f55447433d95edc1bd0e2ac5",
+      "raw_payload": {
+        "homepage_text": "[블로그] 아멜리에 라이트 메리제인 플랫 AM268001 아멜리에 라이트 메리제인 플랫 AM268001 (1cm/블랙 or 실버) * 1개 D - 2 신청 695 / 10명",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [
+          "blog"
+        ],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "294113",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=294113",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=294113",
+      "title": "코니야 컬러 디자인 멀티탭 3구",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/23/thumb-31400146_yLpnBb2m_ab6583cc6e2dbd2403a69f2df7a8bf691f185d61_230x230.jpg",
+      "reward_summary": "코니야 컬러 디자인 멀티탭 3구 * 1개(구매수량)",
+      "location_text": null,
+      "content_hash": "414817a4f90137e555be0b76b253ccf12f04555f39af8ee692fc71dbb31c75fd",
+      "dedup_key": "bb6cf90ecd1aa9895aef3c9d75ecba204b85a7158b91748d2d62da1368413d39",
+      "raw_payload": {
+        "homepage_text": "[스마트스토어] 코니야 컬러 디자인 멀티탭 3구 코니야 컬러 디자인 멀티탭 3구 * 1개(구매수량) D - 1 신청 694 / 10명 13,200P",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "293360",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=293360",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=293360",
+      "title": "고급 올리브유 엑스트라 버진 ♥",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/18/thumb-31400146_3f6M0yAB_8850b5533790a278fbdee73fe4d5d9e996abf6c3_230x230.jpg",
+      "reward_summary": "고급 올리브유 엑스트라버진 250mlx2p",
+      "location_text": null,
+      "content_hash": "0a1f317fb0af48cffc0fd24cfc86683f1ca2bb4f7b4291069e633240f28f1558",
+      "dedup_key": "77daa365b4498798efb6b2b88e2b9c7fc767f7780b2a651c3a77b10ff7d032e9",
+      "raw_payload": {
+        "homepage_text": "[블로그] 고급 올리브유 엑스트라 버진 ♥ 고급 올리브유 엑스트라버진 250mlx2p D - 1 신청 686 / 5명",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [
+          "blog"
+        ],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "293435",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=293435",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=293435",
+      "title": "엘리자벳 골드링 볼륨 여름 샌들 EL26003",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/19/thumb-31400146_K1Nx4l6y_2b89d77825458553e414c2d373cd80705ab5dd94_230x230.jpg",
+      "reward_summary": "엘리자벳 골드링 볼륨 여름 샌들 EL26003 (6cm/블랙 or 스카이블루) * 1개",
+      "location_text": null,
+      "content_hash": "3ecb017dba739b3624ddd9d911ff51ac069d2ae32e07378be02c79b65607d8df",
+      "dedup_key": "5198728a259f86fc03df2381202487743b2a98bd22542b9d7cbaa2e261e314fd",
+      "raw_payload": {
+        "homepage_text": "[블로그] 엘리자벳 골드링 볼륨 여름 샌들 EL26003 엘리자벳 골드링 볼륨 여름 샌들 EL26003 (6cm/블랙 or 스카이블루) * 1개 D - 2 신청 646 / 5명",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [
+          "blog"
+        ],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "293359",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=293359",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=293359",
+      "title": "아기 층간소음 폴더매트 라운드림",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/18/thumb-31400146_KVcl1bzX_9aa61ad8178d7d9914a9cf43d88353572fb7be6e_230x230.jpg",
+      "reward_summary": "이누아 폴더매트 (옵션 : 140 x 220cm / 2면 슬라이드)",
+      "location_text": null,
+      "content_hash": "e22ec87d91e2493c56cfb392c21d866a15013b54ff32feb4c15424dd6e947f57",
+      "dedup_key": "ee79d76492591731d0eaec11cd07bb6d7411d993b65604adcd805e136883a657",
+      "raw_payload": {
+        "homepage_text": "[블로그] 아기 층간소음 폴더매트 라운드림 이누아 폴더매트 (옵션 : 140 x 220cm / 2면 슬라이드) D - 2 신청 613 / 10명",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [
+          "blog"
+        ],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "406915",
+      "source_url": "https://tble.kr/view.php?cp_id=406915",
+      "normalized_url": "https://tble.kr/view.php?cp_id=406915",
+      "title": "눈에띄네뷰티",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": "5,000포인트",
+      "location_text": null,
+      "content_hash": "0b6233f1a4b0a03f4f6249f8b1324b6150230afbfd01ae4601087a4031333f9e",
+      "dedup_key": "f236e6e3a9536d511631a64f2951c79731748b6682108f9c430611515d880a12",
+      "raw_payload": {
+        "homepage_text": "2일 남음 [기자단] 눈에띄네뷰티 5,000포인트 신청 159 명 / 모집 1 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "reporter"
+        ]
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "412880",
+      "source_url": "https://tble.kr/view.php?cp_id=412880",
+      "normalized_url": "https://tble.kr/view.php?cp_id=412880",
+      "title": "산내들우복당 - 영양 갈비탕",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": "우복당 영양 갈비탕 700g 2개 제공",
+      "location_text": null,
+      "content_hash": "f7fc7fa645c1eb53c2fe569349bcd709bacd19d2dc1efac9136bbd46178c09da",
+      "dedup_key": "1fcdfe9d356cadaa241eb29252d6d2cb765c7f0d977b09efa98979226d708df2",
+      "raw_payload": {
+        "homepage_text": "11일 남음 [배송] 산내들우복당 - 영양 갈비탕 우복당 영양 갈비탕 700g 2개 제공 신청 336 명 / 모집 10 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "412952",
+      "source_url": "https://tble.kr/view.php?cp_id=412952",
+      "normalized_url": "https://tble.kr/view.php?cp_id=412952",
+      "title": "한닢쿡",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": "국대육수 50알",
+      "location_text": null,
+      "content_hash": "1857f5ef3bd2c56633c28ff97386721db08a0e79ebacff3f9db5acff8f164c21",
+      "dedup_key": "b654c76b6cf026ffad4676ce88a50ee3d3d27f8435c7bc0520ba78d84f7ccba3",
+      "raw_payload": {
+        "homepage_text": "5일 남음 [배송] 한닢쿡 국대육수 50알 신청 125 명 / 모집 10 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "413054",
+      "source_url": "https://tble.kr/view.php?cp_id=413054",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413054",
+      "title": "바스크담",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": "프리미엄 수제 카페 바스크 치즈 케이크",
+      "location_text": null,
+      "content_hash": "812e715fa37f55e6253873584e81a3a3c03804dcc17aa0f94885ac99334a1b7a",
+      "dedup_key": "e16745053b38fb33b069d8c71215497a07fe1f423631eb54e4b56800b240bb64",
+      "raw_payload": {
+        "homepage_text": "8일 남음 [배송] 바스크담 프리미엄 수제 카페 바스크 치즈 케이크 신청 230 명 / 모집 10 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery",
+          "visit"
+        ]
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "412572",
+      "source_url": "https://tble.kr/view.php?cp_id=412572",
+      "normalized_url": "https://tble.kr/view.php?cp_id=412572",
+      "title": "메이든",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": "메이든 착즙기 실버",
+      "location_text": null,
+      "content_hash": "d43acaadcf7bc7f128909baa85ef7c5cf99ac5c6cfbc78696b7f62d95da9e0f9",
+      "dedup_key": "77f25921f354126b71d1d7f59e7f3f1d2ba860fca33a6b6c871e81841e064fb1",
+      "raw_payload": {
+        "homepage_text": "1일 남음 [배송] 메이든 메이든 착즙기 실버 신청 693 명 / 모집 10 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "413357",
+      "source_url": "https://tble.kr/view.php?cp_id=413357",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413357",
+      "title": "아리울떡공방",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": "삼색 모듬 바람떡 1kg 제공",
+      "location_text": null,
+      "content_hash": "afd0fbbffd351276638c1e54ea180034e6fb7bd23f7abb7ca5cee45367616278",
+      "dedup_key": "688fe1e85c45cfa59bb585eb002c280990435483964a886f60bbb628533d094f",
+      "raw_payload": {
+        "homepage_text": "11일 남음 [배송] 아리울떡공방 삼색 모듬 바람떡 1kg 제공 신청 110 명 / 모집 30 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "412728",
+      "source_url": "https://tble.kr/view.php?cp_id=412728",
+      "normalized_url": "https://tble.kr/view.php?cp_id=412728",
+      "title": "온비다",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": "플루메리아3개, 바다비누2개, 데이지꽃비누2개, 조개비누2개, 아이스아메리카노2개, 어몽어스 2개, 수막새 비누 2개",
+      "location_text": null,
+      "content_hash": "d34186cb3981f84be204b541571cd244f2df2ce6664ecafa22efc79f4ad65656",
+      "dedup_key": "01c9be1b779a07ad3643fddc71ff6c5c97f95709885cc77d7fd790e0eeb2552f",
+      "raw_payload": {
+        "homepage_text": "3일 남음 [배송] 온비다 플루메리아3개, 바다비누2개, 데이지꽃비누2개, 조개비누2개, 아이스아메리카노2개, 어몽어스 2개, 수막새 비누 2개 신청 113 명 / 모집 8 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ]
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "409483",
+      "source_url": "https://tble.kr/view.php?cp_id=409483",
+      "normalized_url": "https://tble.kr/view.php?cp_id=409483",
+      "title": "XBAG",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": "5,000포인트",
+      "location_text": null,
+      "content_hash": "c8a2d773e756db3bbffd8b95bed0ff72de105432c759b8335ff5c16490d32fa7",
+      "dedup_key": "8f256850acbb820aff01f2c149f9a261e4aafb2a172f26e69b4dd96476b12d5a",
+      "raw_payload": {
+        "homepage_text": "2일 남음 [기자단] XBAG 5,000포인트 신청 192 명 / 모집 5 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "reporter"
+        ]
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "412650",
+      "source_url": "https://tble.kr/view.php?cp_id=412650",
+      "normalized_url": "https://tble.kr/view.php?cp_id=412650",
+      "title": "세르프",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": "100만원 상당의 세르프 이용권 제공",
+      "location_text": "서울",
+      "content_hash": "65f1c9a6a530c07c7b8f7badbd6bc6513b88ccb18d1a576f31c82fda40a224e1",
+      "dedup_key": "82b4bdb949a70c0af5a53065e0149bc26dfcc0ba065c27116d768f5e7e9fd350",
+      "raw_payload": {
+        "homepage_text": "2일 남음 [서울 압구정] 세르프 100만원 상당의 세르프 이용권 제공 신청 62 명 / 모집 1 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "서울"
+        ],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "412746",
+      "source_url": "https://tble.kr/view.php?cp_id=412746",
+      "normalized_url": "https://tble.kr/view.php?cp_id=412746",
+      "title": "세르프",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": "100만원 상당의 세르프 이용권 제공",
+      "location_text": null,
+      "content_hash": "96f00483440b99296caf5e8174b6145306341552f99ec408e89d125b2d114c9c",
+      "dedup_key": "87009005b25f51af3ea336afbe9b2f232fcc2ef075c8cceceb138732158ef614",
+      "raw_payload": {
+        "homepage_text": "3일 남음 [방배역] 세르프 100만원 상당의 세르프 이용권 제공 신청 48 명 / 모집 5 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "412491",
+      "source_url": "https://tble.kr/view.php?cp_id=412491",
+      "normalized_url": "https://tble.kr/view.php?cp_id=412491",
+      "title": "피부과_우마카세 리프팅",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": "440,000원 상당의 티타늄리프팅40kj 시술 제공",
+      "location_text": null,
+      "content_hash": "8fa5ddfec0e5e432b1ad0f9a9380e6971056e8a6bfedda7f7412667188a8c420",
+      "dedup_key": "33ccc7af7910ff6c994bfa7e3b4f290ed2d58fad95fbdd0ae4f29b84fae12e90",
+      "raw_payload": {
+        "homepage_text": "2일 남음 [네이버/클립] [강남] 피부과_우마카세 리프팅 440,000원 상당의 티타늄리프팅40kj 시술 제공 신청 51 명 / 모집 3 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [
+          "naver_clip"
+        ],
+        "region_tags": [],
+        "benefit_tags": []
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "413130",
+      "source_url": "https://tble.kr/view.php?cp_id=413130",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413130",
+      "title": "세르프",
+      "brand_name": null,
+      "status": "active",
+      "image_url": null,
+      "reward_summary": "100만원 상당의 세르프 이용권 제공",
+      "location_text": "서울",
+      "content_hash": "153d4527509942989472df7a0e57fbf29dfc4c3d9ea6441a56823e8440e3e64e",
+      "dedup_key": "61e1ee03ecf92a58804b35f49a04d4db267bd1b62b685a40083556327d16d0cf",
+      "raw_payload": {
+        "homepage_text": "8일 남음 [서울 합정] 세르프 100만원 상당의 세르프 이용권 제공 신청 49 명 / 모집 5 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "서울"
+        ],
+        "benefit_tags": []
+      }
+    }
+  ]
+}

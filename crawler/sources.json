@@ -1,0 +1,52 @@
+[
+  {
+    "code": "reviewnote",
+    "name": "리뷰노트",
+    "target_url": "https://www.reviewnote.co.kr/",
+    "robots_url": "https://www.reviewnote.co.kr/robots.txt",
+    "active": true,
+    "allowed_link_patterns": ["/campaigns/"],
+    "detail_fetch": false,
+    "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+  },
+  {
+    "code": "gangnammatzip",
+    "name": "강남맛집 체험단",
+    "target_url": "https://xn--939au0g4vj8sq.net/",
+    "robots_url": "https://xn--939au0g4vj8sq.net/robots.txt",
+    "active": true,
+    "allowed_link_patterns": ["/cp/?id="],
+    "detail_fetch": false,
+    "policy_note": "Start with homepage snippets only."
+  },
+  {
+    "code": "ringble",
+    "name": "링블",
+    "target_url": "https://www.ringble.co.kr/",
+    "robots_url": "https://www.ringble.co.kr/robots.txt",
+    "active": true,
+    "allowed_link_patterns": ["detail.php?number="],
+    "detail_fetch": false,
+    "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+  },
+  {
+    "code": "reviewplace",
+    "name": "리뷰플레이스",
+    "target_url": "https://www.reviewplace.co.kr/",
+    "robots_url": "https://www.reviewplace.co.kr/robots.txt",
+    "active": true,
+    "allowed_link_patterns": ["/pr/?id="],
+    "detail_fetch": false,
+    "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+  },
+  {
+    "code": "tble",
+    "name": "티블",
+    "target_url": "https://tble.kr/",
+    "robots_url": "https://www.tble.kr/robots.txt",
+    "active": true,
+    "allowed_link_patterns": ["view.php?cp_id="],
+    "detail_fetch": false,
+    "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+  }
+]

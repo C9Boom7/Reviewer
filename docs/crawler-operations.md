@@ -1,0 +1,78 @@
+# 크롤러 운영안
+
+## 실행 모드
+
+초기 크롤러는 `homepage_only_no_detail_fetch` 모드다.
+
+- 각 소스의 허용된 홈페이지 URL만 요청한다.
+- 홈페이지 HTML 안에 이미 노출된 캠페인 카드 snippet만 추출한다.
+- robots에서 막힌 상세/목록 경로는 요청하지 않는다.
+- 소스 사이에 sleep을 두고 순차 실행한다.
+
+샘플 실행:
+
+```bash
+python3 crawler/crawl_sample.py --limit-per-source 12 --sleep 1.5
+```
+
+출력:
+
+```text
+data/samples/campaigns.sample.json
+```
+
+## GitHub Actions 주기
+
+MVP 권장값:
+
+- 기본 수집: 2시간마다.
+- 안정화 후 핵심 소스만 30~60분.
+- 전체 재검증: 하루 1회.
+- 10분 주기는 피한다. 대상 서버 부하와 GitHub Actions 지연/drop 리스크가 커진다.
+
+cron 예시:
+
+```yaml
+schedule:
+  - cron: "17 */2 * * *"
+```
+
+정각은 피한다. GitHub Actions scheduled workflow는 고부하 시간에 지연되거나 drop될 수 있으므로, 데이터 freshness는 best-effort로 봐야 한다.
+
+## Supabase 연동 방향
+
+GitHub Secrets:
+
+- `SUPABASE_URL`
+- `SUPABASE_SERVICE_ROLE_KEY`
+
+최초 1회 Supabase SQL Editor에서 아래 파일을 순서대로 실행한다.
+
+1. `supabase/schema.sql`
+2. `supabase/seed_sources.sql`
+
+Actions job 흐름:
+
+1. checkout
+2. Python setup
+3. `python3 crawler/crawl_sample.py --out data/samples/campaigns.latest.json`
+4. `python3 crawler/sync_supabase.py --input data/samples/campaigns.latest.json`
+5. 성공/실패와 관계없이 artifact로 `campaigns.latest.json` 업로드
+
+현재 workflow는 `.github/workflows/crawl-campaigns.yml`에 있다.
+
+로컬에서 Supabase 쓰기 없이 매핑만 확인하려면:
+
+```bash
+python3 crawler/sync_supabase.py --dry-run --input data/samples/campaigns.sample.json
+```
+
+실제 Supabase 쓰기는 GitHub Actions에서 service role key로만 수행한다.
+
+## 차단/실패 정책
+
+- `robots.txt`가 대상 URL을 막으면 `blocked_by_robots`로 기록하고 요청하지 않는다.
+- 1회 실패: 다음 run에서 재시도.
+- 3회 연속 실패: `sources.is_active=false` 전환 후보.
+- HTML 구조 변경으로 파싱 결과가 0건이면 실패가 아니라 `empty_parse`로 분리한다.
+- 대량 상세 fetch가 필요해지면 사이트별 허가 또는 제휴/API를 먼저 검토한다.

@@ -1,0 +1,433 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import os
+import re
+import sys
+import urllib.error
+import urllib.parse
+import urllib.request
+from dataclasses import dataclass
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+
+SUPABASE_URL_ENV = "SUPABASE_URL"
+SUPABASE_KEY_ENV = "SUPABASE_SERVICE_ROLE_KEY"
+
+
+def now_iso() -> str:
+    return datetime.now(timezone.utc).isoformat()
+
+
+def sha256_text(value: str) -> str:
+    return hashlib.sha256(value.encode("utf-8")).hexdigest()
+
+
+def normalize_for_key(value: str | None) -> str:
+    if not value:
+        return ""
+    value = re.sub(r"\[[^\]]+\]", " ", value)
+    value = re.sub(r"\s+", " ", value)
+    return value.strip().lower()
+
+
+def canonical_key_for(item: dict[str, Any]) -> str:
+    # Conservative cross-source merge: title + reward must match after normalization.
+    # This may leave duplicates, which is safer than merging unrelated campaigns.
+    basis = "|".join(
+        [
+            normalize_for_key(item.get("title")),
+            normalize_for_key(item.get("reward_summary")),
+            normalize_for_key(item.get("location_text")),
+        ]
+    )
+    return sha256_text(basis)
+
+
+def clean_supabase_url(value: str) -> str:
+    return value.rstrip("/")
+
+
+@dataclass
+class SupabaseClient:
+    base_url: str
+    service_key: str
+    dry_run: bool = False
+
+    @property
+    def rest_url(self) -> str:
+        return f"{self.base_url}/rest/v1"
+
+    def request(
+        self,
+        method: str,
+        path: str,
+        payload: Any | None = None,
+        headers: dict[str, str] | None = None,
+    ) -> Any:
+        if self.dry_run and method.upper() != "GET":
+            print(f"[dry-run] {method} {path}")
+            return []
+
+        body = None if payload is None else json.dumps(payload, ensure_ascii=False).encode("utf-8")
+        request_headers = {
+            "apikey": self.service_key,
+            "Authorization": f"Bearer {self.service_key}",
+            "Accept": "application/json",
+        }
+        if body is not None:
+            request_headers["Content-Type"] = "application/json"
+        if headers:
+            request_headers.update(headers)
+
+        request = urllib.request.Request(
+            f"{self.rest_url}{path}",
+            data=body,
+            headers=request_headers,
+            method=method.upper(),
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                raw = response.read()
+        except urllib.error.HTTPError as exc:
+            detail = exc.read().decode("utf-8", "ignore")
+            raise RuntimeError(f"Supabase {method} {path} failed: HTTP {exc.code} {detail}") from exc
+
+        if not raw:
+            return None
+        return json.loads(raw.decode("utf-8"))
+
+    def select_sources(self, codes: list[str]) -> dict[str, str]:
+        if not codes:
+            return {}
+        if self.dry_run:
+            return {code: f"dry-source-{sha256_text(code)[:12]}" for code in codes}
+        encoded_codes = ",".join(codes)
+        rows = self.request("GET", f"/sources?select=id,code&code=in.({encoded_codes})")
+        return {row["code"]: row["id"] for row in rows}
+
+    def select_listing_id(self, row: dict[str, Any]) -> str | None:
+        if self.dry_run:
+            return None
+
+        select = "select=id,normalized_url,external_id,dedup_key"
+        filters = [
+            ("external_id", row.get("external_id")),
+            ("normalized_url", row["normalized_url"]),
+            ("dedup_key", row["dedup_key"]),
+        ]
+        for column, value in filters:
+            if value is None:
+                continue
+            encoded_value = urllib.parse.quote(str(value), safe="")
+            path = f"/source_listings?{select}&source_id=eq.{row['source_id']}&{column}=eq.{encoded_value}&limit=1"
+            rows = self.request("GET", path)
+            if rows:
+                return rows[0]["id"]
+        return None
+
+    def patch_by_id(self, table: str, row_id: str, row: dict[str, Any], return_representation: bool) -> list[dict[str, Any]]:
+        if self.dry_run:
+            print(f"[dry-run] PATCH /{table}?id=eq.{row_id}")
+            result = dict(row)
+            result["id"] = row_id
+            return [result]
+
+        prefer = "return=representation" if return_representation else "return=minimal"
+        result = self.request(
+            "PATCH",
+            f"/{table}?id=eq.{row_id}",
+            row,
+            headers={"Prefer": prefer},
+        )
+        return result or []
+
+    def insert_one(self, table: str, row: dict[str, Any], return_representation: bool) -> list[dict[str, Any]]:
+        if self.dry_run:
+            print(f"[dry-run] POST /{table}")
+            result = dict(row)
+            result["id"] = f"dry-{table}-{sha256_text(json.dumps(row, sort_keys=True, default=str))[:12]}"
+            return [result]
+
+        return self.insert(table, [row], return_representation=return_representation)
+
+    def upsert_listing(self, row: dict[str, Any]) -> dict[str, Any]:
+        existing_id = self.select_listing_id(row)
+        if existing_id:
+            rows = self.patch_by_id("source_listings", existing_id, row, return_representation=True)
+            return rows[0]
+
+        try:
+            rows = self.insert_one("source_listings", row, return_representation=True)
+            return rows[0]
+        except RuntimeError:
+            # A concurrent run or a secondary unique key may have won between lookup and insert.
+            existing_id = self.select_listing_id(row)
+            if not existing_id:
+                raise
+            rows = self.patch_by_id("source_listings", existing_id, row, return_representation=True)
+            return rows[0]
+
+    def upsert(self, table: str, rows: list[dict[str, Any]], on_conflict: str, return_representation: bool) -> list[dict[str, Any]]:
+        if not rows:
+            return []
+        if self.dry_run:
+            print(f"[dry-run] POST /{table}?on_conflict={on_conflict} rows={len(rows)}")
+            if not return_representation:
+                return []
+            result_rows = []
+            for row in rows:
+                result = dict(row)
+                result["id"] = f"dry-{table}-{sha256_text(json.dumps(row, sort_keys=True, default=str))[:12]}"
+                result_rows.append(result)
+            return result_rows
+        query = urllib.parse.urlencode({"on_conflict": on_conflict})
+        prefer = "resolution=merge-duplicates"
+        prefer += ",return=representation" if return_representation else ",return=minimal"
+        result = self.request(
+            "POST",
+            f"/{table}?{query}",
+            rows,
+            headers={"Prefer": prefer},
+        )
+        return result or []
+
+    def insert(self, table: str, rows: list[dict[str, Any]], return_representation: bool) -> list[dict[str, Any]]:
+        if not rows:
+            return []
+        if self.dry_run:
+            print(f"[dry-run] POST /{table} rows={len(rows)}")
+            if not return_representation:
+                return []
+            result_rows = []
+            for row in rows:
+                result = dict(row)
+                result["id"] = f"dry-{table}-{sha256_text(json.dumps(row, sort_keys=True, default=str))[:12]}"
+                result_rows.append(result)
+            return result_rows
+        prefer = "return=representation" if return_representation else "return=minimal"
+        result = self.request(
+            "POST",
+            f"/{table}",
+            rows,
+            headers={"Prefer": prefer},
+        )
+        return result or []
+
+
+def load_json(path: Path) -> dict[str, Any]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def load_source_configs(path: Path) -> list[dict[str, Any]]:
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def source_seed_rows(source_configs: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    rows = []
+    for index, source in enumerate(source_configs, start=1):
+        rows.append(
+            {
+                "code": source["code"],
+                "name": source["name"],
+                "homepage_url": source["target_url"],
+                "robots_url": source["robots_url"],
+                "crawl_priority": index * 10,
+                "is_active": bool(source["active"]),
+                "crawl_interval_minutes": 120,
+                "crawl_policy": {
+                    "status": "homepage_only" if source["active"] else "inactive",
+                    "reason": source.get("policy_note"),
+                },
+                "crawler_config": {
+                    "parser": "homepage_anchor_snippets",
+                    "target_url": source["target_url"],
+                    "allowed_link_patterns": source["allowed_link_patterns"],
+                    "detail_fetch": source["detail_fetch"],
+                },
+                "notes": source.get("policy_note"),
+            }
+        )
+    return rows
+
+
+def listing_row(item: dict[str, Any], source_id: str, crawled_at: str) -> dict[str, Any]:
+    return {
+        "source_id": source_id,
+        "external_id": item.get("external_id"),
+        "source_url": item["source_url"],
+        "normalized_url": item["normalized_url"],
+        "title": item["title"],
+        "brand_name": item.get("brand_name"),
+        "status": item.get("status", "active"),
+        "image_url": item.get("image_url"),
+        "reward_summary": item.get("reward_summary"),
+        "location_text": item.get("location_text"),
+        "content_hash": item.get("content_hash"),
+        "dedup_key": item["dedup_key"],
+        "raw_payload": item.get("raw_payload", {}),
+        "parsed_payload": item.get("parsed_payload", {}),
+        "last_seen_at": crawled_at,
+        "last_crawled_at": crawled_at,
+    }
+
+
+def campaign_row(item: dict[str, Any], crawled_at: str) -> dict[str, Any]:
+    parsed = item.get("parsed_payload", {})
+    platform_tags = parsed.get("platform_tags") or []
+    region_tags = parsed.get("region_tags") or []
+    benefit_tags = parsed.get("benefit_tags") or []
+    canonical_key = canonical_key_for(item)
+
+    return {
+        "canonical_key": canonical_key,
+        "title": item["title"],
+        "brand_name": item.get("brand_name"),
+        "summary": item.get("reward_summary"),
+        "status": "active",
+        "reward_summary": item.get("reward_summary"),
+        "location_text": item.get("location_text"),
+        "primary_image_url": item.get("image_url"),
+        "canonical_url": item.get("source_url"),
+        "platform_tags": platform_tags,
+        "region_tags": region_tags,
+        "benefit_tags": benefit_tags,
+        "details": {
+            "latest_source_code": item.get("source_code"),
+            "latest_external_id": item.get("external_id"),
+        },
+        "dedup_meta": {
+            "strategy": "normalized_title_reward_location_v1",
+            "source_dedup_key": item.get("dedup_key"),
+        },
+        "last_seen_at": crawled_at,
+    }
+
+
+def sync(payload: dict[str, Any], source_configs: list[dict[str, Any]], client: SupabaseClient) -> dict[str, Any]:
+    crawled_at = payload.get("generated_at") or now_iso()
+    campaigns = payload.get("campaigns", [])
+    source_summaries = payload.get("source_summaries", [])
+    source_codes = sorted(
+        {item["source_code"] for item in campaigns}
+        | {summary["source_code"] for summary in source_summaries}
+    )
+
+    client.upsert("sources", source_seed_rows(source_configs), on_conflict="code", return_representation=False)
+    source_ids = client.select_sources(source_codes)
+    missing_sources = sorted(set(source_codes) - set(source_ids))
+    if missing_sources:
+        raise RuntimeError(f"Missing sources after upsert: {', '.join(missing_sources)}")
+
+    listing_rows = [listing_row(item, source_ids[item["source_code"]], crawled_at) for item in campaigns]
+    listing_results = [client.upsert_listing(row) for row in listing_rows]
+    listing_ids_by_url = {row["normalized_url"]: row["id"] for row in listing_results}
+
+    campaign_rows_by_key: dict[str, dict[str, Any]] = {}
+    item_key_by_url: dict[str, str] = {}
+    for item in campaigns:
+        row = campaign_row(item, crawled_at)
+        campaign_rows_by_key[row["canonical_key"]] = row
+        item_key_by_url[item["normalized_url"]] = row["canonical_key"]
+
+    campaign_results = client.upsert(
+        "campaigns",
+        list(campaign_rows_by_key.values()),
+        on_conflict="canonical_key",
+        return_representation=True,
+    )
+    campaign_ids_by_key = {row["canonical_key"]: row["id"] for row in campaign_results}
+
+    links = []
+    for item in campaigns:
+        listing_id = listing_ids_by_url.get(item["normalized_url"])
+        campaign_id = campaign_ids_by_key.get(item_key_by_url[item["normalized_url"]])
+        if not listing_id or not campaign_id:
+            continue
+        links.append(
+            {
+                "campaign_id": campaign_id,
+                "source_listing_id": listing_id,
+                "is_primary": True,
+                "match_confidence": 0.900,
+                "match_reason": "canonical_key:normalized_title_reward_location_v1",
+            }
+        )
+
+    client.upsert(
+        "campaign_source_listings",
+        links,
+        on_conflict="source_listing_id",
+        return_representation=False,
+    )
+
+    run_rows = []
+    github_run_id = os.environ.get("GITHUB_RUN_ID")
+    git_sha = os.environ.get("GITHUB_SHA")
+    for summary in source_summaries:
+        source_id = source_ids.get(summary["source_code"])
+        run_rows.append(
+            {
+                "source_id": source_id,
+                "github_run_id": github_run_id,
+                "git_sha": git_sha,
+                "status": summary["status"],
+                "started_at": summary.get("started_at") or crawled_at,
+                "finished_at": summary.get("finished_at") or now_iso(),
+                "fetched_count": summary.get("item_count", 0),
+                "upserted_count": summary.get("item_count", 0) if summary["status"] == "ok" else 0,
+                "error_count": 0 if summary["status"] == "ok" else 1,
+                "error_message": summary.get("reason"),
+                "meta": summary,
+            }
+        )
+    client.insert("crawler_runs", run_rows, return_representation=False)
+
+    return {
+        "sources": len(source_ids),
+        "source_listings": len(listing_rows),
+        "campaigns": len(campaign_rows_by_key),
+        "links": len(links),
+        "crawler_runs": len(run_rows),
+    }
+
+
+def build_client(args: argparse.Namespace) -> SupabaseClient:
+    url = args.supabase_url or os.environ.get(SUPABASE_URL_ENV)
+    key = args.supabase_key or os.environ.get(SUPABASE_KEY_ENV)
+    if args.dry_run:
+        return SupabaseClient(base_url=clean_supabase_url(url or "https://dry-run.supabase.co"), service_key=key or "dry-run", dry_run=True)
+    if not url:
+        raise SystemExit(f"Missing {SUPABASE_URL_ENV}")
+    if not key:
+        raise SystemExit(f"Missing {SUPABASE_KEY_ENV}")
+    return SupabaseClient(base_url=clean_supabase_url(url), service_key=key, dry_run=False)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Sync crawled campaign JSON into Supabase.")
+    parser.add_argument("--input", type=Path, default=Path("data/samples/campaigns.sample.json"))
+    parser.add_argument("--sources", type=Path, default=Path("crawler/sources.json"))
+    parser.add_argument("--supabase-url")
+    parser.add_argument("--supabase-key")
+    parser.add_argument("--dry-run", action="store_true")
+    args = parser.parse_args()
+
+    payload = load_json(args.input)
+    source_configs = load_source_configs(args.sources)
+    client = build_client(args)
+    result = sync(payload, source_configs, client)
+    print(json.dumps(result, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as exc:
+        print(f"sync failed: {exc}", file=sys.stderr)
+        raise
