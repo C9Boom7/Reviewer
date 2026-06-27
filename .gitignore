@@ -2,3 +2,11 @@
 __pycache__/
 *.pyc
 data/samples/campaigns.latest.json
+
+# Frontend
+node_modules/
+dist/
+.pnpm-store/
+.env
+.env.local
+.env.*.local
