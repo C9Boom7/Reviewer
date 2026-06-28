@@ -33,3 +33,14 @@ pnpm run build
 ```
 
 Supabase env가 없으면 `public/data/campaigns.sample.json` 샘플 데이터로 동작합니다.
+
+## Deploy
+
+`main` 브랜치에 프론트 변경이 push되면 GitHub Pages 배포 워크플로가 실행됩니다.
+
+필요한 GitHub Secret:
+
+- `SUPABASE_URL`
+- `SUPABASE_ANON_KEY`
+
+`SUPABASE_ANON_KEY`가 없으면 배포된 화면도 샘플 데이터로 동작합니다.

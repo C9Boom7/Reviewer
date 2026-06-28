@@ -48,7 +48,7 @@ function mapSampleCampaigns(payload: SamplePayload): CampaignCard[] {
 }
 
 async function loadSample(reason: string | null = null): Promise<LoadResult> {
-  const response = await fetch("/data/campaigns.sample.json");
+  const response = await fetch(`${import.meta.env.BASE_URL}data/campaigns.sample.json`);
   if (!response.ok) {
     throw new Error(`Failed to load sample campaigns: ${response.status}`);
   }
