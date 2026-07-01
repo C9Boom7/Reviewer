@@ -20,6 +20,19 @@
 - 신청/모집 인원
 - 출처별 카테고리, 채널 태그, 혜택 태그
 
+## 파서 구조
+
+크롤러 실행 흐름은 `crawler/crawl_sample.py`가 담당하고, 사이트별 HTML 해석은 `crawler/parsers/` 아래로 분리한다.
+
+- `crawler/parsers/common.py`: homepage anchor 기반 공통 추출, 이미지/마감/태그/해시 생성.
+- `crawler/parsers/reviewnote.py`: 리뷰노트 카드 컨테이너, 제목/보상 class, campaign id 추출.
+- `crawler/parsers/ringble.py`: 링블 table 카드 컨테이너, 제목/보상 table cell, number 추출.
+- `crawler/parsers/reviewplace.py`: 리뷰플레이스 제목/보상 class, id 추출.
+- `crawler/parsers/gangnammatzip.py`: 강남맛집 URL id 추출. robots 차단 시 parser는 호출되지 않는다.
+- `crawler/parsers/tble.py`: 티블 제목/보상 class, cp_id 추출. robots 차단 시 parser는 호출되지 않는다.
+
+새 소스를 추가할 때는 `crawler/sources.json`에 `parser` 값을 명시하고, 필요한 경우 `crawler/parsers/{source}.py`에 source별 hook만 추가한다. fetch, robots 확인, JSON payload 조립은 `crawl_sample.py`에 유지한다.
+
 샘플 실행:
 
 ```bash
@@ -93,6 +106,7 @@ python3 crawler/verify_supabase.py
 ## 차단/실패 정책
 
 - `robots.txt`가 대상 URL을 막으면 `blocked_by_robots`로 기록하고 요청하지 않는다.
+- robots 차단은 기술적으로 항상 불가능하다는 뜻은 아니지만, 이 프로젝트에서는 우회하지 않는다. 허용 URL, 공식 API/RSS, 제휴, 수동 등록 같은 안전한 경로만 사용한다.
 - `blocked_by_robots` source는 자동 비활성화하지 않고 `sources.crawl_policy.status=blocked_by_robots_candidate`로 기록한다.
 - 1회 실패: 다음 run에서 재시도.
 - 3회 연속 실패: `sources.is_active=false` 전환 후보.

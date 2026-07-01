@@ -5,6 +5,7 @@
     "target_url": "https://www.reviewnote.co.kr/",
     "robots_url": "https://www.reviewnote.co.kr/robots.txt",
     "active": true,
+    "parser": "reviewnote_homepage",
     "allowed_link_patterns": ["/campaigns/"],
     "detail_fetch": false,
     "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
@@ -15,6 +16,7 @@
     "target_url": "https://xn--939au0g4vj8sq.net/",
     "robots_url": "https://xn--939au0g4vj8sq.net/robots.txt",
     "active": true,
+    "parser": "gangnammatzip_homepage",
     "allowed_link_patterns": ["/cp/?id="],
     "detail_fetch": false,
     "policy_note": "Start with homepage snippets only."
@@ -25,6 +27,7 @@
     "target_url": "https://www.ringble.co.kr/",
     "robots_url": "https://www.ringble.co.kr/robots.txt",
     "active": true,
+    "parser": "ringble_homepage",
     "allowed_link_patterns": ["detail.php?number="],
     "detail_fetch": false,
     "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
@@ -35,6 +38,7 @@
     "target_url": "https://www.reviewplace.co.kr/",
     "robots_url": "https://www.reviewplace.co.kr/robots.txt",
     "active": true,
+    "parser": "reviewplace_homepage",
     "allowed_link_patterns": ["/pr/?id="],
     "detail_fetch": false,
     "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
@@ -45,6 +49,7 @@
     "target_url": "https://tble.kr/",
     "robots_url": "https://www.tble.kr/robots.txt",
     "active": true,
+    "parser": "tble_homepage",
     "allowed_link_patterns": ["view.php?cp_id="],
     "detail_fetch": false,
     "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."

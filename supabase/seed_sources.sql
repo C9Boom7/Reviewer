@@ -34,7 +34,7 @@ insert into public.sources (
   true,
   120,
   '{"status":"homepage_only","reason":"robots.txt disallows /campaigns/. Crawl only campaign snippets already rendered on the allowed homepage; do not fetch campaign detail/list pages."}'::jsonb,
-  '{"parser":"generic_home_anchors","target_url":"https://www.reviewnote.co.kr/","allowed_link_patterns":["/campaigns/"],"detail_fetch":false}'::jsonb,
+  '{"parser":"reviewnote_homepage","target_url":"https://www.reviewnote.co.kr/","allowed_link_patterns":["/campaigns/"],"detail_fetch":false}'::jsonb,
   '상세/목록 경로 자동 접근 금지. 홈페이지 노출 카드만 샘플 수집.'
 ),
 (
@@ -60,7 +60,7 @@ insert into public.sources (
   true,
   120,
   '{"status":"homepage_only","reason":"robots.txt allows root and many public paths but blocks several admin/review paths. Start with homepage snippets only."}'::jsonb,
-  '{"parser":"generic_home_anchors","target_url":"https://xn--939au0g4vj8sq.net/","allowed_link_patterns":["/cp/?id="],"detail_fetch":false}'::jsonb,
+  '{"parser":"gangnammatzip_homepage","target_url":"https://xn--939au0g4vj8sq.net/","allowed_link_patterns":["/cp/?id="],"detail_fetch":false}'::jsonb,
   '홈페이지 인기/마감임박 카드 수집 가능.'
 ),
 (
@@ -73,7 +73,7 @@ insert into public.sources (
   true,
   120,
   '{"status":"homepage_only","reason":"robots.txt disallows /pr and several detail/list paths. Crawl only campaign snippets already rendered on the allowed homepage."}'::jsonb,
-  '{"parser":"generic_home_anchors","target_url":"https://www.reviewplace.co.kr/","allowed_link_patterns":["/pr/?id="],"detail_fetch":false}'::jsonb,
+  '{"parser":"reviewplace_homepage","target_url":"https://www.reviewplace.co.kr/","allowed_link_patterns":["/pr/?id="],"detail_fetch":false}'::jsonb,
   '홈페이지 실시간 인기캠페인 카드만 수집.'
 ),
 (
@@ -86,7 +86,7 @@ insert into public.sources (
   true,
   120,
   '{"status":"homepage_only","reason":"robots.txt disallows detail.php. Crawl only detail links and snippets already rendered on the allowed homepage; do not fetch details."}'::jsonb,
-  '{"parser":"generic_home_anchors","target_url":"https://www.ringble.co.kr/","allowed_link_patterns":["detail.php?number="],"detail_fetch":false}'::jsonb,
+  '{"parser":"ringble_homepage","target_url":"https://www.ringble.co.kr/","allowed_link_patterns":["detail.php?number="],"detail_fetch":false}'::jsonb,
   '제품/방문/인스타/유튜브 카테고리 노출. 상세 fetch 금지.'
 ),
 (
@@ -99,7 +99,7 @@ insert into public.sources (
   true,
   120,
   '{"status":"homepage_only","reason":"robots.txt disallows category and view query paths. Crawl only campaign snippets already rendered on the allowed homepage."}'::jsonb,
-  '{"parser":"generic_home_anchors","target_url":"https://tble.kr/","allowed_link_patterns":["view.php?cp_id="],"detail_fetch":false}'::jsonb,
+  '{"parser":"tble_homepage","target_url":"https://tble.kr/","allowed_link_patterns":["view.php?cp_id="],"detail_fetch":false}'::jsonb,
   '홈페이지 인기 캠페인 카드 수집 가능.'
 )
 on conflict (code) do update set

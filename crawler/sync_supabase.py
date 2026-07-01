@@ -318,7 +318,7 @@ def source_seed_rows(source_configs: list[dict[str, Any]]) -> list[dict[str, Any
                     "reason": source.get("policy_note"),
                 },
                 "crawler_config": {
-                    "parser": "homepage_anchor_snippets",
+                    "parser": source.get("parser", "homepage_anchor_snippets"),
                     "target_url": source["target_url"],
                     "allowed_link_patterns": source["allowed_link_patterns"],
                     "detail_fetch": source["detail_fetch"],
