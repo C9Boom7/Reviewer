@@ -42,7 +42,8 @@ type DataState = {
 };
 
 type ActiveTab = "home" | "schedule" | "saved" | "my";
-type QuickFilter = "all" | "delivery" | "visit" | "multi" | "recent";
+type QuickFilter = "all" | "delivery" | "visit" | "multi" | "urgent";
+type SortMode = "deadline" | "recent" | "sources";
 
 type FilterState = {
   query: string;
@@ -94,7 +95,13 @@ const quickFilters: Array<{ id: QuickFilter; label: string; icon: LucideIcon }> 
   { id: "delivery", label: "배송형", icon: Package },
   { id: "visit", label: "방문형", icon: MapPin },
   { id: "multi", label: "여러 출처", icon: Star },
-  { id: "recent", label: "최근 수집", icon: CheckCircle2 },
+  { id: "urgent", label: "마감임박", icon: CheckCircle2 },
+];
+
+const sortModes: Array<{ id: SortMode; label: string }> = [
+  { id: "deadline", label: "마감순" },
+  { id: "recent", label: "최신순" },
+  { id: "sources", label: "출처순" },
 ];
 
 const navItems: Array<{ id: ActiveTab; label: string; icon: LucideIcon }> = [
@@ -239,6 +246,12 @@ function sourceStatusLabel(status: string): string {
   return sourceStatusLabels[status] ?? status;
 }
 
+function dateTimeValue(value: string | null): number {
+  if (!value) return Number.NEGATIVE_INFINITY;
+  const time = new Date(value).getTime();
+  return Number.isNaN(time) ? Number.NEGATIVE_INFINITY : time;
+}
+
 function campaignSearchText(campaign: CampaignCard): string {
   return [
     campaign.title,
@@ -267,21 +280,41 @@ function applyFilters(campaigns: CampaignCard[], filters: FilterState): Campaign
     if (filters.quick === "delivery" && !campaign.benefit_tags.includes("delivery")) return false;
     if (filters.quick === "visit" && !campaign.benefit_tags.includes("visit")) return false;
     if (filters.quick === "multi" && confirmedSourceCount(campaign) < 2) return false;
-    if (filters.quick === "recent") {
-      const seenAt = new Date(campaign.last_seen_at).getTime();
-      const twoDays = 1000 * 60 * 60 * 24 * 2;
-      if (Number.isNaN(seenAt) || Date.now() - seenAt > twoDays) return false;
+    if (filters.quick === "urgent") {
+      const days = getDeadlineInfo(campaign).days;
+      if (days === null || days < 0 || days > 3) return false;
     }
     return true;
   });
 }
 
-function sortCampaigns(campaigns: CampaignCard[]): CampaignCard[] {
+function nextSortMode(current: SortMode): SortMode {
+  const index = sortModes.findIndex((mode) => mode.id === current);
+  return sortModes[(index + 1) % sortModes.length].id;
+}
+
+function sortLabel(mode: SortMode): string {
+  return sortModes.find((sortMode) => sortMode.id === mode)?.label ?? "마감순";
+}
+
+function sortCampaigns(campaigns: CampaignCard[], mode: SortMode): CampaignCard[] {
   return [...campaigns].sort((a, b) => {
+    if (mode === "recent") {
+      const recentDiff = dateTimeValue(b.last_seen_at) - dateTimeValue(a.last_seen_at);
+      if (recentDiff !== 0) return recentDiff;
+    }
+
+    if (mode === "sources") {
+      const sourceDiff = confirmedSourceCount(b) - confirmedSourceCount(a);
+      if (sourceDiff !== 0) return sourceDiff;
+      const recentDiff = dateTimeValue(b.last_seen_at) - dateTimeValue(a.last_seen_at);
+      if (recentDiff !== 0) return recentDiff;
+    }
+
     const aDeadline = getDeadlineDate(a)?.getTime() ?? Number.POSITIVE_INFINITY;
     const bDeadline = getDeadlineDate(b)?.getTime() ?? Number.POSITIVE_INFINITY;
     if (aDeadline !== bDeadline) return aDeadline - bDeadline;
-    return new Date(b.last_seen_at).getTime() - new Date(a.last_seen_at).getTime();
+    return dateTimeValue(b.last_seen_at) - dateTimeValue(a.last_seen_at);
   });
 }
 
@@ -399,6 +432,8 @@ function HomeView({
   data,
   filters,
   setFilters,
+  sortMode,
+  setSortMode,
   campaigns,
   options,
   savedIds,
@@ -408,6 +443,8 @@ function HomeView({
   data: DataState;
   filters: FilterState;
   setFilters: React.Dispatch<React.SetStateAction<FilterState>>;
+  sortMode: SortMode;
+  setSortMode: React.Dispatch<React.SetStateAction<SortMode>>;
   campaigns: CampaignCard[];
   options: { sources: string[]; sourceLabels: Record<string, string> };
   savedIds: Set<string>;
@@ -473,8 +510,8 @@ function HomeView({
       <section className="listToolbar">
         <strong>총 {campaigns.length}개</strong>
         <div>
-          <button className="sortButton" type="button">
-            최신순
+          <button className="sortButton" type="button" onClick={() => setSortMode((current) => nextSortMode(current))}>
+            {sortLabel(sortMode)}
             <SlidersHorizontal size={16} />
           </button>
           <button className="viewButton isActive" type="button" aria-label="리스트 보기">
@@ -858,6 +895,7 @@ function App() {
   const [data, setData] = useState<DataState | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [filters, setFilters] = useState<FilterState>(emptyFilters);
+  const [sortMode, setSortMode] = useState<SortMode>("deadline");
   const [activeTab, setActiveTab] = useState<ActiveTab>("home");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [savedIds, setSavedIds] = useState<Set<string>>(() => new Set());
@@ -878,7 +916,7 @@ function App() {
     };
   }, []);
 
-  const sortedCampaigns = useMemo(() => sortCampaigns(data?.campaigns ?? []), [data]);
+  const sortedCampaigns = useMemo(() => sortCampaigns(data?.campaigns ?? [], sortMode), [data, sortMode]);
 
   const visibleCampaigns = useMemo(() => applyFilters(sortedCampaigns, filters), [sortedCampaigns, filters]);
 
@@ -946,6 +984,8 @@ function App() {
                   data={data}
                   filters={filters}
                   setFilters={setFilters}
+                  sortMode={sortMode}
+                  setSortMode={setSortMode}
                   campaigns={visibleCampaigns}
                   options={options}
                   savedIds={savedIds}
