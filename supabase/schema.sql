@@ -221,6 +221,8 @@ select
       jsonb_build_object(
         'source_code', s.code,
         'source_name', s.name,
+        'source_mode', coalesce(s.crawl_policy->>'source_mode', s.crawl_policy->>'status', 'summary_only'),
+        'crawl_policy_status', s.crawl_policy->>'status',
         'source_url', sl.source_url,
         'external_id', sl.external_id,
         'status', sl.status

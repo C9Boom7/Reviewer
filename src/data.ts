@@ -39,6 +39,8 @@ function mapSampleCampaigns(payload: SamplePayload): CampaignCard[] {
         {
           source_code: item.source_code,
           source_name: item.source_name,
+          source_mode: "summary_only",
+          crawl_policy_status: "crawlable",
           source_url: item.source_url,
           external_id: item.external_id ?? null,
           status: item.status,

@@ -1,6 +1,10 @@
+export type SourceMode = "full" | "summary_only" | "blocked" | "candidate" | string;
+
 export type SourceListing = {
   source_code: string;
   source_name: string;
+  source_mode?: SourceMode | null;
+  crawl_policy_status?: string | null;
   source_url: string;
   external_id: string | null;
   status: string;

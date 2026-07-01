@@ -13,8 +13,8 @@
 
 | 영역 | 구현 내용 |
 | --- | --- |
-| 크롤러 | source별 homepage 수집, robots 확인, parser 분리, `empty_parse` 분리 |
-| Parser | `reviewnote`, `ringble`, `reviewplace`, `gangnammatzip`, `tble` 모듈화 |
+| 크롤러 | source별 `summary_only` 수집, robots 확인, parser 분리, `empty_parse` 분리 |
+| Parser | `reviewnote`, `seoulouba`, `dinnerqueen`, `modublog`, `ringble`, `reviewplace`, `gangnammatzip`, `tble` 모듈화 |
 | 데이터 동기화 | Supabase `sources`, `source_listings`, `campaigns`, 연결 테이블 upsert |
 | 대표 카드 | `campaign_cards` view로 active source 기준 대표 카드 제공 |
 | 운영 검증 | crawl 결과 Summary, source/card coverage, orphan campaign close |
@@ -137,9 +137,9 @@ sequenceDiagram
   GH->>T: run unittest
   T-->>GH: pass/fail
   GH->>C: load crawler/sources.json
-  C->>R: can_fetch(homepage)
+  C->>R: can_fetch(source target URL)
   alt allowed
-    C->>P: extract homepage campaign snippets
+    C->>P: extract summary campaign snippets
     P-->>C: campaign items
     C->>S: sync source_listings and campaigns
   else blocked

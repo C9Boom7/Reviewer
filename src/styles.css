@@ -411,6 +411,11 @@ p {
   background: #eef2ef;
 }
 
+.plainChip.summary {
+  color: #315d81;
+  background: #e7f2fb;
+}
+
 .heartButton {
   flex: 0 0 auto;
   width: 34px;
@@ -682,12 +687,17 @@ p {
   gap: 8px;
   min-height: 48px;
   margin-bottom: 28px;
-  padding: 0 14px;
+  padding: 11px 14px;
   border-radius: 8px;
   color: #46617c;
   background: #edf5fb;
   font-size: 14px;
   font-weight: 800;
+  line-height: 1.45;
+}
+
+.sourceNotice svg {
+  flex: 0 0 auto;
 }
 
 .sourceLinkList {

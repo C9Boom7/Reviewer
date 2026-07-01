@@ -36,6 +36,14 @@ def make_source(
 
 
 SOURCES = {
+    "dinnerqueen": make_source(
+        "dinnerqueen",
+        "디너의여왕",
+        "https://dinnerqueen.net/taste",
+        "https://dinnerqueen.net/robots.txt",
+        "dinnerqueen_homepage",
+        ["/taste/"],
+    ),
     "reviewnote": make_source(
         "reviewnote",
         "리뷰노트",
@@ -76,14 +84,32 @@ SOURCES = {
         "tble_homepage",
         ["view.php?cp_id="],
     ),
+    "seoulouba": make_source(
+        "seoulouba",
+        "서울오빠",
+        "https://www.seoulouba.co.kr/",
+        "https://www.seoulouba.co.kr/robots.txt",
+        "seoulouba_homepage",
+        ["campaign/?c="],
+    ),
+    "modublog": make_source(
+        "modublog",
+        "모블",
+        "https://www.modublog.co.kr/",
+        "https://www.modublog.co.kr/robots.txt",
+        "modublog_homepage",
+        ["/product/"],
+    ),
 }
 
 
 class ParserRegistryTest(unittest.TestCase):
     def test_configured_sources_have_parser(self) -> None:
         sources = crawl_sample.load_sources(ROOT / "crawler" / "sources.json")
-        self.assertEqual(5, len(sources))
+        self.assertEqual(10, len(sources))
         for source in sources:
+            if not source.active:
+                continue
             self.assertIn(source.code, PARSERS)
             self.assertTrue(source.parser.endswith("_homepage"))
 
@@ -197,8 +223,88 @@ class HomepageParserTest(unittest.TestCase):
         self.assertIn("instagram", item["parsed_payload"]["platform_tags"])
         self.assertTrue(item["application_deadline_at"])
 
+    def test_dinnerqueen_parser_skips_category_links(self) -> None:
+        items = extract_campaigns(
+            SOURCES["dinnerqueen"],
+            """
+            <a href="/taste?ct=%EB%A7%9B%EC%A7%91">맛집</a>
+            <a href="/taste/1431298">메인 캐러셀 링크</a>
+            <a href="/taste/1420173">
+              <img src="/uploads/fan.jpg">
+              <strong>시코 미니 선풍기</strong>
+              <span>D-6</span>
+            </a>
+            """,
+            limit=3,
+        )
+        self.assertEqual(1, len(items), items)
+        self.assertEqual("1420173", items[0]["external_id"])
+        self.assertEqual("시코 미니 선풍기", items[0]["title"])
+        self.assertTrue(items[0]["application_deadline_at"])
+
+    def test_seoulouba_parser_extracts_homepage_campaign_links(self) -> None:
+        item = self.assert_single_item(
+            "seoulouba",
+            """
+            <a href="https://www.seoulouba.co.kr/campaign/?cat=377">방문형</a>
+            <a href="https://www.seoulouba.co.kr/campaign/?c=415627">
+              [배송형] 은혜로운팜
+              <span>모집 5명</span>
+              <span>D-3</span>
+            </a>
+            """,
+            "415627",
+            "은혜로운팜",
+            None,
+        )
+        self.assertIn("delivery", item["parsed_payload"]["benefit_tags"])
+        self.assertTrue(item["application_deadline_at"])
+
+    def test_modublog_parser_extracts_product_cards(self) -> None:
+        items = extract_campaigns(
+            SOURCES["modublog"],
+            """
+            <a href="https://www.modublog.co.kr/product/?up=1">확률UP</a>
+            <a href="https://www.modublog.co.kr/product/48716">
+              휴대용 블루투스 15w 스피커 [방수 블루투스 스피커/쿠팡리뷰] 하리보
+            </a>
+            """,
+            limit=3,
+        )
+        self.assertEqual(1, len(items), items)
+        self.assertEqual("48716", items[0]["external_id"])
+        self.assertEqual("휴대용 블루투스 15w 스피커 하리보", items[0]["title"])
+        self.assertIn("purchase_review", items[0]["parsed_payload"]["benefit_tags"])
+
 
 class CrawlSourceStatusTest(unittest.TestCase):
+    def test_robots_allows_exact_home_with_dollar_rule(self) -> None:
+        robots_text = """
+        User-agent: *
+        Disallow: /
+        Allow: /$
+        """
+        self.assertTrue(crawl_sample.robots_text_allows(robots_text, "https://www.example.com/"))
+        self.assertFalse(crawl_sample.robots_text_allows(robots_text, "https://www.example.com/campaign/?c=1"))
+
+    def test_robots_disallows_query_patterns(self) -> None:
+        robots_text = """
+        User-agent: *
+        Allow: /
+        Disallow: /*?*
+        """
+        self.assertTrue(crawl_sample.robots_text_allows(robots_text, "https://example.com/taste"))
+        self.assertFalse(crawl_sample.robots_text_allows(robots_text, "https://example.com/taste?order=hot"))
+
+    def test_robots_keeps_consecutive_user_agents_in_one_group(self) -> None:
+        robots_text = """
+        User-agent: Googlebot
+        User-agent: *
+        Disallow: /private/
+        """
+        self.assertTrue(crawl_sample.robots_text_allows(robots_text, "https://example.com/public/1"))
+        self.assertFalse(crawl_sample.robots_text_allows(robots_text, "https://example.com/private/1"))
+
     def test_empty_parse_status_when_homepage_fetch_succeeds_with_no_items(self) -> None:
         original_robots_allows = crawl_sample.robots_allows
         original_fetch_html = crawl_sample.fetch_html

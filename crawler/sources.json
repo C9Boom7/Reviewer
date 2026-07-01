@@ -1,14 +1,63 @@
 [
   {
+    "code": "revu",
+    "name": "레뷰 REVU",
+    "target_url": "https://www.revu.net/",
+    "robots_url": "https://www.revu.net/robots.txt",
+    "active": false,
+    "source_mode": "candidate",
+    "parser": "revu_dynamic_tbd",
+    "allowed_link_patterns": [],
+    "detail_fetch": false,
+    "policy_note": "High-priority source, but campaign cards are not present in initial homepage HTML. Needs dynamic rendering or official integration analysis before activation."
+  },
+  {
     "code": "reviewnote",
     "name": "리뷰노트",
     "target_url": "https://www.reviewnote.co.kr/",
     "robots_url": "https://www.reviewnote.co.kr/robots.txt",
     "active": true,
+    "source_mode": "summary_only",
     "parser": "reviewnote_homepage",
     "allowed_link_patterns": ["/campaigns/"],
     "detail_fetch": false,
-    "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
+    "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and store snippets already rendered there."
+  },
+  {
+    "code": "seoulouba",
+    "name": "서울오빠",
+    "target_url": "https://www.seoulouba.co.kr/",
+    "robots_url": "https://www.seoulouba.co.kr/robots.txt",
+    "active": true,
+    "source_mode": "summary_only",
+    "parser": "seoulouba_homepage",
+    "allowed_link_patterns": ["campaign/?c="],
+    "detail_fetch": false,
+    "policy_note": "robots.txt allows only the homepage. Fetch the homepage only and store campaign links/snippets already rendered there."
+  },
+  {
+    "code": "dinnerqueen",
+    "name": "디너의여왕",
+    "target_url": "https://dinnerqueen.net/taste",
+    "robots_url": "https://dinnerqueen.net/robots.txt",
+    "active": true,
+    "source_mode": "summary_only",
+    "parser": "dinnerqueen_homepage",
+    "allowed_link_patterns": ["/taste/"],
+    "detail_fetch": false,
+    "policy_note": "Fetch the allowed /taste listing page only. Do not fetch query-filtered pages or campaign detail pages."
+  },
+  {
+    "code": "modublog",
+    "name": "모블",
+    "target_url": "https://www.modublog.co.kr/",
+    "robots_url": "https://www.modublog.co.kr/robots.txt",
+    "active": true,
+    "source_mode": "summary_only",
+    "parser": "modublog_homepage",
+    "allowed_link_patterns": ["/product/"],
+    "detail_fetch": false,
+    "policy_note": "robots.txt allows the homepage. Fetch the homepage only and store product campaign snippets already rendered there."
   },
   {
     "code": "gangnammatzip",
@@ -16,10 +65,11 @@
     "target_url": "https://xn--939au0g4vj8sq.net/",
     "robots_url": "https://xn--939au0g4vj8sq.net/robots.txt",
     "active": true,
+    "source_mode": "summary_only",
     "parser": "gangnammatzip_homepage",
     "allowed_link_patterns": ["/cp/?id="],
     "detail_fetch": false,
-    "policy_note": "Start with homepage snippets only."
+    "policy_note": "Fetch homepage snippets only."
   },
   {
     "code": "ringble",
@@ -27,6 +77,7 @@
     "target_url": "https://www.ringble.co.kr/",
     "robots_url": "https://www.ringble.co.kr/robots.txt",
     "active": true,
+    "source_mode": "summary_only",
     "parser": "ringble_homepage",
     "allowed_link_patterns": ["detail.php?number="],
     "detail_fetch": false,
@@ -38,6 +89,7 @@
     "target_url": "https://www.reviewplace.co.kr/",
     "robots_url": "https://www.reviewplace.co.kr/robots.txt",
     "active": true,
+    "source_mode": "summary_only",
     "parser": "reviewplace_homepage",
     "allowed_link_patterns": ["/pr/?id="],
     "detail_fetch": false,
@@ -47,11 +99,24 @@
     "code": "tble",
     "name": "티블",
     "target_url": "https://tble.kr/",
-    "robots_url": "https://www.tble.kr/robots.txt",
+    "robots_url": "https://tble.kr/robots.txt",
     "active": true,
+    "source_mode": "summary_only",
     "parser": "tble_homepage",
     "allowed_link_patterns": ["view.php?cp_id="],
     "detail_fetch": false,
     "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+  },
+  {
+    "code": "reviewshare",
+    "name": "리뷰쉐어",
+    "target_url": "https://reviewshare.io/",
+    "robots_url": "https://reviewshare.io/robots.txt",
+    "active": false,
+    "source_mode": "blocked",
+    "parser": "reviewshare_project_blocked",
+    "allowed_link_patterns": [],
+    "detail_fetch": false,
+    "policy_note": "Campaign project pages are disallowed by robots.txt and the homepage has no usable campaign snippets."
   }
 ]

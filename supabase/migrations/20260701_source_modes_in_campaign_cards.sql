@@ -1,5 +1,5 @@
--- Apply in Supabase SQL Editor.
--- Keeps campaign_cards source_count/source_listings aligned with active source_listings only.
+-- Apply in Supabase SQL Editor after the crawler config update.
+-- Exposes source crawl mode in campaign_cards.source_listings[] without adding a table column.
 
 create or replace view public.campaign_cards
 with (security_invoker = true) as
@@ -41,14 +41,3 @@ left join public.campaign_source_listings csl on csl.campaign_id = c.id
 left join public.source_listings sl on sl.id = csl.source_listing_id and sl.status = 'active'
 left join public.sources s on s.id = sl.source_id
 group by c.id;
-
-update public.campaigns c
-set status = 'closed'
-where c.status = 'active'
-  and not exists (
-    select 1
-    from public.campaign_source_listings csl
-    join public.source_listings sl on sl.id = csl.source_listing_id
-    where csl.campaign_id = c.id
-      and sl.status = 'active'
-  );

@@ -304,6 +304,7 @@ def load_source_configs(path: Path) -> list[dict[str, Any]]:
 def source_seed_rows(source_configs: list[dict[str, Any]]) -> list[dict[str, Any]]:
     rows = []
     for index, source in enumerate(source_configs, start=1):
+        source_mode = source.get("source_mode", "summary_only")
         rows.append(
             {
                 "code": source["code"],
@@ -314,14 +315,17 @@ def source_seed_rows(source_configs: list[dict[str, Any]]) -> list[dict[str, Any
                 "is_active": bool(source["active"]),
                 "crawl_interval_minutes": 120,
                 "crawl_policy": {
-                    "status": "homepage_only" if source["active"] else "inactive",
+                    "source_mode": source_mode,
+                    "status": "crawlable" if source["active"] and source_mode in {"full", "summary_only"} else source_mode,
                     "reason": source.get("policy_note"),
+                    "detail_fetch": bool(source.get("detail_fetch")),
                 },
                 "crawler_config": {
                     "parser": source.get("parser", "homepage_anchor_snippets"),
                     "target_url": source["target_url"],
                     "allowed_link_patterns": source["allowed_link_patterns"],
                     "detail_fetch": source["detail_fetch"],
+                    "source_mode": source_mode,
                 },
                 "notes": source.get("policy_note"),
             }
@@ -423,15 +427,19 @@ def mark_blocked_sources(
         if not source_id:
             continue
         source_config = source_config_by_code.get(summary["source_code"], {})
+        configured_mode = source_config.get("source_mode", "summary_only")
         client.patch_by_id(
             "sources",
             source_id,
             {
                 "crawl_policy": {
+                    "source_mode": "blocked",
+                    "configured_source_mode": configured_mode,
                     "status": "blocked_by_robots_candidate",
                     "reason": summary.get("reason"),
                     "last_checked_at": summary.get("finished_at") or now_iso(),
                     "policy_note": source_config.get("policy_note"),
+                    "detail_fetch": bool(source_config.get("detail_fetch")),
                 },
                 "notes": f"Blocked by robots candidate: {summary.get('reason')}",
             },

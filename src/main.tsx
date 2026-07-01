@@ -90,6 +90,13 @@ const sourceStatusLabels: Record<string, string> = {
   archived: "보관",
 };
 
+const sourceModeLabels: Record<string, string> = {
+  full: "전체수집",
+  summary_only: "요약수집",
+  blocked: "차단",
+  candidate: "후보",
+};
+
 const quickFilters: Array<{ id: QuickFilter; label: string; icon: LucideIcon }> = [
   { id: "all", label: "전체", icon: Sparkles },
   { id: "delivery", label: "배송형", icon: Package },
@@ -244,6 +251,24 @@ function getConditionText(campaign: CampaignCard): string {
 
 function sourceStatusLabel(status: string): string {
   return sourceStatusLabels[status] ?? status;
+}
+
+function sourceModeLabel(mode: string | null | undefined): string {
+  if (!mode) return "요약수집";
+  return sourceModeLabels[mode] ?? mode;
+}
+
+function hasSummaryOnlySource(campaign: CampaignCard): boolean {
+  return confirmedSources(campaign).some((source) => !source.source_mode || source.source_mode === "summary_only");
+}
+
+function sourceDisclosureText(campaign: CampaignCard): string {
+  const source = primarySource(campaign);
+  if (!source) return "수집 출처에서 가져온 요약 정보예요. 세부 조건은 원본에서 확인하세요.";
+  if (!source.source_mode || source.source_mode === "summary_only") {
+    return `${source.source_name}의 공개 요약 영역에서 가져왔어요. 세부 조건과 신청 가능 여부는 원본에서 확인하세요.`;
+  }
+  return `${source.source_name}에서 가져왔어요. 세부 조건과 신청 가능 여부는 원본에서 확인하세요.`;
 }
 
 function dateTimeValue(value: string | null): number {
@@ -404,6 +429,7 @@ function CampaignTile({
       <div className="tileBody">
         <div className="tileMeta">
           <span className="sourceChip">{getCategoryLabel(campaign)}</span>
+          {hasSummaryOnlySource(campaign) && <span className="plainChip summary">요약수집</span>}
           {sourceCount > 1 && <span className="plainChip">출처 {sourceCount}</span>}
           <button
             className={`heartButton ${saved ? "isSaved" : ""}`}
@@ -588,7 +614,7 @@ function DetailView({
           </div>
           <div className="statusLine">
             <Check size={17} />
-            원문 확인 가능
+            {hasSummaryOnlySource(campaign) ? "요약 수집 정보" : "원문 확인 가능"}
           </div>
           <div className="statusLine">
             <CalendarDays size={17} />
@@ -611,7 +637,7 @@ function DetailView({
 
         <section className="sourceNotice">
           <Inbox size={17} />
-          이 정보는 {source?.source_name ?? "수집 출처"}에서 가져왔어요
+          {sourceDisclosureText(campaign)}
         </section>
 
         {sources.length > 1 && (
@@ -621,7 +647,7 @@ function DetailView({
               {sources.map((listing) => (
                 <a href={listing.source_url} target="_blank" rel="noreferrer" key={`${listing.source_code}-${listing.source_url}`}>
                   <span>{listing.source_name}</span>
-                  <small>{sourceStatusLabel(listing.status)}</small>
+                  <small>{sourceStatusLabel(listing.status)} · {sourceModeLabel(listing.source_mode)}</small>
                   <ArrowUpRight size={15} />
                 </a>
               ))}

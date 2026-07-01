@@ -2,9 +2,11 @@
 
 ## 실행 모드
 
-초기 크롤러는 `homepage_only_no_detail_fetch` 모드다.
+크롤러는 `source_mode_policy_no_detail_fetch` 모드다.
 
-- 각 소스의 허용된 홈페이지 URL만 요청한다.
+- `summary_only`: 허용된 홈페이지 또는 공개 목록 URL만 요청한다.
+- `full`: 향후 공식 API/RSS/허용 목록이 확인된 소스에 사용한다.
+- `candidate`, `blocked`: DB에는 seed하지만 자동 수집하지 않고 `skipped`로 기록한다.
 - 홈페이지 HTML 안에 이미 노출된 캠페인 카드 snippet만 추출한다.
 - 정보가 여러 anchor/sibling에 나뉜 소스는 캠페인 URL 기준 카드 컨테이너를 묶어서 추출한다.
 - robots에서 막힌 상세/목록 경로는 요청하지 않는다.
@@ -25,7 +27,10 @@
 크롤러 실행 흐름은 `crawler/crawl_sample.py`가 담당하고, 사이트별 HTML 해석은 `crawler/parsers/` 아래로 분리한다.
 
 - `crawler/parsers/common.py`: homepage anchor 기반 공통 추출, 이미지/마감/태그/해시 생성.
+- `crawler/parsers/dinnerqueen.py`: 디너의여왕 `/taste` 공개 목록의 `/taste/{id}` 링크 추출.
 - `crawler/parsers/reviewnote.py`: 리뷰노트 카드 컨테이너, 제목/보상 class, campaign id 추출.
+- `crawler/parsers/seoulouba.py`: 서울오빠 홈 화면의 `campaign/?c=` 링크 추출.
+- `crawler/parsers/modublog.py`: 모블 홈 화면의 `/product/{id}` 링크 추출.
 - `crawler/parsers/ringble.py`: 링블 table 카드 컨테이너, 제목/보상 table cell, number 추출.
 - `crawler/parsers/reviewplace.py`: 리뷰플레이스 제목/보상 class, id 추출.
 - `crawler/parsers/gangnammatzip.py`: 강남맛집 URL id 추출. robots 차단 시 parser는 호출되지 않는다.
@@ -125,6 +130,7 @@ python3 crawler/verify_supabase.py
 - `robots.txt`가 대상 URL을 막으면 `blocked_by_robots`로 기록하고 요청하지 않는다.
 - robots 차단은 기술적으로 항상 불가능하다는 뜻은 아니지만, 이 프로젝트에서는 우회하지 않는다. 허용 URL, 공식 API/RSS, 제휴, 수동 등록 같은 안전한 경로만 사용한다.
 - `blocked_by_robots` source는 자동 비활성화하지 않고 `sources.crawl_policy.status=blocked_by_robots_candidate`로 기록한다.
+- 일부 사이트는 Python TLS/인증서 체인 문제로 fetch가 실패할 수 있어, 동일 URL에 대해 `curl` fallback을 1회 사용한다. 이 fallback은 robots/홈 문서를 읽기 위한 것이며 차단 경로를 우회하지 않는다.
 - 1회 실패: 다음 run에서 재시도.
 - 3회 연속 실패: `sources.is_active=false` 전환 후보.
 - HTML 구조 변경으로 파싱 결과가 0건이면 실패가 아니라 `empty_parse`로 분리한다.
@@ -145,7 +151,9 @@ python3 crawler/verify_supabase.py
 
 ```text
 supabase/migrations/20260701_campaign_cards_active_sources.sql
+supabase/migrations/20260701_source_modes_in_campaign_cards.sql
 ```
 
-이 패치는 `campaign_cards.source_count`와 `source_listings` JSON을 active listing 기준으로 바꾸고,
+첫 번째 패치는 `campaign_cards.source_count`와 `source_listings` JSON을 active listing 기준으로 바꾸고,
 active listing이 없는 campaign을 즉시 `closed` 처리한다.
+두 번째 패치는 `campaign_cards.source_listings[]`에 `source_mode`와 `crawl_policy_status`를 노출한다.

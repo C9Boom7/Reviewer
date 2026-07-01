@@ -350,6 +350,7 @@ class HomepageParser:
                 "raw_payload": {
                     "homepage_text": text,
                     "homepage_url": source.target_url,
+                    "source_mode": getattr(source, "source_mode", "summary_only"),
                     "policy_note": source.policy_note,
                 },
                 "parsed_payload": {
