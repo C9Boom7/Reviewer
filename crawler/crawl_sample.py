@@ -91,10 +91,12 @@ def crawl_source(source: Source, limit: int) -> dict[str, Any]:
     try:
         page_html = fetch_html(source.target_url)
         items = extract_campaigns(source, page_html, limit=limit)
+        status = "ok" if items else "empty_parse"
+        reason = None if items else f"no campaign snippets matched parser {source.parser}"
         return {
             "source_code": source.code,
-            "status": "ok",
-            "reason": None,
+            "status": status,
+            "reason": reason,
             "started_at": started_at,
             "finished_at": now_iso(),
             "fetched_url": source.target_url,

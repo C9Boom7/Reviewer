@@ -145,7 +145,9 @@ def build_warnings(run_rows: list[dict[str, Any]], source_metrics: list[dict[str
     for row in run_rows:
         source = source_from_run_row(row)
         status = row.get("status")
-        if status not in {"ok", "blocked_by_robots", "skipped"}:
+        if status == "empty_parse":
+            warnings.append(f"{source.get('code') or 'unknown'} fetched the homepage but parsed 0 campaign cards.")
+        elif status not in {"ok", "blocked_by_robots", "skipped"}:
             warnings.append(f"{source.get('code') or 'unknown'} finished with status={status}.")
 
     for metric in source_metrics:

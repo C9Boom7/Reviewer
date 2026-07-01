@@ -404,6 +404,10 @@ def successful_source_codes(source_summaries: list[dict[str, Any]]) -> set[str]:
     }
 
 
+def is_error_status(status: str) -> bool:
+    return status not in {"ok", "empty_parse", "skipped"}
+
+
 def mark_blocked_sources(
     source_summaries: list[dict[str, Any]],
     source_configs: list[dict[str, Any]],
@@ -596,7 +600,7 @@ def sync(payload: dict[str, Any], source_configs: list[dict[str, Any]], client: 
                 "fetched_count": summary.get("item_count", 0),
                 "upserted_count": summary.get("item_count", 0) if summary["status"] == "ok" else 0,
                 "closed_count": closed_count,
-                "error_count": 0 if summary["status"] == "ok" else 1,
+                "error_count": 1 if is_error_status(summary["status"]) else 0,
                 "error_message": summary.get("reason"),
                 "meta": summary,
             }
