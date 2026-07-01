@@ -41,6 +41,15 @@ jobs:
           python3 crawler/sync_supabase.py \
             --input data/samples/campaigns.latest.json
 
+      - name: Verify Supabase sync
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: |
+          python3 crawler/verify_supabase.py \
+            --min-successful-sources 1 \
+            --min-active-campaigns 1
+
       - name: Upload crawl output
         if: always()
         uses: actions/upload-artifact@v4

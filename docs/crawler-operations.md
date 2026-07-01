@@ -68,14 +68,22 @@ Actions job 흐름:
 2. Python setup
 3. `python3 crawler/crawl_sample.py --out data/samples/campaigns.latest.json`
 4. `python3 crawler/sync_supabase.py --input data/samples/campaigns.latest.json`
-5. 성공/실패와 관계없이 artifact로 `campaigns.latest.json` 업로드
+5. `python3 crawler/verify_supabase.py`로 최신 run과 Supabase 반영 지표 검증
+6. 성공/실패와 관계없이 artifact로 `campaigns.latest.json` 업로드
 
 현재 workflow는 `.github/workflows/crawl-campaigns.yml`에 있다.
+검증 결과는 GitHub Actions run의 Summary에서 `Supabase crawl verification` 표로 확인한다.
 
 로컬에서 Supabase 쓰기 없이 매핑만 확인하려면:
 
 ```bash
 python3 crawler/sync_supabase.py --dry-run --input data/samples/campaigns.sample.json
+```
+
+Supabase secret이 있는 환경에서는 아래처럼 반영 상태만 직접 확인할 수 있다.
+
+```bash
+python3 crawler/verify_supabase.py
 ```
 
 실제 Supabase 쓰기는 GitHub Actions에서 service role key로만 수행한다.
