@@ -95,7 +95,16 @@ Actions job 흐름:
 6. 성공/실패와 관계없이 artifact로 `campaigns.latest.json` 업로드
 
 현재 workflow는 `.github/workflows/crawl-campaigns.yml`에 있다.
-검증 결과는 GitHub Actions run의 Summary에서 `Supabase crawl verification` 표로 확인한다.
+검증 결과는 GitHub Actions run의 Summary에서 `Supabase crawl operations dashboard`로 확인한다.
+
+대시보드는 아래 내용을 보여준다.
+
+- 최신 run과 이전 run id
+- source 상태 요약과 전회 대비 delta
+- source별 `ok`, `empty_parse`, `blocked_by_robots`, `error` 신호
+- source listing 필드 coverage
+- campaign card 필드 coverage
+- parser 0건, orphan card, 필수 필드 누락 warning
 
 로컬에서 Supabase 쓰기 없이 매핑만 확인하려면:
 

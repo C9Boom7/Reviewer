@@ -42,6 +42,24 @@ def select_latest_run_id(client: SupabaseClient) -> str | None:
     return rows[0].get("github_run_id")
 
 
+def select_previous_run_id(client: SupabaseClient, current_run_id: str | None) -> str | None:
+    if not current_run_id:
+        return None
+    encoded_run_id = encode(current_run_id)
+    rows = client.request(
+        "GET",
+        "/crawler_runs"
+        "?select=github_run_id"
+        "&github_run_id=not.is.null"
+        f"&github_run_id=not.eq.{encoded_run_id}"
+        "&order=finished_at.desc"
+        "&limit=1",
+    )
+    if not rows:
+        return None
+    return rows[0].get("github_run_id")
+
+
 def select_run_rows(client: SupabaseClient, github_run_id: str | None) -> list[dict[str, Any]]:
     run_id = github_run_id or select_latest_run_id(client)
     if not run_id:
@@ -137,6 +155,72 @@ def source_from_run_row(row: dict[str, Any]) -> dict[str, str | None]:
     return {"code": meta.get("source_code"), "name": meta.get("source_code")}
 
 
+def int_value(value: Any) -> int:
+    try:
+        return int(value or 0)
+    except (TypeError, ValueError):
+        return 0
+
+
+def format_percent(part: int, total: int) -> str:
+    if total <= 0:
+        return "n/a"
+    return f"{(part / total) * 100:.1f}%"
+
+
+def coverage_cell(part: int, total: int) -> str:
+    return f"{part}/{total} ({format_percent(part, total)})"
+
+
+def delta_cell(current: int, previous: int | None) -> str:
+    if previous is None:
+        return "n/a"
+    delta = current - previous
+    if delta > 0:
+        return f"+{delta}"
+    return str(delta)
+
+
+def run_totals(run_rows: list[dict[str, Any]]) -> dict[str, int]:
+    return {
+        "sources": len(run_rows),
+        "ok_sources": sum(1 for row in run_rows if row.get("status") == "ok"),
+        "empty_parse_sources": sum(1 for row in run_rows if row.get("status") == "empty_parse"),
+        "blocked_sources": sum(1 for row in run_rows if row.get("status") == "blocked_by_robots"),
+        "error_sources": sum(1 for row in run_rows if int_value(row.get("error_count")) > 0),
+        "fetched": sum(int_value(row.get("fetched_count")) for row in run_rows),
+        "upserted": sum(int_value(row.get("upserted_count")) for row in run_rows),
+        "closed": sum(int_value(row.get("closed_count")) for row in run_rows),
+    }
+
+
+def status_label(status: str | None) -> str:
+    labels = {
+        "ok": "[OK] ok",
+        "empty_parse": "[WARN] empty_parse",
+        "blocked_by_robots": "[BLOCKED] blocked_by_robots",
+        "skipped": "[SKIP] skipped",
+        "error": "[ERROR] error",
+    }
+    return labels.get(str(status), f"[UNKNOWN] {status}")
+
+
+def quality_signal(row: dict[str, Any]) -> str:
+    status = row.get("status")
+    fetched_count = int_value(row.get("fetched_count"))
+    if status == "ok" and fetched_count > 0:
+        return "healthy"
+    if status == "ok":
+        return "ok but no fetched rows"
+    if status == "empty_parse":
+        return "parser returned 0 cards"
+    if status == "blocked_by_robots":
+        return "request skipped by policy"
+    if status == "skipped":
+        return "source inactive"
+    return "needs attention"
+
+
 def build_warnings(run_rows: list[dict[str, Any]], source_metrics: list[dict[str, Any]], campaign_metrics: dict[str, int]) -> list[str]:
     warnings: list[str] = []
     if not run_rows:
@@ -179,16 +263,36 @@ def markdown_table(headers: list[str], rows: list[list[Any]]) -> str:
 
 def build_markdown(result: dict[str, Any]) -> str:
     run_rows = result["run_rows"]
+    previous_run_rows = result.get("previous_run_rows", [])
     source_metrics = result["source_metrics"]
     campaign_metrics = result["campaign_metrics"]
     warnings = result["warnings"]
+    totals = run_totals(run_rows)
+    previous_totals = run_totals(previous_run_rows) if previous_run_rows else None
+
+    overview_table = markdown_table(
+        ["metric", "current", "previous delta"],
+        [
+            ["sources checked", totals["sources"], delta_cell(totals["sources"], previous_totals["sources"] if previous_totals else None)],
+            ["ok sources", totals["ok_sources"], delta_cell(totals["ok_sources"], previous_totals["ok_sources"] if previous_totals else None)],
+            ["empty parse sources", totals["empty_parse_sources"], delta_cell(totals["empty_parse_sources"], previous_totals["empty_parse_sources"] if previous_totals else None)],
+            ["blocked sources", totals["blocked_sources"], delta_cell(totals["blocked_sources"], previous_totals["blocked_sources"] if previous_totals else None)],
+            ["fetched listings", totals["fetched"], delta_cell(totals["fetched"], previous_totals["fetched"] if previous_totals else None)],
+            ["upserted listings", totals["upserted"], delta_cell(totals["upserted"], previous_totals["upserted"] if previous_totals else None)],
+            ["closed stale listings", totals["closed"], delta_cell(totals["closed"], previous_totals["closed"] if previous_totals else None)],
+            ["rows with error_count", totals["error_sources"], delta_cell(totals["error_sources"], previous_totals["error_sources"] if previous_totals else None)],
+            ["active campaign cards", campaign_metrics["active_count"], "n/a"],
+            ["cards without active source", campaign_metrics["without_active_sources"], "n/a"],
+        ],
+    )
 
     run_table = markdown_table(
-        ["source", "status", "fetched", "upserted", "closed", "errors", "message"],
+        ["source", "status", "signal", "fetched", "upserted", "closed", "errors", "message"],
         [
             [
                 source_from_run_row(row).get("code"),
-                row.get("status"),
+                status_label(row.get("status")),
+                quality_signal(row),
                 row.get("fetched_count"),
                 row.get("upserted_count"),
                 row.get("closed_count"),
@@ -205,10 +309,10 @@ def build_markdown(result: dict[str, Any]) -> str:
                 metric["code"],
                 metric["active_count"],
                 metric["removed_count"],
-                metric["with_image"],
-                metric["with_deadline"],
-                metric["with_reward"],
-                metric["with_location"],
+                coverage_cell(metric["with_image"], metric["active_count"]),
+                coverage_cell(metric["with_deadline"], metric["active_count"]),
+                coverage_cell(metric["with_reward"], metric["active_count"]),
+                coverage_cell(metric["with_location"], metric["active_count"]),
             ]
             for metric in source_metrics
         ],
@@ -219,23 +323,26 @@ def build_markdown(result: dict[str, Any]) -> str:
             [
                 campaign_metrics["active_count"],
                 campaign_metrics["without_active_sources"],
-                campaign_metrics["with_image"],
-                campaign_metrics["with_deadline"],
-                campaign_metrics["with_reward"],
-                campaign_metrics["with_location"],
+                coverage_cell(campaign_metrics["with_image"], campaign_metrics["active_count"]),
+                coverage_cell(campaign_metrics["with_deadline"], campaign_metrics["active_count"]),
+                coverage_cell(campaign_metrics["with_reward"], campaign_metrics["active_count"]),
+                coverage_cell(campaign_metrics["with_location"], campaign_metrics["active_count"]),
             ]
         ],
     )
     warning_lines = "\n".join(f"- {warning}" for warning in warnings) if warnings else "- No warnings."
     return "\n\n".join(
         [
-            "## Supabase crawl verification",
+            "## Supabase crawl operations dashboard",
             f"GitHub run id: `{result['github_run_id'] or 'latest'}`",
+            f"Previous run id: `{result.get('previous_github_run_id') or 'n/a'}`",
+            "### Operation summary",
+            overview_table,
             "### Latest crawler runs",
             run_table,
-            "### Source listings",
+            "### Source listing coverage",
             listing_table,
-            "### Campaign cards",
+            "### Campaign card coverage",
             campaign_table,
             "### Warnings",
             warning_lines,
@@ -277,12 +384,17 @@ def main() -> None:
     args = parser.parse_args()
 
     client = build_client(args)
-    run_rows = select_run_rows(client, args.github_run_id)
+    github_run_id = args.github_run_id or select_latest_run_id(client)
+    previous_github_run_id = select_previous_run_id(client, github_run_id)
+    run_rows = select_run_rows(client, github_run_id)
+    previous_run_rows = select_run_rows(client, previous_github_run_id) if previous_github_run_id else []
     source_metrics = source_listing_metrics(client)
     campaign_metrics = campaign_card_metrics(client)
     result = {
-        "github_run_id": args.github_run_id,
+        "github_run_id": github_run_id,
+        "previous_github_run_id": previous_github_run_id,
         "run_rows": run_rows,
+        "previous_run_rows": previous_run_rows,
         "source_metrics": source_metrics,
         "campaign_metrics": campaign_metrics,
         "warnings": [],
