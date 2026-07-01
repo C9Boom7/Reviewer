@@ -258,7 +258,7 @@ def metadata_from_text(text: str) -> dict[str, Any]:
 
     applicant_count = None
     recruit_count = None
-    count_match = re.search(r"신청\s*([\d,]+)\s*명?\s*/\s*(?:모집\s*)?([\d,]+)\s*명", text)
+    count_match = re.search(r"신청\s*([\d,]+)\s*명?\s*/\s*(?:모집\s*)?([\d,]+)\s*명?", text)
     if count_match:
         applicant_count = int(count_match.group(1).replace(",", ""))
         recruit_count = int(count_match.group(2).replace(",", ""))
@@ -316,7 +316,48 @@ def first_class_text(block: str, class_name: str) -> str | None:
     return value or None
 
 
+def class_texts(block: str, class_name: str) -> list[str]:
+    pattern = re.compile(
+        rf"<(?P<tag>[a-z0-9]+)\b[^>]*\bclass=[\"'][^\"']*\b{re.escape(class_name)}\b[^\"']*[\"'][^>]*>(?P<body>.*?)</(?P=tag)>",
+        flags=re.I | re.S,
+    )
+    values = []
+    for match in pattern.finditer(block):
+        value = clean_text(match.group("body"))
+        if value:
+            values.append(value)
+    return values
+
+
+def looks_like_deadline_text(value: str) -> bool:
+    return bool(re.search(r"오늘\s*마감|오늘마감|\bD\s*[-–]\s*(?:DAY|\d+)\b|-?\d+\s*일\s*남음", value, flags=re.I))
+
+
+def ringble_reward_text(block: str) -> str | None:
+    pattern = re.compile(
+        r"<td\b[^>]*color\s*:\s*#aaaaaa[^>]*>(?P<body>.*?)</td>",
+        flags=re.I | re.S,
+    )
+    for match in pattern.finditer(block):
+        value = clean_text(match.group("body")).strip()
+        if value and not re.search(r"신청|모집", value):
+            return value
+    return None
+
+
 def preferred_title_and_reward(source_code: str, block: str, fallback_text: str) -> tuple[str, str | None]:
+    if source_code == "reviewnote":
+        title = first_class_text(block, "text-16m")
+        reward = first_class_text(block, "text-14r")
+        if title:
+            return normalize_title(title), reward
+
+    if source_code == "ringble":
+        title = next((value for value in class_texts(block, "list_title") if not looks_like_deadline_text(value)), None)
+        reward = ringble_reward_text(block)
+        if title:
+            return normalize_title(title), reward
+
     if source_code == "reviewplace":
         title = first_class_text(block, "tit")
         reward = first_class_text(block, "txt")
@@ -330,6 +371,26 @@ def preferred_title_and_reward(source_code: str, block: str, fallback_text: str)
             return normalize_title(title), reward
 
     return normalize_title(fallback_text), None
+
+
+def card_block_for_anchor(source_code: str, page_html: str, match: re.Match[str]) -> str:
+    markers = {
+        "reviewnote": '<div class="relative pl-[2.5px]">',
+        "ringble": "<td width='240' class='store_list_wrap'",
+    }
+    marker = markers.get(source_code)
+    if not marker:
+        return match.group("body")
+
+    start = page_html.rfind(marker, 0, match.start())
+    if start == -1:
+        return match.group("body")
+
+    next_start = page_html.find(marker, match.end())
+    if next_start == -1:
+        max_lengths = {"reviewnote": 7000, "ringble": 4000}
+        next_start = min(len(page_html), start + max_lengths.get(source_code, 5000))
+    return page_html[start:next_start]
 
 
 def extract_campaigns(source: Source, page_html: str, limit: int) -> list[dict[str, Any]]:
@@ -347,8 +408,9 @@ def extract_campaigns(source: Source, page_html: str, limit: int) -> list[dict[s
 
         normalized_url = normalize_url(source.target_url, href)
         body = match.group("body")
-        text = clean_text(body)
-        image_url = extract_image(body, source.target_url)
+        card_block = card_block_for_anchor(source.code, page_html, match)
+        text = clean_text(card_block)
+        image_url = extract_image(card_block, source.target_url)
         if image_url:
             image_by_url[normalized_url] = image_url
             if normalized_url in grouped and not grouped[normalized_url].get("image_url"):
@@ -361,7 +423,7 @@ def extract_campaigns(source: Source, page_html: str, limit: int) -> list[dict[s
         if not text or text in {"더보기", "More View"}:
             continue
 
-        title, reward_summary = preferred_title_and_reward(source.code, body, text)
+        title, reward_summary = preferred_title_and_reward(source.code, card_block, text)
         if len(title) < 3 or title.lower() in {"campaign"} or title in {"캠페인", "캠페인 이미지", "인기 캠페인"}:
             continue
 

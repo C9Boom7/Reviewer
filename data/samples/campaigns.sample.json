@@ -1,40 +1,39 @@
 {
-  "generated_at": "2026-07-01T09:43:20.486478+00:00",
+  "generated_at": "2026-07-01T10:05:19.740880+00:00",
   "crawl_mode": "homepage_only_no_detail_fetch",
   "source_summaries": [
     {
       "source_code": "reviewnote",
       "status": "ok",
       "reason": null,
-      "started_at": "2026-07-01T09:43:11.744344+00:00",
-      "finished_at": "2026-07-01T09:43:12.188816+00:00",
+      "started_at": "2026-07-01T10:05:09.446049+00:00",
+      "finished_at": "2026-07-01T10:05:09.915516+00:00",
       "fetched_url": "https://www.reviewnote.co.kr/",
       "item_count": 24
     },
     {
       "source_code": "gangnammatzip",
-      "status": "ok",
-      "reason": null,
-      "started_at": "2026-07-01T09:43:13.193882+00:00",
-      "finished_at": "2026-07-01T09:43:13.825827+00:00",
-      "fetched_url": "https://xn--939au0g4vj8sq.net/",
-      "item_count": 30
+      "status": "blocked_by_robots",
+      "reason": "robots.txt does not allow fetching https://xn--939au0g4vj8sq.net/",
+      "started_at": "2026-07-01T10:05:11.420553+00:00",
+      "finished_at": "2026-07-01T10:05:11.487690+00:00",
+      "item_count": 0
     },
     {
       "source_code": "ringble",
       "status": "ok",
       "reason": null,
-      "started_at": "2026-07-01T09:43:14.830915+00:00",
-      "finished_at": "2026-07-01T09:43:16.096796+00:00",
+      "started_at": "2026-07-01T10:05:12.992788+00:00",
+      "finished_at": "2026-07-01T10:05:14.147009+00:00",
       "fetched_url": "https://www.ringble.co.kr/",
-      "item_count": 30
+      "item_count": 36
     },
     {
       "source_code": "reviewplace",
       "status": "ok",
       "reason": null,
-      "started_at": "2026-07-01T09:43:17.101832+00:00",
-      "finished_at": "2026-07-01T09:43:19.024157+00:00",
+      "started_at": "2026-07-01T10:05:15.652045+00:00",
+      "finished_at": "2026-07-01T10:05:16.048762+00:00",
       "fetched_url": "https://www.reviewplace.co.kr/",
       "item_count": 20
     },
@@ -42,8 +41,8 @@
       "source_code": "tble",
       "status": "ok",
       "reason": null,
-      "started_at": "2026-07-01T09:43:20.032030+00:00",
-      "finished_at": "2026-07-01T09:43:20.486471+00:00",
+      "started_at": "2026-07-01T10:05:17.553807+00:00",
+      "finished_at": "2026-07-01T10:05:19.740871+00:00",
       "fetched_url": "https://tble.kr/",
       "item_count": 28
     }
@@ -59,13 +58,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F619338dd-c2a4-4bea-b333-0b3b6d773f68?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-31T14:59:59+00:00",
+      "reward_summary": "LG전자 퓨리케어 360도 Hit 공기청정기 (정가 731,000원)",
       "location_text": "재택",
-      "content_hash": "c35e2fd22babb055720298db04427acd68c15c3a7cc17668601a7c2a2776b0f1",
+      "content_hash": "655c2f4dfe57af0b78a85c8b0dd5071d86dd4b729c06d86f73c63c105a99b6c8",
       "dedup_key": "1814d35d57ddc6cab7fd277633875f0a8629b6ee9a76613b521d27f2f6053d13",
       "raw_payload": {
-        "homepage_text": "[재택] LG전자 퓨리케어 360도 Hit 공기청정기",
+        "homepage_text": "30 일 남음 신청 1684 / 1 배송형 [재택] LG전자 퓨리케어 360도 Hit 공기청정기 LG전자 퓨리케어 360도 Hit 공기청정기 (정가 731,000원)",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -78,9 +77,9 @@
         "source_categories": [
           "재택"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "30 일 남음",
+        "applicant_count": 1684,
+        "recruit_count": 1,
         "reward_points": null
       }
     },
@@ -94,13 +93,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F9d7c4aee-51b8-4336-97da-3297aa49e367?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-11T14:59:59+00:00",
+      "reward_summary": "20만 포인트",
       "location_text": "경기 김포시",
-      "content_hash": "16a86720f2e238f6fcb6e39ea56040dfa1427d3e22fa0dab43cef171ba751cba",
+      "content_hash": "fc3852929e6518b0109f42be712f89c8d530b204d1cd1e3f2cb8a666100d6800",
       "dedup_key": "a610768e3f2e1268cbbb4c800c4e572ec553cf7bd625ae01b6672c5db409ecf1",
       "raw_payload": {
-        "homepage_text": "[경기/김포시] 옷파는야옹이",
+        "homepage_text": "10 일 남음 신청 68 / 5 방문형 [경기/김포시] 옷파는야옹이 20만 포인트 200,000 P",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -116,10 +115,10 @@
           "경기",
           "김포시"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "10 일 남음",
+        "applicant_count": 68,
+        "recruit_count": 5,
+        "reward_points": 200000
       }
     },
     {
@@ -132,13 +131,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2Fc44d31bc-5745-40ab-bcf4-c684e6e7477c?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-03T14:59:59+00:00",
+      "reward_summary": "9만원 식사권 +200,000P 지급",
       "location_text": "서울 서초구",
-      "content_hash": "a60318d4ece9b8d50935690081ca6c675c22e0636720b9b8336cc88e46a83ad4",
+      "content_hash": "4a163cb60122ca98e8576042c1907ece2521ce214eec542c71d533fd93e67b72",
       "dedup_key": "b7c778fd7cc7a13443421700de6aa9facd5ac01c29728278eb91e77b6e2e51ab",
       "raw_payload": {
-        "homepage_text": "[서울/서초구] 반포로스",
+        "homepage_text": "2 일 남음 신청 569 / 2 방문형 [서울/서초구] 반포로스 9만원 식사권 +200,000P 지급 200,000 P 인기 체험단 더보기",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -154,10 +153,10 @@
           "서울",
           "서초구"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "2 일 남음",
+        "applicant_count": 569,
+        "recruit_count": 2,
+        "reward_points": 200000
       }
     },
     {
@@ -170,13 +169,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F0471bd15-2663-4df9-a84a-326dfceae7b6?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-03T14:59:59+00:00",
+      "reward_summary": "대극천 K-납작 딱딱이 복숭아 선물 1kg 6~7입 / 42,700원(배송비 포함)",
       "location_text": "재택",
-      "content_hash": "db5b3555e1e78ae1313e03c4e93ad7f788181ac6b0b1ded5a8427ddbde2e8117",
+      "content_hash": "72abbc6a7e78fb013550a0b1a50037ca9daa26776a69fa75b6ead3b62d34e3ee",
       "dedup_key": "63ddfd394891667a2b5a8b8bbc9ed0176120473ff9e8ebbfed9d2707d393642e",
       "raw_payload": {
-        "homepage_text": "[재택] (주)자연의모든것",
+        "homepage_text": "2 일 남음 신청 2859 / 5 배송형 [재택] (주)자연의모든것 대극천 K-납작 딱딱이 복숭아 선물 1kg 6~7입 / 42,700원(배송비 포함)",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -189,9 +188,9 @@
         "source_categories": [
           "재택"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "2 일 남음",
+        "applicant_count": 2859,
+        "recruit_count": 5,
         "reward_points": null
       }
     },
@@ -205,13 +204,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F0ab7323a-d2df-4b78-873e-d642294c25bb?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-03T14:59:59+00:00",
+      "reward_summary": "프리미엄 백도 복숭아 1kg 4~5입 특품 / 35,700원(배송비 포함)",
       "location_text": "재택",
-      "content_hash": "92673d1bad750a21cad00bd6addbf0b85d8a8b2208723964b60fc813ac545b4f",
+      "content_hash": "3a87757217a66bd7005a3887f01b9a7a6a0691e459f224342f086503110c9011",
       "dedup_key": "8fd3d556cbb650d1e3de0d6a5553833f3123224cdf8b9a8bfd87529f73308797",
       "raw_payload": {
-        "homepage_text": "[재택] (주)자연의모든것",
+        "homepage_text": "2 일 남음 신청 2390 / 5 배송형 [재택] (주)자연의모든것 프리미엄 백도 복숭아 1kg 4~5입 특품 / 35,700원(배송비 포함)",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -224,9 +223,9 @@
         "source_categories": [
           "재택"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "2 일 남음",
+        "applicant_count": 2390,
+        "recruit_count": 5,
         "reward_points": null
       }
     },
@@ -240,13 +239,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F7efd2786-da1c-4309-9679-4c9ad83b558a?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "* 고당도 자두 1kg",
       "location_text": "재택",
-      "content_hash": "681ada874f4670a9e903433134d1739ebec699534edbc7afe885f9bca86b084b",
+      "content_hash": "528293793a58002522bd7b97f9cd2b11e2725467076e88f7cbf757de06b8651b",
       "dedup_key": "5fa980dc1db77f91b8e19e66ce3ef835b1920a3546eb860ae5b1189bca09f007",
       "raw_payload": {
-        "homepage_text": "[재택] 프리미엄과일 한들애",
+        "homepage_text": "1 일 남음 신청 2176 / 10 배송형 [재택] 프리미엄과일 한들애 * 고당도 자두 1kg",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -259,9 +258,9 @@
         "source_categories": [
           "재택"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "1 일 남음",
+        "applicant_count": 2176,
+        "recruit_count": 10,
         "reward_points": null
       }
     },
@@ -275,13 +274,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2Fbce6d8e8-5574-4ef0-b466-df465bb736ca?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "저당 오늘은 현미주먹밥 베스트 10종 (곤약치킨데리야끼/햄김치/곤약참치마요/오므라이스/고추참치/소고기고추장/소불고기/곤약김치치즈/전주식비빔/김자반멸치볶음) (38,800원)",
       "location_text": "재택",
-      "content_hash": "5208feb509d0a34db8e9bb672c5ed2b3bf8211b0353f2f9bfb003a28d75f536b",
+      "content_hash": "429678147d6bd36357d937655391d332aed00131ee2709cd7a0bd5e7837003c9",
       "dedup_key": "b12394cf2fb88afa3208c5dfe6431ca084ce51bf67df4f27d90251591c75c92f",
       "raw_payload": {
-        "homepage_text": "[재택] 다신샵",
+        "homepage_text": "5 일 남음 신청 1949 / 10 배송형 [재택] 다신샵 저당 오늘은 현미주먹밥 베스트 10종 (곤약치킨데리야끼/햄김치/곤약참치마요/오므라이스/고추참치/소고기고추장/소불고기/곤약김치치즈/전주식비빔/김자반멸치볶음) (38,800원)",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -294,9 +293,9 @@
         "source_categories": [
           "재택"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "5 일 남음",
+        "applicant_count": 1949,
+        "recruit_count": 10,
         "reward_points": null
       }
     },
@@ -310,13 +309,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2Fe432d6a2-a50e-4caf-b2a9-4fa0b94a8fab?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "스탠다드 코스 2인 258,000원",
       "location_text": "서울 영등포구",
-      "content_hash": "89c727f3916a5e57a4459774de3d48d489558fbaa1d9c6c71525321ae7ac7466",
+      "content_hash": "50f5baa58f9b308cf4102763666fe65d710a52df0982bd59945435681106ebce",
       "dedup_key": "d152315fe29a62c118482284e514e8b23056d5d0838a7f6991ff37b553cb68d4",
       "raw_payload": {
-        "homepage_text": "[서울/영등포구] 모도우 여의도점",
+        "homepage_text": "1 일 남음 신청 1632 / 15 방문형 [서울/영등포구] 모도우 여의도점 스탠다드 코스 2인 258,000원",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -332,9 +331,9 @@
           "서울",
           "영등포구"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "1 일 남음",
+        "applicant_count": 1632,
+        "recruit_count": 15,
         "reward_points": null
       }
     },
@@ -348,13 +347,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2Ffcb92c64-8368-44c7-909f-5ce08fd4d4b9?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-03T14:59:59+00:00",
+      "reward_summary": "고당도 하우스 감귤 선물 1.5kg 이상 (18 - 24입 / 13brix) / 32,800원(배송비 포함)",
       "location_text": "재택",
-      "content_hash": "d76ea7c01cedf1393ba4b0ae0112dabd19f4c0f21a0b9eb85209d357aa15c50d",
+      "content_hash": "f525c863e278bb3a30f75438764486b1e18c573377a82803b3885394f581503f",
       "dedup_key": "13f9f0fa305b5b4892ae47b0fe526273fc99593055a3362ea4dcfdc03007c533",
       "raw_payload": {
-        "homepage_text": "[재택] (주)자연의모든것",
+        "homepage_text": "2 일 남음 신청 1618 / 5 배송형 [재택] (주)자연의모든것 고당도 하우스 감귤 선물 1.5kg 이상 (18 - 24입 / 13brix) / 32,800원(배송비 포함)",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -367,9 +366,9 @@
         "source_categories": [
           "재택"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "2 일 남음",
+        "applicant_count": 1618,
+        "recruit_count": 5,
         "reward_points": null
       }
     },
@@ -383,13 +382,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F8c3f1e8b-bf26-4ad1-97c4-59270e02692e?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "다용도 서랍한칸 수납장 (올화이트) 162,000원",
       "location_text": "재택",
-      "content_hash": "c714548c2e68494cfd3c511d9daeece15195aaa092cbc84f434d5ffc29bcfdfb",
+      "content_hash": "87c3eda2805f57452ef2a1659a2bd58485c0e7ad3684057ff87fab36ff303c0d",
       "dedup_key": "a462b01ae0d2bc0b918fe7925f5061d6e8b7db08bf78abcb7eb85e236ecfc3de",
       "raw_payload": {
-        "homepage_text": "[재택] [가구]간식 보관함 서랍한칸 수납장(올화이트 컬러)",
+        "homepage_text": "1 일 남음 신청 1386 / 1 배송형 [재택] [가구]간식 보관함 서랍한칸 수납장(올화이트 컬러) 다용도 서랍한칸 수납장 (올화이트) 162,000원",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -403,9 +402,9 @@
           "가구",
           "재택"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "1 일 남음",
+        "applicant_count": 1386,
+        "recruit_count": 1,
         "reward_points": null
       }
     },
@@ -419,13 +418,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2Ff2a64861-f6c2-4a75-b8ca-62ebe961fd48?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "스탠다드 코스 2인 258,000원",
       "location_text": "서울 종로구",
-      "content_hash": "50c601d628444b8493f4b4688f5dcbd8f1301602471d5adb550c4f71d870dc7c",
+      "content_hash": "1362dffc00485f20b2a3b7f42f8259968c44b930dd960952a96a5f7426235de7",
       "dedup_key": "996601ddb81073131e85debba62193f2254f35509ab023ac1de35c322daf8374",
       "raw_payload": {
-        "homepage_text": "[서울/종로구] 모도우 광화문점",
+        "homepage_text": "1 일 남음 신청 1293 / 15 방문형 [서울/종로구] 모도우 광화문점 스탠다드 코스 2인 258,000원 마감 임박 체험단 더보기",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -441,9 +440,9 @@
           "서울",
           "종로구"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "1 일 남음",
+        "applicant_count": 1293,
+        "recruit_count": 15,
         "reward_points": null
       }
     },
@@ -458,12 +457,12 @@
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F47f98e53-84b0-4a4a-9752-937da043d795?alt=media",
       "application_deadline_at": null,
-      "reward_summary": null,
+      "reward_summary": "뼈 없는 닭갈비 2인분, 고구마무스치즈, 막국수+감자전 세트, 쫄면or우동사리, 볶음밥",
       "location_text": "경기 의정부시",
-      "content_hash": "e95560c52d7f58fed6d0aa5d591dec543bcfd7ca2b6912aa45fded0ff8b0bdaa",
+      "content_hash": "33fee5227178e18f98c2f30cf15f7e8769ce29ccfd0de28c511acb4c91e9a62e",
       "dedup_key": "85f8c7986b2e01476d035d6db62c37d4423b18ba4fa653436375dbd20b6c4476",
       "raw_payload": {
-        "homepage_text": "[경기/의정부시] 거시기닭갈비 민락점",
+        "homepage_text": "오늘 선정 마감 신청 50 / 1 방문형 [경기/의정부시] 거시기닭갈비 민락점 뼈 없는 닭갈비 2인분, 고구마무스치즈, 막국수+감자전 세트, 쫄면or우동사리, 볶음밥 50,000 P",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -480,9 +479,9 @@
           "의정부시"
         ],
         "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "applicant_count": 50,
+        "recruit_count": 1,
+        "reward_points": 50000
       }
     },
     {
@@ -496,12 +495,12 @@
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F7b6880e6-fe52-405b-a16d-5cc7c0bda3c8?alt=media",
       "application_deadline_at": null,
-      "reward_summary": null,
+      "reward_summary": "오버웨잇 타르트 4p [1박스](26,500원)+아메리카노1잔 (5,000원)",
       "location_text": "강원 강릉시",
-      "content_hash": "2c9f4139b7c8b920fa8374347e9742c42878f68c0c8a41956d7be878d5e64c2e",
+      "content_hash": "4aff37a84c1f9e2204345206ec13144c31efb2d6afe469f78d83cef8bd0ded0e",
       "dedup_key": "347f7db9c283036db9654deee754b0dfdecfba53ecac7879b0f712f0133c2846",
       "raw_payload": {
-        "homepage_text": "[강원/강릉시] 오버웨잇 강릉본점",
+        "homepage_text": "오늘 선정 마감 신청 37 / 2 방문형 [강원/강릉시] 오버웨잇 강릉본점 오버웨잇 타르트 4p [1박스](26,500원)+아메리카노1잔 (5,000원) 50,000 P",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -514,13 +513,14 @@
           "visit"
         ],
         "source_categories": [
+          "1박스",
           "강릉시",
           "강원"
         ],
         "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "applicant_count": 37,
+        "recruit_count": 2,
+        "reward_points": 4
       }
     },
     {
@@ -534,12 +534,12 @@
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F3cd847e9-c03a-4e79-81db-1b8a67735547?alt=media",
       "application_deadline_at": null,
-      "reward_summary": null,
+      "reward_summary": "뒷고기2인분+꼬들살2인분 42000원",
       "location_text": "경북 김천시",
-      "content_hash": "08f82379b7f9242a1863ff6f79798af8421ed90d7e6e4f5c634a6b894e171879",
+      "content_hash": "1120343c9be44f97608a9ab976303eab767b8f43ce67f0c6ef6a2cc9a24e93a7",
       "dedup_key": "28c42bfde626a1e723bf0b26c53a81455d791f7f67a9752fe365d52ae2df3072",
       "raw_payload": {
-        "homepage_text": "[경북/김천시] 고깃간",
+        "homepage_text": "오늘 선정 마감 선착순 1 / 5 페이백 [경북/김천시] 고깃간 뒷고기2인분+꼬들살2인분 42000원 90 % 4,200 42,000 페이백 37,800 P",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -558,7 +558,7 @@
         "deadline_text": null,
         "applicant_count": null,
         "recruit_count": null,
-        "reward_points": null
+        "reward_points": 37800
       }
     },
     {
@@ -572,12 +572,12 @@
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2Febf3d44a-3136-4919-957a-0f856975f156?alt=media",
       "application_deadline_at": null,
-      "reward_summary": null,
+      "reward_summary": "책구매 15000원",
       "location_text": "제주 제주시",
-      "content_hash": "8a032dfdad709735e152d737268e7c4d990975b6171d29be004027711d7c9cee",
+      "content_hash": "cb01f16c85e8353880aefa4136dc61e44563ce7486dcb4a638570f2d97cb1769",
       "dedup_key": "9a6b29a9eba17e8aef8c76e68d949a2c0badc9240adf29f422d5b42eed8093fc",
       "raw_payload": {
-        "homepage_text": "[제주/제주시] 부아르와인상점 & 부아르책방",
+        "homepage_text": "오늘 선정 마감 선착순 1 / 5 페이백 [제주/제주시] 부아르와인상점 & 부아르책방 책구매 15000원 70 % 4,500 15,000 페이백 10,500 P",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -596,7 +596,7 @@
         "deadline_text": null,
         "applicant_count": null,
         "recruit_count": null,
-        "reward_points": null
+        "reward_points": 10500
       }
     },
     {
@@ -610,12 +610,12 @@
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2Fe0f212c1-5644-4896-aaa5-1b576ea235dd?alt=media",
       "application_deadline_at": null,
-      "reward_summary": null,
+      "reward_summary": "1회당 단가 210000만원, 대체의학 접목 필라테스 2회 제공",
       "location_text": "경기 성남시",
-      "content_hash": "5b9e6581b1ec11389cfe2516449d9bf00cfde1c19397fec065707d4fd1aba2d9",
+      "content_hash": "2daf9f749263b405e9cfdc49a51e9760e37742cb4dc8aeccf4b443cbdc83b59b",
       "dedup_key": "ce8fcbba5506294c8dc975eae4ae99b72498f5609495ecca608e0f330168e305",
       "raw_payload": {
-        "homepage_text": "[경기/성남시] 아이엘필라테스",
+        "homepage_text": "오늘 선정 마감 신청 2 / 10 방문형 [경기/성남시] 아이엘필라테스 1회당 단가 210000만원, 대체의학 접목 필라테스 2회 제공 10,000 P",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -632,9 +632,9 @@
           "성남시"
         ],
         "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "applicant_count": 2,
+        "recruit_count": 10,
+        "reward_points": 10000
       }
     },
     {
@@ -648,12 +648,12 @@
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F70c4a91c-1c99-4a1a-8a34-94c24d726288?alt=media",
       "application_deadline_at": null,
-      "reward_summary": null,
+      "reward_summary": "장어. 파김치,장어탕 8만원상당식사",
       "location_text": "부산 부산진구",
-      "content_hash": "8ed6d7271e7c205881e4c3dfdead421462a140117e50f4c450b8888d19770834",
+      "content_hash": "16045d3e60185f78d35e3aa8dc6c3cf9a84f2ce588fb771460da43d4f683a705",
       "dedup_key": "07cbe3ddb4276a07daafa46ff4191934d135e08bdc6195bccc3b5a00bcf20c02",
       "raw_payload": {
-        "homepage_text": "[부산/부산진구] 최풍장",
+        "homepage_text": "오늘 선정 마감 신청 53 / 3 방문형 [부산/부산진구] 최풍장 장어. 파김치,장어탕 8만원상당식사 10,000 P",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -670,9 +670,9 @@
           "부산진구"
         ],
         "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "applicant_count": 53,
+        "recruit_count": 3,
+        "reward_points": 10000
       }
     },
     {
@@ -686,12 +686,12 @@
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2Fd1f35ffd-a9c0-437d-9529-a1cd07b43084?alt=media",
       "application_deadline_at": null,
-      "reward_summary": null,
+      "reward_summary": "6월한정 금토일 캠핑장 2박 이용권",
       "location_text": "충북 충주시",
-      "content_hash": "0398f3e7ead68c13f941bccb9fb07293825a5da73fa38094cdf021a628c1e438",
+      "content_hash": "6f73bc0f10a8ddf3a0b8c4a29191cd0f11fcf8d27d0eac697eb3f6c765907933",
       "dedup_key": "13160a1803aa2e3122672787a7ed0448ad9f216c1b08550ad4e36c06132e8fea",
       "raw_payload": {
-        "homepage_text": "[충북/충주시] 캠핑에바나나",
+        "homepage_text": "오늘 선정 마감 신청 23 / 10 방문형 [충북/충주시] 캠핑에바나나 6월한정 금토일 캠핑장 2박 이용권 5,000 P",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -708,9 +708,9 @@
           "충주시"
         ],
         "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "applicant_count": 23,
+        "recruit_count": 10,
+        "reward_points": 5000
       }
     },
     {
@@ -724,12 +724,12 @@
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2Fe58f16ef-8f6f-44f0-98d6-85946e1c3d89?alt=media",
       "application_deadline_at": null,
-      "reward_summary": null,
+      "reward_summary": "4만원 자유식사권",
       "location_text": "충남 천안시",
-      "content_hash": "240566ee6acd65591cb326164e4b9994c4e33e3e80351cab0347747e68e30f1e",
+      "content_hash": "a8dd6aa65d12d34098bc59fd42abd241f94819001c20c49e3d38d885cfb68e1e",
       "dedup_key": "f75b54fe3e2921fe2d6151c12eaa2a9f44719670372dd624c541fca2a60abc59",
       "raw_payload": {
-        "homepage_text": "[충남/천안시] 마니국밥 본점",
+        "homepage_text": "오늘 선정 마감 신청 17 / 2 방문형 [충남/천안시] 마니국밥 본점 4만원 자유식사권 5,000 P 신규 체험단 더보기",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -746,9 +746,9 @@
           "충남"
         ],
         "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "applicant_count": 17,
+        "recruit_count": 2,
+        "reward_points": 5000
       }
     },
     {
@@ -761,13 +761,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F4632c0be-cbd1-4da3-b7ff-954b96cf5bf2?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-11T14:59:59+00:00",
+      "reward_summary": "5만 원 식사권 및 생맥주 2잔+150,000p",
       "location_text": "대구 서구",
-      "content_hash": "410f81905f812a0787b1ca93ad8c852abc428a9636ef5e1c56ddc9de9fd5cb81",
+      "content_hash": "b640d0cdd5406c67fa14a50d895dde13c8f41a7182c7eeb9d20853d7f9c0a612",
       "dedup_key": "d01300931ac1db8b3b67ee47edceeb3528fb1bf8075e3b5b51f9c8b8e4e65c60",
       "raw_payload": {
-        "homepage_text": "[대구/서구] 뜰에한판 북구청점",
+        "homepage_text": "10 일 남음 신청 16 / 1 방문형 [대구/서구] 뜰에한판 북구청점 5만 원 식사권 및 생맥주 2잔+150,000p 150,000 P",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -783,10 +783,10 @@
           "대구",
           "서구"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "10 일 남음",
+        "applicant_count": 16,
+        "recruit_count": 1,
+        "reward_points": 150000
       }
     },
     {
@@ -799,13 +799,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F3ef12a5c-77a7-4b6e-8103-ca04e3d75ec0?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-11T14:59:59+00:00",
+      "reward_summary": "10만원매장이용권+10만포인트",
       "location_text": "충남 천안시",
-      "content_hash": "3c8bfd1fd2c9c593a793f1bba4c92eb29df2aaf7998c92c64aef5f4689ca2b66",
+      "content_hash": "086a080eca8a9e92eb217f52d9b2fa9c910bd7f4c2839c87cfbf373b180608fa",
       "dedup_key": "7def516164594f88f4d819b2cac56c4d22088d22720cd570adc9b68f17bd0ec2",
       "raw_payload": {
-        "homepage_text": "[충남/천안시] 천안 도마뱀분양 파충류샵 드브센",
+        "homepage_text": "10 일 남음 신청 6 / 2 방문형 [충남/천안시] 천안 도마뱀분양 파충류샵 드브센 10만원매장이용권+10만포인트 100,000 P",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -821,10 +821,10 @@
           "천안시",
           "충남"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "10 일 남음",
+        "applicant_count": 6,
+        "recruit_count": 2,
+        "reward_points": 100000
       }
     },
     {
@@ -837,13 +837,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2Fc51e8a3a-3dd5-42ce-b76b-aee0aef3abeb?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-11T14:59:59+00:00",
+      "reward_summary": "2만5천원 식사권",
       "location_text": "강원 춘천시",
-      "content_hash": "1849776ceb87e4c8ac839bc12c597c4329f029c1ca578ea90dda41b65db48626",
+      "content_hash": "45c45f9f021b7d5f565b4410bc22e102d448e4d5f452f77dc458f21e7e7d712b",
       "dedup_key": "f89f4e8801aa2fdae48280a111a2b5964a3f749967882242eb5f12af06a71f98",
       "raw_payload": {
-        "homepage_text": "[강원/춘천시] 장원닭갈비막국수 춘천본점",
+        "homepage_text": "10 일 남음 신청 1 / 1 방문형 [강원/춘천시] 장원닭갈비막국수 춘천본점 2만5천원 식사권 100,000 P",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -859,10 +859,10 @@
           "강원",
           "춘천시"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "10 일 남음",
+        "applicant_count": 1,
+        "recruit_count": 1,
+        "reward_points": 100000
       }
     },
     {
@@ -875,13 +875,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2Ffd3c3f40-8abe-4b1d-946d-2b273df5ed21?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-11T14:59:59+00:00",
+      "reward_summary": "감자탕 소 25,000원",
       "location_text": "대전 중구",
-      "content_hash": "efcdbfc3a37602218fcc0b946283fc6c78b01bdde1b85d994fc0326177ed2691",
+      "content_hash": "e6d0200f7340b9661fa3754dc78681a668a0eeedd13012744270f99916042eaf",
       "dedup_key": "8e3980df3cfccd3394525d5f1ecfabfd223fa1d9c1d4bf525c653f96afe8646c",
       "raw_payload": {
-        "homepage_text": "[대전/중구] 대전해장국",
+        "homepage_text": "10 일 남음 신청 7 / 1 방문형 [대전/중구] 대전해장국 감자탕 소 25,000원 100,000 P",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -897,10 +897,10 @@
           "대전",
           "중구"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "10 일 남음",
+        "applicant_count": 7,
+        "recruit_count": 1,
+        "reward_points": 100000
       }
     },
     {
@@ -913,13 +913,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://firebasestorage.googleapis.com/v0/b/reviewnote-e92d9.appspot.com/o/campaigns%2F5d43e583-838a-4cad-9194-eef79a625ebc?alt=media",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-11T14:59:59+00:00",
+      "reward_summary": "8만원 상당 망고크로플케이크 및 왁뿌소금빵 포인트10만점",
       "location_text": "경남 창원시",
-      "content_hash": "7ccef72b42d7daadc9537ca047d2aa27756df412ddfba3468b1f528d0da46226",
+      "content_hash": "99c2b54e78d5508c191ff725122c46dfbde4204a2b2f656712211effc827cbee",
       "dedup_key": "7101fc2835f05bd86fa49604fc3a03d1523574f72baa2ad5d7f0c8e2b01a22ef",
       "raw_payload": {
-        "homepage_text": "[경남/창원시] 모도베이커리",
+        "homepage_text": "10 일 남음 신청 6 / 1 방문형 [경남/창원시] 모도베이커리 8만원 상당 망고크로플케이크 및 왁뿌소금빵 포인트10만점 100,000 P 챗봇 문의 <img style=\"d",
         "homepage_url": "https://www.reviewnote.co.kr/",
         "policy_note": "robots.txt disallows /campaigns/. Fetch only the allowed homepage and do not request detail/list pages."
       },
@@ -935,1084 +935,10 @@
           "경남",
           "창원시"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2218235",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218235",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218235",
-      "title": "강릉이래요",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2218235-cdbb5b892cd5f5435ba364b42de40cda43b2b273_300x300.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": null,
-      "content_hash": "e3a8a8fb42fee11a2a373cfba7953fdf1b0f6408f84f34dd86f8ad0cf8b04851",
-      "dedup_key": "3826e82f4d37f9ca3be01bb394c2a87049c333cddfbb36c3494cbab9c659ce5e",
-      "raw_payload": {
-        "homepage_text": "강릉이래요",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [],
-        "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2221812",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2221812",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2221812",
-      "title": "OPNNG",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/29/thumb-cmp_2221812-624f66fbdcaa6dd95f9d6dd10bf6a4187fa7c8e5_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "서울 강남",
-      "content_hash": "e5d64b7e92c08960c144038fee9fe944cff5f1adefc9ca7ad466cf6e348bb74a",
-      "dedup_key": "954bcdef0913f31ccfed2a4d31dea0e452fc0c87c7f82648d8ad90dc7be0aca2",
-      "raw_payload": {
-        "homepage_text": "[서울 강남] OPNNG",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "서울"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "서울 강남"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2217617",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2217617",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2217617",
-      "title": "스케줄오스테리아",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2217617-c3bce7c41815262d77618abd73bf15f22f174de2_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "서울 중구",
-      "content_hash": "b130424c422410c4ceb390f742648f06bd22056a505026c10be6072074d4de6b",
-      "dedup_key": "f2389c23e214520d70ad05248486ec767dd660cd6974b78615799a9a9486c2cd",
-      "raw_payload": {
-        "homepage_text": "[서울 중구] 스케줄오스테리아",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "서울"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "서울 중구"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2223502",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2223502",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2223502",
-      "title": "LG 코드제로 로봇청소기",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/30/thumb-3535218181_xGmdPUO4_fac44560e8ff270a7b42c63da4ca0fc0410e0fc1_300x300.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": null,
-      "content_hash": "89a00b9b54b1c0c679bffea6414bd48d757eb4ff2270a2614731571940d47c6e",
-      "dedup_key": "9d7a77c22643cd0d6bed95544dbb6d4a8ced8b4aa813de2cdec30e6f476081ba",
-      "raw_payload": {
-        "homepage_text": "LG 코드제로 로봇청소기",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [],
-        "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2217618",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2217618",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2217618",
-      "title": "오스테리아에덴",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2217618-bc8f9a65276c5255b608888b4d42fbfe1ec49cb8_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "서울 강남",
-      "content_hash": "c7b01366a5968347e103ce35c6a8283887403550381026f01232646a5d6eee2a",
-      "dedup_key": "61d412d205b5036d41fe10725521a32a2a9c0ceab92e9bbee13a7dd971bc22d6",
-      "raw_payload": {
-        "homepage_text": "[서울 강남] 오스테리아에덴",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "서울"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "서울 강남"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2217570",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2217570",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2217570",
-      "title": "치플레 인천 롯데백화점 팝업스토어",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2217570-fd0cf036884e6e69c4794fa89c56dca355c36622_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "인천 미추홀",
-      "content_hash": "fd7f2267d3241b3f9ecc13e2c6e10de4a184f61dba332cef7866d28feb4dae54",
-      "dedup_key": "e2cd78f978754be68b2205184fd52b1284d1c3e62bb791f17fe904edf93e441f",
-      "raw_payload": {
-        "homepage_text": "[인천 미추홀] 치플레 인천 롯데백화점 팝업스토어",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "인천"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "인천 미추홀"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2218307",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218307",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218307",
-      "title": "멜팅소울 롯데백화점 잠실점",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2218307-7d7c248fd57b2aacc901564cba3930e9663435bd_300x300.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "서울 송파",
-      "content_hash": "51417211270ac51edde43c22e0ac28e5b69ec681875b66e5194dd63b10a9c992",
-      "dedup_key": "73490fe352719ac64f518d0566a982d15df2aa0ea0f1e699bcf5686b7772279a",
-      "raw_payload": {
-        "homepage_text": "[서울 송파] 멜팅소울 롯데백화점 잠실점",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "서울"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "서울 송파"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2218097",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218097",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218097",
-      "title": "냉스토랑",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-1028325342_EXmDeTLK_4039a12d7b2844c09bc74fc9a39f82cabf49bbf2_300x300.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": null,
-      "content_hash": "28a96db614633f8f16da5fd93c55864b92354bb7a4429a4329d2675ce5f6daa2",
-      "dedup_key": "7dede10d02aae6821797558bce6472dcb535276a7e2097bf8a736833cf3fe382",
-      "raw_payload": {
-        "homepage_text": "[페이백]냉스토랑",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [],
-        "source_categories": [
-          "페이백"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2219507",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2219507",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2219507",
-      "title": "안리감성스테이",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/25/thumb-cmp_2219507-79ec882e80c4b6f601318e9628a410d6cbbf8ef0_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "부산 수영",
-      "content_hash": "806c79caa3426d6a9f1a97f1dc9224a13ecda04c8c60ec20bffba6c2e773afd2",
-      "dedup_key": "949af42ee2aaa424f4dedc4139802bdf629f63399f87a719fdbcaf8e20c70a1d",
-      "raw_payload": {
-        "homepage_text": "[부산 수영] 안리감성스테이",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "부산"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "부산 수영"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2220357",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2220357",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2220357",
-      "title": "집밥 장인",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/26/thumb-1028325342_SarbgXEN_bac54e9a02804ee50a51bac724b98ef833118e35_300x300.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": null,
-      "content_hash": "1f798162d9ca6221b1fe0da20fd4531dbfc09249e75456d073df26b3cf8467e5",
-      "dedup_key": "4312aa1bddcafbdc75be0f18ba9d09d53c39f46d1d170fbf5596b58d9e7870ba",
-      "raw_payload": {
-        "homepage_text": "집밥 장인",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [],
-        "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2223503",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2223503",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2223503",
-      "title": "롯데상품권",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/30/thumb-cmp_2223503-0ad8897f89a44dd0d2510c63b555b980435f398d_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": null,
-      "content_hash": "852f15fdab557b159f6668622d63281b02d24fe13cb1e1bc7980c3e49642958b",
-      "dedup_key": "83b30549ecfa19b1d576f25acb59d9fe64d0093c0a2c3168743e7de2df1529bb",
-      "raw_payload": {
-        "homepage_text": "롯데상품권",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [],
-        "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2218062",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218062",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218062",
-      "title": "쿠우쿠우 부산 광복점",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2218062-e87bdeaacf39b6ab838e51370353360c580cd748_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "부산 중구",
-      "content_hash": "ed99fb1a8a2557286864176f9b78c9c301ebfe205ea35e095ac34ae326e14133",
-      "dedup_key": "d2a8f29e4a465bdaaabd17cc48a92c8037cd783536ec9f25139b6aee008ca8f1",
-      "raw_payload": {
-        "homepage_text": "[부산 중구] 쿠우쿠우 부산 광복점",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "부산"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "부산 중구"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2218256",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218256",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218256",
-      "title": "쿠우쿠우 광주하남점",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2218256-f33601a1a99efa73687327039220458bb406948e_300x300.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "광주 광산",
-      "content_hash": "4035d79907dfe7063827bf7a116f861595ea8a29d10ee04b0cdbda69dff7d923",
-      "dedup_key": "f85f65ee3a7623acacd4a64433a87a043b583888bd03b64e3a5188737e55aa2c",
-      "raw_payload": {
-        "homepage_text": "[광주 광산] 쿠우쿠우 광주하남점",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "광주"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "광주 광산"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2218537",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218537",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218537",
-      "title": "노천민물장어 청주율량점",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2218537-f2e06716dd13972fbe6ac1879ca76ee05813cbbc_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "충북 청주",
-      "content_hash": "7016f28c71ca35c25b96bfa31521b66a5e8d9e4359a7ce6bcd6f24b905634235",
-      "dedup_key": "a4f74e8c811112e0439168fdf6c33852510f54cd271d2ac6ff11cbc8bcf60612",
-      "raw_payload": {
-        "homepage_text": "[충북 청주] 노천민물장어 청주율량점",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "충북"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "충북 청주"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2218543",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218543",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218543",
-      "title": "등대펜션",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2218543-9507f9a79f31423a2fdeab94371fd3f6f17686e7_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "전남 보성",
-      "content_hash": "01a9f7ade2f523a7ee0ec22f40c500fab2f20614b1325a60cabf18f0ae2f7145",
-      "dedup_key": "fce92ddb7db11f3fbda512f47590519d20c4c1732f4fb055555ad20b2cdcf824",
-      "raw_payload": {
-        "homepage_text": "[전남 보성] 등대펜션",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "전남"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "전남 보성"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2218599",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218599",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218599",
-      "title": "하이까벨리",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2218599-c8a69b5fc90f4e8c185095f7b9a62c22b94e9400_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "강원 춘천",
-      "content_hash": "04348600b02fe8f5ff692ba55b43e528eb13c686607149da2799f8e6d07455ec",
-      "dedup_key": "1d9cf59c04fbb4808dc6eae5e629de57cdc7e9b760b9ce9a0cd4e60190db7024",
-      "raw_payload": {
-        "homepage_text": "[강원 춘천] 하이까벨리",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "강원"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "강원 춘천"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2218602",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218602",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218602",
-      "title": "체리프리다이빙",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2218602-0f094a979d186e6bc55176d102d3f49987410949_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "대전 동구",
-      "content_hash": "f76fe7ef5c5ea13cce1da3521ac49e53eb5504769f94aabf7b07d96e3ab1c3bc",
-      "dedup_key": "3a0222c3efe462a9c959d6a7a52d7f6999016ed6c2cf2e01db45506da4d8b2f1",
-      "raw_payload": {
-        "homepage_text": "[대전 동구]체리프리다이빙",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "대전"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "대전 동구"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2218641",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218641",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218641",
-      "title": "에이바헤어 봉화산역점",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2218641-8a9c8aa2ea187aefb62e100a35b76958d09f4517_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "서울 중랑",
-      "content_hash": "932c7ac29e6e5b8628ee6f9b84ec60f627e3b62e5fc844bfeb0f3c148e4f5a4d",
-      "dedup_key": "b42163c28511321f41773cb765ccff40e6c95d4f6030cd83ba888903bbbe1772",
-      "raw_payload": {
-        "homepage_text": "[서울 중랑] 에이바헤어 봉화산역점",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "서울"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "서울 중랑"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2218759",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218759",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218759",
-      "title": "슈가포허",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2218759-f29286b92c3be7313525fd656bee5363755468b2_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "인천 미추홀",
-      "content_hash": "c7d1b38db98a17e06773a1915cf9a807d0175147ea2cf3d247a4925277cc4d25",
-      "dedup_key": "5d79e8d88caf6b84b5b210024c708938127a812e73f4a5061ae819473839a824",
-      "raw_payload": {
-        "homepage_text": "[인천 미추홀] 슈가포허",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "인천"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "인천 미추홀"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2218761",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218761",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2218761",
-      "title": "스태그커피 박달점",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/24/thumb-cmp_2218761-abfc5da34a492404b5e3c1c5cb4691a67e72db26_300x300.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "경기 안양",
-      "content_hash": "adadb019c2aaad7c8c7b20d8fe94233575204d05f2a67cc7921464c78a8030a6",
-      "dedup_key": "45eb215b4c4111bdced45dddb22fb4b8c9f06a25effb8180d69cefb57a3c4e63",
-      "raw_payload": {
-        "homepage_text": "[경기 안양] 스태그커피 박달점",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "경기"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "경기 안양"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2222074",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2222074",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2222074",
-      "title": "통큰장어",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/29/thumb-cmp_2222074-f6163740b1c33f6db504705bd49e1c88c26a9a68_300x300.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": null,
-      "content_hash": "e23155995bdedaf209907222eac82ce123bd07c733b87b7567bf534b91853dac",
-      "dedup_key": "72fd8ef8e51307a7f83c344efb15b549d219dca260856cb5a2d853f2439086cf",
-      "raw_payload": {
-        "homepage_text": "통큰장어",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [],
-        "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2224491",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2224491",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2224491",
-      "title": "코트원 테니스",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/30/thumb-cmp_2224491-65ee2b7e7d6ba7556c29f0c14eef0c819f616259_300x300.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "경북 구미",
-      "content_hash": "59f297bf8286c7188f06e1c1ee03e4c108570f569c401a56dbb5ad54349492c6",
-      "dedup_key": "a487d4cf08be6db1f6f4c48863e3fdb0002a760d6dc39c2369325bebc3cfd7da",
-      "raw_payload": {
-        "homepage_text": "[경북 구미] 코트원 테니스",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "경북"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "경북 구미"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2224783",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2224783",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2224783",
-      "title": "연탄한우산대",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/30/thumb-cmp_2224783-c960728cc199c426b6d62c383429d637dd4aec18_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "경북 경주",
-      "content_hash": "5de063ad6e9ff2d6de8677b187c46a22ed6f012e781c638bf5eb2100a89c12df",
-      "dedup_key": "490efe6cbb286fb10ae0aad6d5f2ef753909d83a03c42bb72c254aff23e82a9b",
-      "raw_payload": {
-        "homepage_text": "[경북 경주] 연탄한우산대",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "경북"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "경북 경주"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2223941",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2223941",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2223941",
-      "title": "전주타투스튜디오드림랜드",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/30/thumb-cmp_2223941-b306e441b1e4f50dfc83b7386927f3736799d971_300x300.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": null,
-      "content_hash": "f4042e01f9d227c0626a08b83a72ba1b4bb6df891fade2984080747906405b52",
-      "dedup_key": "a5d897d0c3449b14cbe79d7f49523cab345a2be9e7da15ecbaf92bfad6da7b40",
-      "raw_payload": {
-        "homepage_text": "[기자단]전주타투스튜디오드림랜드",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [
-          "reporter"
-        ],
-        "source_categories": [
-          "기자단"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2224801",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2224801",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2224801",
-      "title": "이상슈케어",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/30/thumb-cmp_2224801-11b99d5b6c0dbda366944a22c18b2f5a1a211691_300x300.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "전북 전주",
-      "content_hash": "b9dd27c5ad7755e2e433fce509a1120cd8ed0be01cbf29ef7cfdfc2fb077046d",
-      "dedup_key": "a005a3c7fdbbd9915e2e5edbef261c0527cf16b061f98f6bf07d563dc888ff7c",
-      "raw_payload": {
-        "homepage_text": "[전북 전주] 이상슈케어",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "전북"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "전북 전주"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2223947",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2223947",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2223947",
-      "title": "조리고 세교직영점",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/30/thumb-cmp_2223947-50b453609caa6d75b53dc2d4973128beb86f3b3d_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "경기 평택",
-      "content_hash": "7adb1e694966a889910cecfd2952c2e2347e0400f67cdf4205c0078ae0827b13",
-      "dedup_key": "c5a79bdf7ae96ebea758a23f0e61151e423141ef16c41ab54b0fe0437954a447",
-      "raw_payload": {
-        "homepage_text": "[경기 평택] 조리고 세교직영점",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "경기"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "경기 평택"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2223435",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2223435",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2223435",
-      "title": "태산렙타일",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://gangnam-review.net/data/file/cmp/2026/06/30/thumb-cmp_2223435-f57aa22cfcec250dc0fa651455e284ad2e5968a7_300x300.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "전남 순천",
-      "content_hash": "f3b9534845fb96e6989ddb279cdb8259e73f8ea95a728d2ff5b663b6c22dc282",
-      "dedup_key": "c19c29a8abcab0f694b0c7d3b9bc5a430a347a0f15bbe9af98e04a009456fe9e",
-      "raw_payload": {
-        "homepage_text": "[전남 순천] 태산렙타일",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "전남"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "전남 순천"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2195331",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2195331",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2195331",
-      "title": "> 가라스시 가경점",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://xn--939au0g4vj8sq.net/img/thum_no.gif",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "충북 청주",
-      "content_hash": "b1c0dba7e581315e26009923d2924311447e0985f3fd0204583658046787ee94",
-      "dedup_key": "cce6dfe198fa5815e87c71cac178d2211eb61130042042eacb9b2f97157315da",
-      "raw_payload": {
-        "homepage_text": "--> [충북 청주] 가라스시 가경점",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "충북"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "충북 청주"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2195849",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2195849",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2195849",
-      "title": "> 천향",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://xn--939au0g4vj8sq.net/img/thum_no.gif",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "서울 종로",
-      "content_hash": "c4bbe38aa9607590289d77c1054ac03877c95b177c19b959b8a3a21491de0a89",
-      "dedup_key": "305967bb6cc757b91a5f482ee2ea013c6324b777205d8b75915cd1e751461197",
-      "raw_payload": {
-        "homepage_text": "--> [서울 종로] 천향",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "서울"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "서울 종로"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "gangnammatzip",
-      "source_name": "강남맛집 체험단",
-      "external_id": "2193236",
-      "source_url": "https://xn--939au0g4vj8sq.net/cp/?id=2193236",
-      "normalized_url": "https://xn--939au0g4vj8sq.net/cp/?id=2193236",
-      "title": "> 일루전",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://xn--939au0g4vj8sq.net/img/thum_no.gif",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "울산 남구",
-      "content_hash": "83ac18f2e30961f61803ec51de67167b67d7221491d7fffa6d64f090c6dda245",
-      "dedup_key": "4a7017ab37da4e285d4cb5b8fe0a627b9c9b6c4168b034bb975826151d5c6f59",
-      "raw_payload": {
-        "homepage_text": "--> [울산 남구] 일루전",
-        "homepage_url": "https://xn--939au0g4vj8sq.net/",
-        "policy_note": "Start with homepage snippets only."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "울산"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "울산 남구"
-        ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "10 일 남음",
+        "applicant_count": 6,
+        "recruit_count": 1,
+        "reward_points": 100000
       }
     },
     {
@@ -2025,13 +951,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/25/1782367695-5792_N_7_220x220_100_2_.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "안녕 공기청정기 1세트",
       "location_text": null,
-      "content_hash": "d42bdfef9602487d0dd96648534837bdef3bfba0bf2fc563201862685f09dddc",
+      "content_hash": "8d4352218e14cb2fc59ea7526d14a3aa726ebfd8636805bb4b625d248200c48f",
       "dedup_key": "7ab9dd1d793d19e67e8fc83e8c9f7f243de5873bc9155b82011da388c47c8475",
       "raw_payload": {
-        "homepage_text": "안녕 공기청정기",
+        "homepage_text": "1일 남음 안녕 공기청정기 안녕 공기청정기 1세트 신청 349 / 모집 20",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2040,9 +966,9 @@
         "region_tags": [],
         "benefit_tags": [],
         "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "1일 남음",
+        "applicant_count": 349,
+        "recruit_count": 20,
         "reward_points": null
       }
     },
@@ -2056,13 +982,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/05/22/1779436307-9891_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "비리빙(B’LIVING) 압축파우치 랜덤(동일)...",
       "location_text": null,
-      "content_hash": "cecbf1c3553c3100d4fb93e788802824f226a5e1c5b3a00c7fb179542923d81c",
+      "content_hash": "d65b640c175192211d62327d5d5133771c44cab69dd03ce22811f22fae3787da",
       "dedup_key": "f7e938e5444fa7d3e2f90c927cc7ef5c31c5f66bff55e0456af7904950506228",
       "raw_payload": {
-        "homepage_text": "비리빙(B’LIVING) 압축파우치",
+        "homepage_text": "1일 남음 비리빙(B’LIVING) 압축파우치 비리빙(B’LIVING) 압축파우치 랜덤(동일)... 신청 306 / 모집 10",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2071,9 +997,9 @@
         "region_tags": [],
         "benefit_tags": [],
         "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "1일 남음",
+        "applicant_count": 306,
+        "recruit_count": 10,
         "reward_points": null
       }
     },
@@ -2087,13 +1013,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/24/1782280898-1471_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "벤딕트 차량용 청소기 (실버 라이닝 퓨어 P...",
       "location_text": null,
-      "content_hash": "2f77a8e83c392e6b394c3ded4da3470cb6e167e12ec51075786a127bcdd7352b",
+      "content_hash": "24b8098ae01d0d3f1e0f09e1d7e02001e8bf85737dea3c9053d15ed5e3c3534b",
       "dedup_key": "d833ac4667b479d9569a6116d664af8f195c84ef1d934dbedc720389c1eb984e",
       "raw_payload": {
-        "homepage_text": "벤딕트 차량용 청소기 실버라이닝퓨어PRO",
+        "homepage_text": "오늘 마감 벤딕트 차량용 청소기 실버라이닝퓨어PRO 벤딕트 차량용 청소기 (실버 라이닝 퓨어 P... 신청 219 / 모집 3",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2102,9 +1028,9 @@
         "region_tags": [],
         "benefit_tags": [],
         "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "오늘마감",
+        "applicant_count": 219,
+        "recruit_count": 3,
         "reward_points": null
       }
     },
@@ -2118,13 +1044,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/05/27/1779862487-8048_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "벤로 셀카봉 BK10L (색상 랜덤)",
       "location_text": null,
-      "content_hash": "542d190ac9f8fc4d393083efe39d78b2827bd671ee74d7a0663e5403978a48fd",
+      "content_hash": "854ea0760f93b406effd7e69d5657c58e805dfb9359b20e763fa896295a4fed4",
       "dedup_key": "b50f6e73ca69a83440a04ccb8bde70c5c983f4700d6664a74607143b489875d4",
       "raw_payload": {
-        "homepage_text": "벤로 셀카봉 BK10L",
+        "homepage_text": "오늘 마감 벤로 셀카봉 BK10L 벤로 셀카봉 BK10L (색상 랜덤) 신청 211 / 모집 5",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2133,9 +1059,9 @@
         "region_tags": [],
         "benefit_tags": [],
         "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "오늘마감",
+        "applicant_count": 211,
+        "recruit_count": 5,
         "reward_points": null
       }
     },
@@ -2149,13 +1075,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/05/28/1779954104-8999_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "거즈 고쟁이바지 S 색상랜덤(green, yellow...",
       "location_text": null,
-      "content_hash": "064687166819e204518e990ee1590005edc8f5042d519d855a15bd0ed6013262",
+      "content_hash": "994842fe1ebbe36cf6ca858453486e3812d3d6581926671a28a8474c7e16d590",
       "dedup_key": "962d025f41e76bb908cb1a6f7dcb624dad0cac2e7b42a22e8ec3cf4b1144a0e2",
       "raw_payload": {
-        "homepage_text": "거즈 고쟁이바지",
+        "homepage_text": "1일 남음 거즈 고쟁이바지 거즈 고쟁이바지 S 색상랜덤(green, yellow... 신청 177 / 모집 1",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2164,9 +1090,9 @@
         "region_tags": [],
         "benefit_tags": [],
         "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "1일 남음",
+        "applicant_count": 177,
+        "recruit_count": 1,
         "reward_points": null
       }
     },
@@ -2180,13 +1106,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/05/13/1778656558-5537_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "손선풍기 미니 선풍기 빈다르 플로우 (색상...",
       "location_text": null,
-      "content_hash": "7a8dcff35c935770f13cf4e1036653301d0ff8f9b9db3d4a07a7182bb1bf886e",
+      "content_hash": "69bb8c1adb07dfe2eedcc706516076a4d5706445026a2bbbf6b1f8a714508fa9",
       "dedup_key": "193473bd1597dba85b02bdcef0fce1922571985c776a26947dca9b7e4f9eae21",
       "raw_payload": {
-        "homepage_text": "벤딕트 손선풍기 미니 선풍기 빈다르 플로우 (리퍼)",
+        "homepage_text": "오늘 마감 벤딕트 손선풍기 미니 선풍기 빈다르 플로우 (리퍼) 손선풍기 미니 선풍기 빈다르 플로우 (색상... 신청 174 / 모집 3",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2195,9 +1121,9 @@
         "region_tags": [],
         "benefit_tags": [],
         "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "오늘마감",
+        "applicant_count": 174,
+        "recruit_count": 3,
         "reward_points": null
       }
     },
@@ -2211,13 +1137,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/04/14/1776128704-4533_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "아렌티 마일드 아메리카노 스틱커피 100T 1...",
       "location_text": null,
-      "content_hash": "60d6c1a54d2db1e92a441b10c20ae6df6510c428765400a0a600b13b868b739b",
+      "content_hash": "945ffef5437dc0ce467ed7801649e98dad71737892565ead703b067145223c5e",
       "dedup_key": "b567c930e362e5966f6eac095014ce9bf57c4446d2f39eb359b88563b071f08d",
       "raw_payload": {
-        "homepage_text": "아렌티 마일드 아메리카노 스틱커피",
+        "homepage_text": "오늘 마감 아렌티 마일드 아메리카노 스틱커피 아렌티 마일드 아메리카노 스틱커피 100T 1... 신청 161 / 모집 5",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2226,9 +1152,9 @@
         "region_tags": [],
         "benefit_tags": [],
         "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "오늘마감",
+        "applicant_count": 161,
+        "recruit_count": 5,
         "reward_points": null
       }
     },
@@ -2242,13 +1168,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/05/21/1779345503-8065_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "썸머 시즌 블렌드 1kg (분쇄도 옵션 선택)...",
       "location_text": null,
-      "content_hash": "c5cd557ae4822bee1fc9b4f40334f72e9df22bb8038a3a1e04ec97d3613b2e33",
+      "content_hash": "69b1113287d4bbd39f5ddffadd3cd7c30e0f823f1f44546029be0df75d41af7e",
       "dedup_key": "7d8dc55a9b6453347b1ed2725e18e941793451951c65d307f4a5c9f4c92f3312",
       "raw_payload": {
-        "homepage_text": "썸머 시즌 블렌드 1kg",
+        "homepage_text": "오늘 마감 썸머 시즌 블렌드 1kg 썸머 시즌 블렌드 1kg (분쇄도 옵션 선택)... 신청 142 / 모집 5",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2257,42 +1183,9 @@
         "region_tags": [],
         "benefit_tags": [],
         "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "ringble",
-      "source_name": "링블",
-      "external_id": "277273",
-      "source_url": "https://www.ringble.co.kr/detail.php?number=277273&category=",
-      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277273&category=",
-      "title": "제주 화산송이 생활탈취제 사려니숲",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://www.ringble.co.kr/mallimg/2026/06/25/1782362185-5367_N_7_220x220_100_2_.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "제주",
-      "content_hash": "7501598daf62aaf7e6b58484cebfb86b0c57b0716e276e800411718532f052ed",
-      "dedup_key": "c07bd4067530e78dbc317ee22114c269b8a4d64921b0e7707d1c36fd8aea3288",
-      "raw_payload": {
-        "homepage_text": "제주 화산송이 생활탈취제 사려니숲",
-        "homepage_url": "https://www.ringble.co.kr/",
-        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "제주"
-        ],
-        "benefit_tags": [],
-        "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "오늘마감",
+        "applicant_count": 142,
+        "recruit_count": 5,
         "reward_points": null
       }
     },
@@ -2306,13 +1199,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2025/09/19/1758246919-9136_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "퍼플래빗 픽셀 올인원 무선 충전기 (애플, ...",
       "location_text": null,
-      "content_hash": "1ad7846e05335e5a97974820a7f26bbf3d8d511985768396f2b697f4f636a27e",
+      "content_hash": "9cfb2536567dbbe57567175d779a2a956e18ecab2506b93caf7d8e823ee05514",
       "dedup_key": "aee3e412f42601ea9317f4d2fa14da1a14814980e14e835488efb99225844d9c",
       "raw_payload": {
-        "homepage_text": "퍼플래빗 픽셀 올인원 무선 충전기",
+        "homepage_text": "오늘 마감 퍼플래빗 픽셀 올인원 무선 충전기 퍼플래빗 픽셀 올인원 무선 충전기 (애플, ... 신청 130 / 모집 3",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2321,9 +1214,42 @@
         "region_tags": [],
         "benefit_tags": [],
         "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "오늘마감",
+        "applicant_count": 130,
+        "recruit_count": 3,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "277273",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=277273&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277273&category=",
+      "title": "제주 화산송이 생활탈취제 사려니숲",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://www.ringble.co.kr/mallimg/2026/06/25/1782362185-5367_N_7_220x220_100_2_.png",
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "제주 화산송이 생활탈취제 사려니숲 1개...",
+      "location_text": "제주",
+      "content_hash": "835bbd617cbc6f425ace03da0073741169432df7075aa8a58ab8ec017dbc24da",
+      "dedup_key": "c07bd4067530e78dbc317ee22114c269b8a4d64921b0e7707d1c36fd8aea3288",
+      "raw_payload": {
+        "homepage_text": "1일 남음 제주 화산송이 생활탈취제 사려니숲 제주 화산송이 생활탈취제 사려니숲 1개... 신청 129 / 모집 20",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "제주"
+        ],
+        "benefit_tags": [],
+        "source_categories": [],
+        "deadline_text": "1일 남음",
+        "applicant_count": 129,
+        "recruit_count": 20,
         "reward_points": null
       }
     },
@@ -2337,13 +1263,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2025/01/13/1736745983-4947_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "퍼기 이중밀폐 이유식큐브 (4구+6구+12구 ...",
       "location_text": null,
-      "content_hash": "8d3f926e8e25fd613a32ce7aaec515513d705b8bcf8d040de9bcc3cfde058669",
+      "content_hash": "6938f6fea842353155b95f65fd683910cbd267687c46895bebcd73a3b02ce3b3",
       "dedup_key": "c27135d7e3f3eab89c6fc3af52331321c65b79d5569fafff786d392baf73fd05",
       "raw_payload": {
-        "homepage_text": "퍼기 이중밀폐 이유식 큐브 세트 (4구, 6구, 12구)",
+        "homepage_text": "오늘 마감 퍼기 이중밀폐 이유식 큐브 세트 (4구, 6구, 12구) 퍼기 이중밀폐 이유식큐브 (4구+6구+12구 ... 신청 129 / 모집 15",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2352,9 +1278,9 @@
         "region_tags": [],
         "benefit_tags": [],
         "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "오늘마감",
+        "applicant_count": 129,
+        "recruit_count": 15,
         "reward_points": null
       }
     },
@@ -2368,13 +1294,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/25/1782362238-5776_N_7_220x220_100_2_.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "제주 화산송이 생활탈취제 비자숲 1개...",
       "location_text": "제주",
-      "content_hash": "c84258a8e05c158769f3eb7cd47db2d1bdda9265680cacfd5fa95fde58ca188e",
+      "content_hash": "97ac4236bbeb438b8ecfb7adbbc68a9905760f9ec479b16513134b48d96d3ec2",
       "dedup_key": "45c79ca7ebc7bc20b32959d30a4e1228c5e80177910684eb380a67df9860eb64",
       "raw_payload": {
-        "homepage_text": "제주 화산송이 생활탈취제 비자숲",
+        "homepage_text": "1일 남음 제주 화산송이 생활탈취제 비자숲 제주 화산송이 생활탈취제 비자숲 1개... 신청 128 / 모집 20",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2385,9 +1311,9 @@
         ],
         "benefit_tags": [],
         "source_categories": [],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "1일 남음",
+        "applicant_count": 128,
+        "recruit_count": 20,
         "reward_points": null
       }
     },
@@ -2397,48 +1323,17 @@
       "external_id": "277241",
       "source_url": "https://www.ringble.co.kr/detail.php?number=277241&category=",
       "normalized_url": "https://www.ringble.co.kr/detail.php?number=277241&category=",
-      "title": "오늘 마감",
+      "title": "세화한우",
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2025/03/24/1742795027-7772_N_7_220x220_100_2_.png",
       "application_deadline_at": "2026-07-01T14:59:59+00:00",
-      "reward_summary": null,
-      "location_text": null,
-      "content_hash": "4af9c4a52a59248fcd3f6b2cd4fa3385d078a78a9cadad4788e54f7f402350ed",
-      "dedup_key": "dbe22fdf6b10ba437ec55feb54421cba4358cc1f7f6d43a25ed1792df86016db",
+      "reward_summary": "정육 -한우1++ 6~8만원 세트 및 서비스 (50...",
+      "location_text": "서울 성동구",
+      "content_hash": "2078b4a61b8ddfa93799c75c355032dd4abd71eba74f1eaac1256ebd56fa9c9b",
+      "dedup_key": "7b9b25f7c9c1bffa69e8d39c00794deff9b4a17c7232e6139d90a7cb9c0e0c5d",
       "raw_payload": {
-        "homepage_text": "오늘 마감",
-        "homepage_url": "https://www.ringble.co.kr/",
-        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [],
-        "source_categories": [],
-        "deadline_text": "오늘마감",
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "ringble",
-      "source_name": "링블",
-      "external_id": "277245",
-      "source_url": "https://www.ringble.co.kr/detail.php?number=277245&category=",
-      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277245&category=",
-      "title": "비스트로오라",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://www.ringble.co.kr/mallimg/2025/07/01/1751336198-410_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
-      "location_text": "서울 마포구",
-      "content_hash": "0bf962acd1b90d71468eee020f7914e9c121804e6dbcd6f6b2f6fec7bbb728b7",
-      "dedup_key": "416c02d0679f4577370013a6bf9e7652860110a9eab667b9b403059d7b3fd750",
-      "raw_payload": {
-        "homepage_text": "[서울/마포구] 비스트로오라",
+        "homepage_text": "오늘 마감 [서울/성동구] 세화한우 정육 -한우1++ 6~8만원 세트 및 서비스 (50... 신청 55 / 모집 100 +1,000 P",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2451,13 +1346,52 @@
           "visit"
         ],
         "source_categories": [
+          "서울",
+          "성동구"
+        ],
+        "deadline_text": "오늘마감",
+        "applicant_count": 55,
+        "recruit_count": 100,
+        "reward_points": 1000
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "277245",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=277245&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277245&category=",
+      "title": "비스트로오라",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://www.ringble.co.kr/mallimg/2025/07/01/1751336198-410_N_7_220x220_100_2_.jpg",
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "[2인 제한] A. 부채스테이크 세트 (부채살...",
+      "location_text": "서울 마포구",
+      "content_hash": "7c8b66298a2933fe9f5b691169eba67d58dd3e9fe5358351ff45079527bb676a",
+      "dedup_key": "416c02d0679f4577370013a6bf9e7652860110a9eab667b9b403059d7b3fd750",
+      "raw_payload": {
+        "homepage_text": "오늘 마감 [서울/마포구] 비스트로오라 [2인 제한] A. 부채스테이크 세트 (부채살... 신청 28 / 모집 8 +1,000 P",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "서울"
+        ],
+        "benefit_tags": [
+          "visit"
+        ],
+        "source_categories": [
+          "2인 제한",
           "마포구",
           "서울"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "오늘마감",
+        "applicant_count": 28,
+        "recruit_count": 8,
+        "reward_points": 1000
       }
     },
     {
@@ -2470,13 +1404,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/17/1781674033-23_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "피부관리 or 윤곽관리 중 택 1",
       "location_text": "서울 동작구",
-      "content_hash": "656ee89b740180faf38161377b569142c1987c903ba7eb08925a58046e205aff",
+      "content_hash": "c744aaff0c5f17f69a930045ed035ee9bbafb19e944b2601d616d53c337d756b",
       "dedup_key": "b769d7a38ad226c3a75d9d14dbca6b1850b4b601ca59d4d034a5e10137cc8e36",
       "raw_payload": {
-        "homepage_text": "[서울/동작구] 스킨쓰담 사당점",
+        "homepage_text": "1일 남음 [서울/동작구] 스킨쓰담 사당점 피부관리 or 윤곽관리 중 택 1 신청 26 / 모집 3 +1,000 P",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2492,10 +1426,10 @@
           "동작구",
           "서울"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "1일 남음",
+        "applicant_count": 26,
+        "recruit_count": 3,
+        "reward_points": 1000
       }
     },
     {
@@ -2508,13 +1442,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/05/1780626281-1287_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "[포장] 햄치즈 야끼무스비 1ea + 명란참치...",
       "location_text": "서울 영등포구",
-      "content_hash": "15cb3fe14fdbdc704f3842d92f1d435ac7e26dc9ef98541b6780059fa0d4334a",
+      "content_hash": "6d3a602d6a6f3c058df40053fb0d487414f2f4c8b89bc35fff7c19b34f0c6eb1",
       "dedup_key": "33ef3308e227ae3e8f5dbfb5e380d0f66808d7b87c1c3cdc8ac01449f9783e6e",
       "raw_payload": {
-        "homepage_text": "[서울/영등포구] 오니마루 신세계백화점 타임스퀘어점오니기리",
+        "homepage_text": "1일 남음 [서울/영등포구] 오니마루 신세계백화점 타임스퀘어점오니기리 [포장] 햄치즈 야끼무스비 1ea + 명란참치... 신청 22 / 모집 2 +2,000 P",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2528,12 +1462,13 @@
         ],
         "source_categories": [
           "서울",
-          "영등포구"
+          "영등포구",
+          "포장"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "1일 남음",
+        "applicant_count": 22,
+        "recruit_count": 2,
+        "reward_points": 2000
       }
     },
     {
@@ -2546,13 +1481,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2025/12/31/1767149262-3900_N_7_220x220_100_2_.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "[1인] 전신바디 관리 70분 (10만원상당)...",
       "location_text": "서울 송파구",
-      "content_hash": "74a8ffb9f8d38a41e56715d3b26f03246e3ca266da118c9d4b2d1785548e8010",
+      "content_hash": "be501a1d943a9fdda9b2294a3086aa2c7dea44b0681e25bc8459683e98649517",
       "dedup_key": "6bfe5d22866202fc802e32dd64c77bf3386a2c4ea14776ec39171854ebec9c8b",
       "raw_payload": {
-        "homepage_text": "[서울/송파구] 약손선생",
+        "homepage_text": "1일 남음 [서울/송파구] 약손선생 [1인] 전신바디 관리 70분 (10만원상당)... 신청 21 / 모집 3 +1,000 P",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2565,13 +1500,14 @@
           "visit"
         ],
         "source_categories": [
+          "1인",
           "서울",
           "송파구"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "1일 남음",
+        "applicant_count": 21,
+        "recruit_count": 3,
+        "reward_points": 1000
       }
     },
     {
@@ -2584,13 +1520,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/16/1781588561-5702_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "자샵이달아트",
       "location_text": "경기 수원시",
-      "content_hash": "0981a968d026969a4212e460d3886b7a72b785fa3759d7e32916887df9b21766",
+      "content_hash": "1de758f8a276c772c574cd42dbdcfd196974447693125ae60be81098ce0f3663",
       "dedup_key": "ec4852c84311ac9ef16a1099a889ba14b05f4d13905a44c8039466394d597e62",
       "raw_payload": {
-        "homepage_text": "[경기/수원시] 라라뷰티 네일",
+        "homepage_text": "오늘 마감 [경기/수원시] 라라뷰티 네일 자샵이달아트 신청 21 / 모집 8 +1,000 P 신규 오픈",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2606,10 +1542,10 @@
           "경기",
           "수원시"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "오늘마감",
+        "applicant_count": 21,
+        "recruit_count": 8,
+        "reward_points": 1000
       }
     },
     {
@@ -2622,13 +1558,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2025/04/03/1743665195-2303_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-08T14:59:59+00:00",
+      "reward_summary": "기자단 포인트 제공",
       "location_text": null,
-      "content_hash": "9a12b678de8847cf8de4500b99a1200f9482b73bdc038e6674c5fd4e14dda654",
+      "content_hash": "20179f4418f3f5a952e3239320ac7a04680a1156a720f15a9818c68144e5c949",
       "dedup_key": "80224d8bef9010b146b4bc6900caee7b6ad844e06d2139d97ca49824604d6884",
       "raw_payload": {
-        "homepage_text": "[기자단] 오네트옴 상왕십리점 왁싱 리뷰",
+        "homepage_text": "7일 남음 [기자단] 오네트옴 상왕십리점 왁싱 리뷰 기자단 포인트 제공 신청 17 / 모집 5 +10,000 P",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2641,10 +1577,10 @@
         "source_categories": [
           "기자단"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "7일 남음",
+        "applicant_count": 17,
+        "recruit_count": 5,
+        "reward_points": 10000
       }
     },
     {
@@ -2657,13 +1593,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/05/27/1779867610-1249_N_7_220x220_100_2_.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-07T14:59:59+00:00",
+      "reward_summary": "여성 웨딩 헤어메이크업 (1회 385,000원상...",
       "location_text": "충남 아산시",
-      "content_hash": "5699ca14b6ee22b885a5f3bdfc7b3354d67fa12921eef43805094cc5b8de4b1c",
+      "content_hash": "4144986e61e41021a4141489d70ab61afdd6a3a4b41a22f31baf085ae8f427af",
       "dedup_key": "e7f3876ed1463f370e5073c4d530cd73ea8a3198cfd4b8ad810a00a94432ab9b",
       "raw_payload": {
-        "homepage_text": "[충남/아산시] 오드리앤코 (웨딩 헤어메이크업)",
+        "homepage_text": "6일 남음 [충남/아산시] 오드리앤코 (웨딩 헤어메이크업) 여성 웨딩 헤어메이크업 (1회 385,000원상... 신청 0 / 모집 8 +1,000 P",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2679,10 +1615,10 @@
           "아산시",
           "충남"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
-        "reward_points": null
+        "deadline_text": "6일 남음",
+        "applicant_count": 0,
+        "recruit_count": 8,
+        "reward_points": 1000
       }
     },
     {
@@ -2695,13 +1631,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716640-6921_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "에브리데이 블루 반팔세트 1개",
       "location_text": null,
-      "content_hash": "2c74c2323ea62595bfbf28eca9d17364a3d8fd637ace05c4c6f8fbe61b116b28",
+      "content_hash": "6e1217cf0a59a1a8627cef07a6f563bb65e3c3495a0f1e99b4366a2f0637dea3",
       "dedup_key": "f4dffe4d20bd4e43b8cec3281f6466b7f5b3b7cc32de5254cc48e7a5ddf18a24",
       "raw_payload": {
-        "homepage_text": "[인스타] 에브리데이 블루 반팔세트",
+        "homepage_text": "5일 남음 [인스타] 에브리데이 블루 반팔세트 에브리데이 블루 반팔세트 1개 신청 2 / 모집 1",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2714,9 +1650,9 @@
         "source_categories": [
           "인스타"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "5일 남음",
+        "applicant_count": 2,
+        "recruit_count": 1,
         "reward_points": null
       }
     },
@@ -2730,13 +1666,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716743-5851_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "에브리데이 네이비 반팔세트 1개...",
       "location_text": null,
-      "content_hash": "fc835e58ea903085a1010c34a5d102c40117a339d31e6025600a430373d6cfdd",
+      "content_hash": "b5f422c859567faece764fd38b6eba51be24e593a345b1e313e874ee33fa3185",
       "dedup_key": "0dd0cfc14bf95c1a28644e1b1146d3bc1046c8753962da2ff23161aefac0f635",
       "raw_payload": {
-        "homepage_text": "[인스타] 에브리데이 네이비 반팔세트",
+        "homepage_text": "5일 남음 [인스타] 에브리데이 네이비 반팔세트 에브리데이 네이비 반팔세트 1개... 신청 2 / 모집 1",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2749,9 +1685,9 @@
         "source_categories": [
           "인스타"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "5일 남음",
+        "applicant_count": 2,
+        "recruit_count": 1,
         "reward_points": null
       }
     },
@@ -2765,13 +1701,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716599-2158_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "에브리데이 바이올렛 반팔세트 1개...",
       "location_text": null,
-      "content_hash": "8a52e21588c91766177e7c326cc8498756f63912b5139a20de93be4b724cb910",
+      "content_hash": "14f5ab1873f6825a874444ac792846f81e14367777e4c25a142db6505c7604cb",
       "dedup_key": "2309d2d8f2d27729b108bb8cf405f238125d9c649c3081142fd3f2d62d83a772",
       "raw_payload": {
-        "homepage_text": "[인스타] 에브리데이 바이올렛 반팔세트",
+        "homepage_text": "5일 남음 [인스타] 에브리데이 바이올렛 반팔세트 에브리데이 바이올렛 반팔세트 1개... 신청 3 / 모집 1",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2784,9 +1720,9 @@
         "source_categories": [
           "인스타"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "5일 남음",
+        "applicant_count": 3,
+        "recruit_count": 1,
         "reward_points": null
       }
     },
@@ -2800,13 +1736,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716550-6635_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "에브리데이 옐로우 반팔세트 1개...",
       "location_text": null,
-      "content_hash": "0e25d2036272818b9a4622cecebe87d97f614d346f47ed9b0111cc4b0dc62d39",
+      "content_hash": "d3ef3cb72a1ed98375d2f2b3c0f762ba5bce03819e691c15ae4612fab0068f40",
       "dedup_key": "df0f3160ae834d01cb383dbfa475f6535bee79e2a8fc76ccd25065bc898bb659",
       "raw_payload": {
-        "homepage_text": "[인스타] 에브리데이 옐로우 반팔세트",
+        "homepage_text": "5일 남음 [인스타] 에브리데이 옐로우 반팔세트 에브리데이 옐로우 반팔세트 1개... 신청 3 / 모집 1",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2819,9 +1755,9 @@
         "source_categories": [
           "인스타"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "5일 남음",
+        "applicant_count": 3,
+        "recruit_count": 1,
         "reward_points": null
       }
     },
@@ -2835,13 +1771,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716520-2224_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "에브리데이 핑크 반팔세트 1개",
       "location_text": null,
-      "content_hash": "d7030633985a6485ecd0987553a8cf86fff9ccbd0a2c3d749e0807532dadff58",
+      "content_hash": "fdf3a062e10e5829e453dd233da5d15e22aa0d86be3ff21c977026a26251dbb0",
       "dedup_key": "1817434c4496b0ee7cbdee173719a98d24ed96ced9568edbbb41de3ff1720a60",
       "raw_payload": {
-        "homepage_text": "[인스타] 에브리데이 핑크 반팔세트",
+        "homepage_text": "5일 남음 [인스타] 에브리데이 핑크 반팔세트 에브리데이 핑크 반팔세트 1개 신청 2 / 모집 1",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2854,9 +1790,9 @@
         "source_categories": [
           "인스타"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "5일 남음",
+        "applicant_count": 2,
+        "recruit_count": 1,
         "reward_points": null
       }
     },
@@ -2870,13 +1806,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716471-8438_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "스윗데이 쿨냉감 끈 원피스 1개...",
       "location_text": null,
-      "content_hash": "de9714a7e705bc7c14cd7e7d3434c5c61cbe29ff3ccfddcbb0d3ec64e2cc3195",
+      "content_hash": "98a912871b200561254ec5eec18c5a31a58073508ba3118642f98dc937aed81f",
       "dedup_key": "bb5450542b9b6a685e69548bfe6b74017dd7a250c51021cddf183a10d0a9811c",
       "raw_payload": {
-        "homepage_text": "[인스타] 스윗데이 쿨냉감 끈 원피스",
+        "homepage_text": "5일 남음 [인스타] 스윗데이 쿨냉감 끈 원피스 스윗데이 쿨냉감 끈 원피스 1개... 신청 2 / 모집 1",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2889,9 +1825,9 @@
         "source_categories": [
           "인스타"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "5일 남음",
+        "applicant_count": 2,
+        "recruit_count": 1,
         "reward_points": null
       }
     },
@@ -2905,13 +1841,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716422-5785_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "퀄팅래빗 쿨냉감 프릴 원피스 1개...",
       "location_text": null,
-      "content_hash": "b44394b4e79b272d63bb009812652deb33981c2a42cb085afe9d0f5073e9a743",
+      "content_hash": "1cdc12eb9521a1e130fc6df093f8edf3a5b25b304091491c4b18e3a50b8fc2fb",
       "dedup_key": "f462ead53649030e073764efd845b3894bc6310acdda00eba6a7c8ef0a0df848",
       "raw_payload": {
-        "homepage_text": "[인스타] 퀄팅래빗 쿨냉감 프릴 원피스",
+        "homepage_text": "5일 남음 [인스타] 퀄팅래빗 쿨냉감 프릴 원피스 퀄팅래빗 쿨냉감 프릴 원피스 1개... 신청 4 / 모집 1",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2924,9 +1860,9 @@
         "source_categories": [
           "인스타"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "5일 남음",
+        "applicant_count": 4,
+        "recruit_count": 1,
         "reward_points": null
       }
     },
@@ -2940,13 +1876,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716386-3637_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "스윗래빗 체크 쿨냉감 반팔세트 1개...",
       "location_text": null,
-      "content_hash": "7bf66a8b516c2c588c8c949f0aabf16c19b500e84f4a7334b459404a8f66fd65",
+      "content_hash": "ca3c8a92c3855bbf0c6c7624bc5e9cad466b3fcedb1ce9a2bcc04844e0263bb1",
       "dedup_key": "ad0ee9eb509d441b2a5ad3fe609ec6839352fccf3e4efd99c4ea621623162784",
       "raw_payload": {
-        "homepage_text": "[인스타] 스윗래빗 체크 쿨냉감 반팔세트",
+        "homepage_text": "5일 남음 [인스타] 스윗래빗 체크 쿨냉감 반팔세트 스윗래빗 체크 쿨냉감 반팔세트 1개... 신청 2 / 모집 1",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2959,9 +1895,9 @@
         "source_categories": [
           "인스타"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "5일 남음",
+        "applicant_count": 2,
+        "recruit_count": 1,
         "reward_points": null
       }
     },
@@ -2975,13 +1911,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716333-1635_N_7_220x220_100_2_.jpg",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "플라워래빗 쿨냉감 반팔세트 1개...",
       "location_text": null,
-      "content_hash": "f6d10701100ee9675e8914a1216429b3c228780e84eca21ae68fd592ebd56049",
+      "content_hash": "280cf3de769c6785be3edaf104c338c6b785bd204c55642993bb50798c591516",
       "dedup_key": "88d5de665236f7bf2d6fd5d3003a8427397846909de3c4e8353740e9f086ba1b",
       "raw_payload": {
-        "homepage_text": "[인스타] 플라워래빗 쿨냉감 반팔세트",
+        "homepage_text": "5일 남음 [인스타] 플라워래빗 쿨냉감 반팔세트 플라워래빗 쿨냉감 반팔세트 1개... 신청 3 / 모집 1",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -2994,9 +1930,9 @@
         "source_categories": [
           "인스타"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "5일 남음",
+        "applicant_count": 3,
+        "recruit_count": 1,
         "reward_points": null
       }
     },
@@ -3010,13 +1946,13 @@
       "brand_name": null,
       "status": "active",
       "image_url": "https://www.ringble.co.kr/mallimg/2026/06/30/1782809665-8331_N_7_220x220_100_2_.png",
-      "application_deadline_at": null,
-      "reward_summary": null,
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "애플도그 쿨냉감 반팔세트 1개",
       "location_text": null,
-      "content_hash": "a29a70129c577a2986990392ee9ee35199a45d3099e70da3a63b444d5b0fdb32",
+      "content_hash": "998423530aaad21dc09a75f50bf979c71fe25ab661e6fd2311981a5e818a6923",
       "dedup_key": "8fc2bd4002c242e86306a85a89503bac0be5fdb28bec955907b8693b662087b4",
       "raw_payload": {
-        "homepage_text": "[인스타] 애플도그 쿨냉감 반팔세트",
+        "homepage_text": "5일 남음 [인스타] 애플도그 쿨냉감 반팔세트 애플도그 쿨냉감 반팔세트 1개 신청 2 / 모집 1",
         "homepage_url": "https://www.ringble.co.kr/",
         "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
       },
@@ -3029,9 +1965,219 @@
         "source_categories": [
           "인스타"
         ],
-        "deadline_text": null,
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "5일 남음",
+        "applicant_count": 2,
+        "recruit_count": 1,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "277673",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=277673&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277673&category=",
+      "title": "돈워리 핑크 쿨냉감 반팔세트",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716234-6041_N_7_220x220_100_2_.jpg",
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "돈워리 핑크 쿨냉감 반팔세트 1개...",
+      "location_text": null,
+      "content_hash": "3bfd23d139045544441aa004ea92808a931c75c1c2520fcdd50be61119f4608a",
+      "dedup_key": "9357b25304dc266dfc64f7f2aa5cb78a6d8da3230efa4e8d178863e67811bcb7",
+      "raw_payload": {
+        "homepage_text": "5일 남음 [인스타] 돈워리 핑크 쿨냉감 반팔세트 돈워리 핑크 쿨냉감 반팔세트 1개... 신청 2 / 모집 1",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [
+          "instagram"
+        ],
+        "region_tags": [],
+        "benefit_tags": [],
+        "source_categories": [
+          "인스타"
+        ],
+        "deadline_text": "5일 남음",
+        "applicant_count": 2,
+        "recruit_count": 1,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "277672",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=277672&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277672&category=",
+      "title": "돈워리 민트 쿨냉감 반팔세트",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716196-4883_N_7_220x220_100_2_.jpg",
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "돈워리 민트 쿨냉감 반팔세트 1개...",
+      "location_text": null,
+      "content_hash": "76fd1051ee14f92cecb6a522b02adeb9e012351225a70277870a6a0ec9ed7c8c",
+      "dedup_key": "8bfc63b0165a3d20685fcf4d286bf4a04fc6414639b3c6817ad2c8c7dfbf9294",
+      "raw_payload": {
+        "homepage_text": "5일 남음 [인스타] 돈워리 민트 쿨냉감 반팔세트 돈워리 민트 쿨냉감 반팔세트 1개... 신청 1 / 모집 1",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [
+          "instagram"
+        ],
+        "region_tags": [],
+        "benefit_tags": [],
+        "source_categories": [
+          "인스타"
+        ],
+        "deadline_text": "5일 남음",
+        "applicant_count": 1,
+        "recruit_count": 1,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "277671",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=277671&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277671&category=",
+      "title": "블루썸머 쿨냉감 반팔세트",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716152-2337_N_7_220x220_100_2_.jpg",
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "블루썸머 쿨냉감 반팔세트 1개",
+      "location_text": null,
+      "content_hash": "7fedc19368120a252fe3325fdc023e12287a8edaf1c4f780be3a0b83a92175e6",
+      "dedup_key": "c4e2c1eb8be2cd9ba6dac31e6996ddc1f3082e94ca30aa574af4b2d90dadb144",
+      "raw_payload": {
+        "homepage_text": "5일 남음 [인스타] 블루썸머 쿨냉감 반팔세트 블루썸머 쿨냉감 반팔세트 1개 신청 1 / 모집 1",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [
+          "instagram"
+        ],
+        "region_tags": [],
+        "benefit_tags": [],
+        "source_categories": [
+          "인스타"
+        ],
+        "deadline_text": "5일 남음",
+        "applicant_count": 1,
+        "recruit_count": 1,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "277670",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=277670&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277670&category=",
+      "title": "썸머디노 쿨냉감 반팔세트",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716068-2013_N_7_220x220_100_2_.jpg",
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "썸머디노 쿨냉감 반팔세트 1개",
+      "location_text": null,
+      "content_hash": "174e9da7d5f4b20b77ffe14ad28ddbe9c0cdb778792bb60a04d5cfa4fddda6c5",
+      "dedup_key": "400a7d19edfb964ab4f48eff1efbf51eb1ef6468be3df26c1d4e41b40bcd0889",
+      "raw_payload": {
+        "homepage_text": "5일 남음 [인스타] 썸머디노 쿨냉감 반팔세트 썸머디노 쿨냉감 반팔세트 1개 신청 1 / 모집 1",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [
+          "instagram"
+        ],
+        "region_tags": [],
+        "benefit_tags": [],
+        "source_categories": [
+          "인스타"
+        ],
+        "deadline_text": "5일 남음",
+        "applicant_count": 1,
+        "recruit_count": 1,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "277667",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=277667&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277667&category=",
+      "title": "큐트도그 체크 쿨냉감 반팔세트",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://www.ringble.co.kr/mallimg/2026/06/29/1782716030-3462_N_7_220x220_100_2_.jpg",
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "큐트도그 체크 쿨냉감 반팔세트 1개...",
+      "location_text": null,
+      "content_hash": "f1ee520f09fb001491f9e10baf2bb10d5008fdca1842c7405159d075ac0e3d9f",
+      "dedup_key": "f5d207e45b500c2e60d8594a80f242f2f0765a87c3809fa1b38bcb739d1d9376",
+      "raw_payload": {
+        "homepage_text": "5일 남음 [인스타] 큐트도그 체크 쿨냉감 반팔세트 큐트도그 체크 쿨냉감 반팔세트 1개... 신청 1 / 모집 1",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [
+          "instagram"
+        ],
+        "region_tags": [],
+        "benefit_tags": [],
+        "source_categories": [
+          "인스타"
+        ],
+        "deadline_text": "5일 남음",
+        "applicant_count": 1,
+        "recruit_count": 1,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "ringble",
+      "source_name": "링블",
+      "external_id": "277666",
+      "source_url": "https://www.ringble.co.kr/detail.php?number=277666&category=",
+      "normalized_url": "https://www.ringble.co.kr/detail.php?number=277666&category=",
+      "title": "레드캣 프리미엄벤토나이트모래",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://www.ringble.co.kr/mallimg/2026/07/01/1782876611-1441_N_7_220x220_100_2_.jpg",
+      "application_deadline_at": "2026-07-07T14:59:59+00:00",
+      "reward_summary": "레드캣 모래 6kg x 2EA (모래 선택 가능)...",
+      "location_text": null,
+      "content_hash": "558c6720d1b0a5cc72268b243787d30bba51a4e46782d9341d42a15541de31f2",
+      "dedup_key": "734406b5981e7744b86f1815646cd2b4d0b784cd5239a52bb0a2ac617e04edb5",
+      "raw_payload": {
+        "homepage_text": "6일 남음 [인스타] 레드캣 프리미엄벤토나이트모래 레드캣 모래 6kg x 2EA (모래 선택 가능)... 신청 0 / 모집 3 마감 임박 { {업체정보출력 세로2개,가로4개,전체,1110,upso_list_photo01a.html,마감임박2,63글자짜름,페이징사용안함,전체,누락0개,,,,진행중캠페인2} } <td",
+        "homepage_url": "https://www.ringble.co.kr/",
+        "policy_note": "robots.txt disallows detail.php. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [
+          "instagram"
+        ],
+        "region_tags": [],
+        "benefit_tags": [],
+        "source_categories": [
+          "인스타"
+        ],
+        "deadline_text": "6일 남음",
+        "applicant_count": 0,
+        "recruit_count": 3,
         "reward_points": null
       }
     },
@@ -3048,10 +2194,10 @@
       "application_deadline_at": "2026-07-01T14:59:59+00:00",
       "reward_summary": "JMW 에어뮤즈 BLDC 에어 써큘레이터 * 1개",
       "location_text": null,
-      "content_hash": "fa4187c69c188ab1be46a92001f366019db1a9f89e4da7b27b0261674685342b",
+      "content_hash": "7b0e7772cda13357ebd5ab22169cfae4a8bdc008ec0f38e5110ccdbee8a722c0",
       "dedup_key": "d18a63ce63b0e1b86c3aa75c71210ab85d7b9a48018187411ab46795e9462e9d",
       "raw_payload": {
-        "homepage_text": "[블로그] JMW 에어뮤즈 BLDC 에어 써큘레이터! JMW 에어뮤즈 BLDC 에어 써큘레이터 * 1개 오늘마감 신청 1431 / 5명",
+        "homepage_text": "[블로그] JMW 에어뮤즈 BLDC 에어 써큘레이터! JMW 에어뮤즈 BLDC 에어 써큘레이터 * 1개 오늘마감 신청 1439 / 5명",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3065,7 +2211,7 @@
           "블로그"
         ],
         "deadline_text": "오늘마감",
-        "applicant_count": 1431,
+        "applicant_count": 1439,
         "recruit_count": 5,
         "reward_points": null
       }
@@ -3083,10 +2229,10 @@
       "application_deadline_at": "2026-07-05T14:59:59+00:00",
       "reward_summary": "주말 뷔페(여름 보양식 프로모션)",
       "location_text": "서울 중구",
-      "content_hash": "c2187b413c1d9b46e4229c26374a7496da82b082de53612a9c2a49a008d8675d",
+      "content_hash": "daf60c9a19ca38fe4452a1f8d4f0debe40c2c1e83cc916fa54cffe4977f24423",
       "dedup_key": "11af02f8b93d18b3f00a7ff1214a7ce899d5e707f67fd0539fccbfc83d4ff9c6",
       "raw_payload": {
-        "homepage_text": "[서울/중구/블로그] 노보텔 앰배서더 서울 동대문 호텔 푸드 익스체인지 레스토랑에서 여름 보양식을! 주말 뷔페(여름 보양식 프로모션) D - 4 신청 1287 / 5명",
+        "homepage_text": "[서울/중구/블로그] 노보텔 앰배서더 서울 동대문 호텔 푸드 익스체인지 레스토랑에서 여름 보양식을! 주말 뷔페(여름 보양식 프로모션) D - 4 신청 1289 / 5명",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3106,7 +2252,7 @@
           "중구"
         ],
         "deadline_text": "D - 4",
-        "applicant_count": 1287,
+        "applicant_count": 1289,
         "recruit_count": 5,
         "reward_points": null
       }
@@ -3124,10 +2270,10 @@
       "application_deadline_at": "2026-07-05T14:59:59+00:00",
       "reward_summary": "고체 탈취제 대용량 280ML * 1",
       "location_text": null,
-      "content_hash": "ae8d6c0bf7ac84250a266e9ee14f991f59ecefecd228f479d1a31bd193b1f476",
+      "content_hash": "181e7c6852272c1a5f8fd1aa1d091ce74c4126d09ad0829909421430778f510a",
       "dedup_key": "e4c6a9ec85d9561c42e290c61a7ed3e251e4487b0914666e44cb62791c00ba49",
       "raw_payload": {
-        "homepage_text": "프리미엄 대용량 고체 탈취제❤️ 고체 탈취제 대용량 280ML * 1 D - 4 신청 987 / 10명",
+        "homepage_text": "프리미엄 대용량 고체 탈취제❤️ 고체 탈취제 대용량 280ML * 1 D - 4 신청 990 / 10명",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3137,7 +2283,7 @@
         "benefit_tags": [],
         "source_categories": [],
         "deadline_text": "D - 4",
-        "applicant_count": 987,
+        "applicant_count": 990,
         "recruit_count": 10,
         "reward_points": null
       }
@@ -3155,10 +2301,10 @@
       "application_deadline_at": "2026-07-01T14:59:59+00:00",
       "reward_summary": "갈비의해석 양념돼지갈비 국내산 목살 수제 양념육 (750g) * 1개(구매수량)",
       "location_text": null,
-      "content_hash": "9aa890abaf86bdf0bca4ad553b1216d43dc4f3191944db37946052e246928ee2",
+      "content_hash": "046af59b91610baaf439bb5cc4d0e7b8d67f9f8ee51513ed2a823c185785cf87",
       "dedup_key": "d55a5ee29d1be295d81dd6e8db8a48ea09b6336eec6d45f5e832a0c47e304998",
       "raw_payload": {
-        "homepage_text": "[스마트스토어] 갈비의해석 양념돼지갈비 국내산 목살 수제 양념육! 갈비의해석 양념돼지갈비 국내산 목살 수제 양념육 (750g) * 1개(구매수량) 오늘마감 신청 843 / 10명 24,440P",
+        "homepage_text": "[스마트스토어] 갈비의해석 양념돼지갈비 국내산 목살 수제 양념육! 갈비의해석 양념돼지갈비 국내산 목살 수제 양념육 (750g) * 1개(구매수량) 오늘마감 신청 846 / 10명 24,440P",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3172,7 +2318,7 @@
           "스마트스토어"
         ],
         "deadline_text": "오늘마감",
-        "applicant_count": 843,
+        "applicant_count": 846,
         "recruit_count": 10,
         "reward_points": 24440
       }
@@ -3190,10 +2336,10 @@
       "application_deadline_at": "2026-07-01T14:59:59+00:00",
       "reward_summary": "벨리푸드 글루텐프리 초코 모찌도넛 550g (55g*10개입) + 벨리푸드 글루텐프리 글레이즈 모찌도넛 550g (55g*10개입) * 총 2개 (구매수량)",
       "location_text": null,
-      "content_hash": "72b3f0e84f5e567b4f5bc252486b36fd38321080536dbd7de28fcc133a77c086",
+      "content_hash": "189073c05c1e948751956e49738f2a83e8358d8da488da42305cb72f499d38af",
       "dedup_key": "89448957921b468109c9ab20b0e2d8ebcf584da0df8f95c27142605a17d6d3dd",
       "raw_payload": {
-        "homepage_text": "[로켓프레시/멀티리뷰] 벨리푸드 글루텐프리 초코 모찌도넛 + 글레이즈 모찌도넛 벨리푸드 글루텐프리 초코 모찌도넛 550g (55g*10개입) + 벨리푸드 글루텐프리 글레이즈 모찌도넛 550g (55g*10개입) * 총 2개 (구매수량) 오늘마감 신청 701 / 4명 멀티리뷰 19,620P",
+        "homepage_text": "[로켓프레시/멀티리뷰] 벨리푸드 글루텐프리 초코 모찌도넛 + 글레이즈 모찌도넛 벨리푸드 글루텐프리 초코 모찌도넛 550g (55g*10개입) + 벨리푸드 글루텐프리 글레이즈 모찌도넛 550g (55g*10개입) * 총 2개 (구매수량) 오늘마감 신청 703 / 4명 멀티리뷰 19,620P",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3208,7 +2354,7 @@
           "멀티리뷰"
         ],
         "deadline_text": "오늘마감",
-        "applicant_count": 701,
+        "applicant_count": 703,
         "recruit_count": 4,
         "reward_points": 19620
       }
@@ -3226,10 +2372,10 @@
       "application_deadline_at": "2026-07-02T14:59:59+00:00",
       "reward_summary": "해밀턴비치 진공흡착 스팀다리미(샴페인 골드) * 1개(구매수량)",
       "location_text": null,
-      "content_hash": "f69982df62fdcb48c501d0b1af5249f93d15d7627a0e77eaa06edfbcf51276a4",
+      "content_hash": "13c74c1cf41f5d732aed1d63c2051b3fe47fb2e29af1cc2c7d3dd21ea4698a5a",
       "dedup_key": "3712da42bc570aba8f9b499f6d9f84af71e721110710da1158ba63f3ae56e25e",
       "raw_payload": {
-        "homepage_text": "[스마트스토어/블로그] 해밀턴비치 진공흡착 스팀다리미♥ 해밀턴비치 진공흡착 스팀다리미(샴페인 골드) * 1개(구매수량) D - 1 신청 688 / 15명 158,000P",
+        "homepage_text": "[스마트스토어/블로그] 해밀턴비치 진공흡착 스팀다리미♥ 해밀턴비치 진공흡착 스팀다리미(샴페인 골드) * 1개(구매수량) D - 1 신청 690 / 15명 158,000P",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3246,7 +2392,7 @@
           "스마트스토어"
         ],
         "deadline_text": "D - 1",
-        "applicant_count": 688,
+        "applicant_count": 690,
         "recruit_count": 15,
         "reward_points": 158000
       }
@@ -3264,10 +2410,10 @@
       "application_deadline_at": "2026-07-01T14:59:59+00:00",
       "reward_summary": "발데자르자 스페인 엑스트라 버진 냉압착올리브오일 캡슐 * 1개(구매수량)",
       "location_text": null,
-      "content_hash": "1fd1308101004f7133d3ce8ae30ec840c161f2a5668a25041906909bdb11a9f0",
+      "content_hash": "1114d2aa31a04f208c5d591b34e8af518cbbf91539e19efc717ed6ef9b45dc96",
       "dedup_key": "a789080921dd6bc9559bfc878fd98b09683fa2a368fce782f7f651de0b2e8cae",
       "raw_payload": {
-        "homepage_text": "[쿠팡] 발데자르자 스페인 엑스트라 버진 냉압착올리브오일 캡슐 발데자르자 스페인 엑스트라 버진 냉압착올리브오일 캡슐 * 1개(구매수량) 오늘마감 신청 658 / 15명 25,800P",
+        "homepage_text": "[쿠팡] 발데자르자 스페인 엑스트라 버진 냉압착올리브오일 캡슐 발데자르자 스페인 엑스트라 버진 냉압착올리브오일 캡슐 * 1개(구매수량) 오늘마감 신청 660 / 15명 25,800P",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3281,7 +2427,7 @@
           "쿠팡"
         ],
         "deadline_text": "오늘마감",
-        "applicant_count": 658,
+        "applicant_count": 660,
         "recruit_count": 15,
         "reward_points": 25800
       }
@@ -3365,10 +2511,10 @@
       "application_deadline_at": "2026-07-02T14:59:59+00:00",
       "reward_summary": "설빙 딸기 & 멜론 구슬 아이스크림 (냉동) * 1개(구매수량)",
       "location_text": null,
-      "content_hash": "629edbbc48cbf2720939b7207e6777e51d82bf9e6bb328c39b57b00f0316e401",
+      "content_hash": "c6f020a68a54a58062fc50945596bce40902deae46bf84a292365f6880620e9e",
       "dedup_key": "ae71a1f422f5f7647cbc9adb44a20bcdf5d15b077600bfefece320725d2b17cc",
       "raw_payload": {
-        "homepage_text": "[쿠팡/로켓프레시] 설빙 딸기 & 멜론 구슬 아이스크림 (냉동) 설빙 딸기 & 멜론 구슬 아이스크림 (냉동) * 1개(구매수량) D - 1 신청 592 / 8명 14,600P",
+        "homepage_text": "[쿠팡/로켓프레시] 설빙 딸기 & 멜론 구슬 아이스크림 (냉동) 설빙 딸기 & 멜론 구슬 아이스크림 (냉동) * 1개(구매수량) D - 1 신청 595 / 8명 14,600P",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3383,7 +2529,7 @@
           "쿠팡"
         ],
         "deadline_text": "D - 1",
-        "applicant_count": 592,
+        "applicant_count": 595,
         "recruit_count": 8,
         "reward_points": 14600
       }
@@ -3435,10 +2581,10 @@
       "application_deadline_at": "2026-07-06T14:59:59+00:00",
       "reward_summary": "피캄 V모드 + PDRN 카페인 블루 캡슐 60 크림",
       "location_text": null,
-      "content_hash": "67ea965b40de9b95408aac8cda43fdb914853f07b1b99372e9fcbc8ce9a51cf9",
+      "content_hash": "ed2c94faaf91cd002aee3327fe16567fc444efc92b7461f04a469469ecb4d695",
       "dedup_key": "4e70ef7405dd1358226bca8890cc73422cb83b6fa02e76c94b708b76431ac925",
       "raw_payload": {
-        "homepage_text": "[블로그] 피캄 V모드 + PDRN 카페인 블루 캡슐 60 크림 피캄 V모드 + PDRN 카페인 블루 캡슐 60 크림 D - 5 신청 548 / 20명",
+        "homepage_text": "[블로그] 피캄 V모드 + PDRN 카페인 블루 캡슐 60 크림 피캄 V모드 + PDRN 카페인 블루 캡슐 60 크림 D - 5 신청 549 / 20명",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3454,7 +2600,7 @@
           "블로그"
         ],
         "deadline_text": "D - 5",
-        "applicant_count": 548,
+        "applicant_count": 549,
         "recruit_count": 20,
         "reward_points": null
       }
@@ -3472,10 +2618,10 @@
       "application_deadline_at": "2026-07-02T14:59:59+00:00",
       "reward_summary": "오트 크런치롤 초코맛(1개/600g) * 1개(구매수량)",
       "location_text": null,
-      "content_hash": "d6588bb44a5d6518b08f19f6f880abf8e3e24640589c4d83274ca8152e05ac98",
+      "content_hash": "6993e7bbb124a9d34243abfafdd56e58b375833db8489ee9b5a43223197ec7ae",
       "dedup_key": "814d329e2c9c9ce534643be17341e5c3b7dde5b9900a79a95e6f126b8da51c21",
       "raw_payload": {
-        "homepage_text": "[쿠팡] 오트 크런치롤 초코맛! 오트 크런치롤 초코맛(1개/600g) * 1개(구매수량) D - 1 신청 539 / 10명 10,460P",
+        "homepage_text": "[쿠팡] 오트 크런치롤 초코맛! 오트 크런치롤 초코맛(1개/600g) * 1개(구매수량) D - 1 신청 542 / 10명 10,460P",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3489,7 +2635,7 @@
           "쿠팡"
         ],
         "deadline_text": "D - 1",
-        "applicant_count": 539,
+        "applicant_count": 542,
         "recruit_count": 10,
         "reward_points": 10460
       }
@@ -3507,10 +2653,10 @@
       "application_deadline_at": "2026-07-01T14:59:59+00:00",
       "reward_summary": "슈가버블 센티드 딥 포밍 비건 핸드워시 시트러스 브리즈 본품(500ml) + 리필 파우치 (450ml) * 1개(구매수량)",
       "location_text": null,
-      "content_hash": "83b018d14a3d2bfa5d11bea546dc190c1f9671c2a2ede5ce05adafcaa9fec424",
+      "content_hash": "2aeaf7b50f96394ed64e9da674209a9d23aa633eabd9afc4d2a4cdb1610f126a",
       "dedup_key": "072e5edb5b34fc4ac18f12064119b5c152e936ee9ccd85a6b33a3c4835e07816",
       "raw_payload": {
-        "homepage_text": "[스마트스토어] 슈가버블 센티드 딥 포밍 비건 핸드워시 시트러스 브리즈 본품&리필 슈가버블 센티드 딥 포밍 비건 핸드워시 시트러스 브리즈 본품(500ml) + 리필 파우치 (450ml) * 1개(구매수량) 오늘마감 신청 517 / 20명 8,900P",
+        "homepage_text": "[스마트스토어] 슈가버블 센티드 딥 포밍 비건 핸드워시 시트러스 브리즈 본품&리필 슈가버블 센티드 딥 포밍 비건 핸드워시 시트러스 브리즈 본품(500ml) + 리필 파우치 (450ml) * 1개(구매수량) 오늘마감 신청 519 / 20명 8,900P",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3524,9 +2670,44 @@
           "스마트스토어"
         ],
         "deadline_text": "오늘마감",
-        "applicant_count": 517,
+        "applicant_count": 519,
         "recruit_count": 20,
         "reward_points": 8900
+      }
+    },
+    {
+      "source_code": "reviewplace",
+      "source_name": "리뷰플레이스",
+      "external_id": "295132",
+      "source_url": "https://www.reviewplace.co.kr/pr/?id=295132",
+      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=295132",
+      "title": "답답함 없이 산뜻하게! 덴젤 생리대 팬티라이너♥",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/29/thumb-31400146_vHNAR9B4_fc3cef2234b7de030ec6c96eefdab08cdeff9419_230x230.jpg",
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "덴젤 생리대 팬티라이너(40개입) * 1개(구매수량)",
+      "location_text": null,
+      "content_hash": "3cd5d4461f3328d5f69bdb66140730e32ddb33439e1cccc58b78898b8f465801",
+      "dedup_key": "84a3a3ece1e8c22bae4242651ac64f2f51027c970e2a7bff906a4d8adef44763",
+      "raw_payload": {
+        "homepage_text": "[쿠팡] 답답함 없이 산뜻하게! 덴젤 생리대 팬티라이너♥ 덴젤 생리대 팬티라이너(40개입) * 1개(구매수량) 오늘마감 신청 517 / 10명 11,770P",
+        "homepage_url": "https://www.reviewplace.co.kr/",
+        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "purchase_review"
+        ],
+        "source_categories": [
+          "쿠팡"
+        ],
+        "deadline_text": "오늘마감",
+        "applicant_count": 517,
+        "recruit_count": 10,
+        "reward_points": 11770
       }
     },
     {
@@ -3562,41 +2743,6 @@
         "applicant_count": 516,
         "recruit_count": 5,
         "reward_points": null
-      }
-    },
-    {
-      "source_code": "reviewplace",
-      "source_name": "리뷰플레이스",
-      "external_id": "295132",
-      "source_url": "https://www.reviewplace.co.kr/pr/?id=295132",
-      "normalized_url": "https://www.reviewplace.co.kr/pr/?id=295132",
-      "title": "답답함 없이 산뜻하게! 덴젤 생리대 팬티라이너♥",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://cdn.cdnreviewplace.co.kr/data/file/product/2026/06/29/thumb-31400146_vHNAR9B4_fc3cef2234b7de030ec6c96eefdab08cdeff9419_230x230.jpg",
-      "application_deadline_at": "2026-07-01T14:59:59+00:00",
-      "reward_summary": "덴젤 생리대 팬티라이너(40개입) * 1개(구매수량)",
-      "location_text": null,
-      "content_hash": "a63ad71707110867145232622a767cb913b724ec01403ba002b214935a393056",
-      "dedup_key": "84a3a3ece1e8c22bae4242651ac64f2f51027c970e2a7bff906a4d8adef44763",
-      "raw_payload": {
-        "homepage_text": "[쿠팡] 답답함 없이 산뜻하게! 덴젤 생리대 팬티라이너♥ 덴젤 생리대 팬티라이너(40개입) * 1개(구매수량) 오늘마감 신청 515 / 10명 11,770P",
-        "homepage_url": "https://www.reviewplace.co.kr/",
-        "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [
-          "purchase_review"
-        ],
-        "source_categories": [
-          "쿠팡"
-        ],
-        "deadline_text": "오늘마감",
-        "applicant_count": 515,
-        "recruit_count": 10,
-        "reward_points": 11770
       }
     },
     {
@@ -3682,10 +2828,10 @@
       "application_deadline_at": "2026-07-01T14:59:59+00:00",
       "reward_summary": "국산 코마사 무지 중목 양말 4켤레 세트 (자율선택) * 1개(구매수량)",
       "location_text": null,
-      "content_hash": "472f73b67267931c558a7d84ed34c508648792ab239468e4b77cfe9ccf9b242b",
+      "content_hash": "3de3ec53128cdc01f84ae0129bb2d667de0e16dfd0a02021888f5f4d42e13668",
       "dedup_key": "bffd35556680ac39dcb4cfee90f72a26738b915ca03a023780cf0138754ffdef",
       "raw_payload": {
-        "homepage_text": "[스마트스토어] 국산 코마사 무지 중목 양말 4켤레 세트 국산 코마사 무지 중목 양말 4켤레 세트 (자율선택) * 1개(구매수량) 오늘마감 신청 498 / 10명 10,500P",
+        "homepage_text": "[스마트스토어] 국산 코마사 무지 중목 양말 4켤레 세트 국산 코마사 무지 중목 양말 4켤레 세트 (자율선택) * 1개(구매수량) 오늘마감 신청 500 / 10명 10,500P",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3699,7 +2845,7 @@
           "스마트스토어"
         ],
         "deadline_text": "오늘마감",
-        "applicant_count": 498,
+        "applicant_count": 500,
         "recruit_count": 10,
         "reward_points": 10500
       }
@@ -3717,10 +2863,10 @@
       "application_deadline_at": "2026-07-06T14:59:59+00:00",
       "reward_summary": "피캄 V모드 + PDRN 카페인 블루 캡슐 60 크림",
       "location_text": null,
-      "content_hash": "4286238c9186d6a5ab138f3697c3fd455848bb435fb5a08c5bf6fbd12c10b5b7",
+      "content_hash": "c7f907e0d512c2d9f8afd8ea5351172c84f91298463368514c0331477c8b9807",
       "dedup_key": "76a6a483df8b12f4145d7392cda74bea06afc14970e7403ce0ab0457990ef627",
       "raw_payload": {
-        "homepage_text": "[블로그] 피캄 V모드 + PDRN 카페인 블루 캡슐 60 크림 피캄 V모드 + PDRN 카페인 블루 캡슐 60 크림 D - 5 신청 493 / 20명",
+        "homepage_text": "[블로그] 피캄 V모드 + PDRN 카페인 블루 캡슐 60 크림 피캄 V모드 + PDRN 카페인 블루 캡슐 60 크림 D - 5 신청 495 / 20명",
         "homepage_url": "https://www.reviewplace.co.kr/",
         "policy_note": "robots.txt disallows /pr. Fetch only the allowed homepage."
       },
@@ -3736,7 +2882,7 @@
           "블로그"
         ],
         "deadline_text": "D - 5",
-        "applicant_count": 493,
+        "applicant_count": 495,
         "recruit_count": 20,
         "reward_points": null
       }
@@ -3744,20 +2890,20 @@
     {
       "source_code": "tble",
       "source_name": "티블",
-      "external_id": "412952",
-      "source_url": "https://tble.kr/view.php?cp_id=412952",
-      "normalized_url": "https://tble.kr/view.php?cp_id=412952",
-      "title": "한닢쿡",
+      "external_id": "413266",
+      "source_url": "https://tble.kr/view.php?cp_id=413266",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413266",
+      "title": "녹 nowk - 더 가든 샤워젤",
       "brand_name": null,
       "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3551702535_B4fY5c3U",
-      "application_deadline_at": "2026-07-02T14:59:59+00:00",
-      "reward_summary": "국대육수 50알",
+      "image_url": "https://tble.kr/data/campaign/3551702535_9PSkmTb7",
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "더 가든 샤워젤",
       "location_text": null,
-      "content_hash": "6a3ec798f46f4f485163a55935b2d5038e570e385a848a6410a62fa56531125d",
-      "dedup_key": "b654c76b6cf026ffad4676ce88a50ee3d3d27f8435c7bc0520ba78d84f7ccba3",
+      "content_hash": "37e3ac26e9cead09d8162d36a879c0fff5567e1f9ea9248b5baf85275a042cd5",
+      "dedup_key": "f43462b75d8641a46ce30d01c4329dec3fb080c0072e9b2e651dafae4f280b76",
       "raw_payload": {
-        "homepage_text": "1일 남음 [배송] 한닢쿡 국대육수 50알 신청 190 명 / 모집 10 명",
+        "homepage_text": "-1일 남음 [배송] 녹 nowk - 더 가든 샤워젤 더 가든 샤워젤 신청 213 명 / 모집 3 명",
         "homepage_url": "https://tble.kr/",
         "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
       },
@@ -3770,9 +2916,9 @@
         "source_categories": [
           "배송"
         ],
-        "deadline_text": "1일 남음",
-        "applicant_count": 190,
-        "recruit_count": 10,
+        "deadline_text": "-1일 남음",
+        "applicant_count": 213,
+        "recruit_count": 3,
         "reward_points": null
       }
     },
@@ -3808,41 +2954,6 @@
         "deadline_text": "7일 남음",
         "applicant_count": 338,
         "recruit_count": 30,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "tble",
-      "source_name": "티블",
-      "external_id": "412880",
-      "source_url": "https://tble.kr/view.php?cp_id=412880",
-      "normalized_url": "https://tble.kr/view.php?cp_id=412880",
-      "title": "산내들우복당 - 영양 갈비탕",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3076909346_DQZtVBR5",
-      "application_deadline_at": "2026-07-08T14:59:59+00:00",
-      "reward_summary": "우복당 영양 갈비탕 700g 2개 제공",
-      "location_text": null,
-      "content_hash": "377dc51dd02915ef2c5709e05059fe8d61bc69eeec0ec8ff5dadde9dfd6b86df",
-      "dedup_key": "1fcdfe9d356cadaa241eb29252d6d2cb765c7f0d977b09efa98979226d708df2",
-      "raw_payload": {
-        "homepage_text": "7일 남음 [배송] 산내들우복당 - 영양 갈비탕 우복당 영양 갈비탕 700g 2개 제공 신청 487 명 / 모집 10 명",
-        "homepage_url": "https://tble.kr/",
-        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [
-          "delivery"
-        ],
-        "source_categories": [
-          "배송"
-        ],
-        "deadline_text": "7일 남음",
-        "applicant_count": 487,
-        "recruit_count": 10,
         "reward_points": null
       }
     },
@@ -3885,20 +2996,20 @@
     {
       "source_code": "tble",
       "source_name": "티블",
-      "external_id": "413266",
-      "source_url": "https://tble.kr/view.php?cp_id=413266",
-      "normalized_url": "https://tble.kr/view.php?cp_id=413266",
-      "title": "녹 nowk - 더 가든 샤워젤",
+      "external_id": "413267",
+      "source_url": "https://tble.kr/view.php?cp_id=413267",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413267",
+      "title": "녹 nowk - 더 가든 바디로션",
       "brand_name": null,
       "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3551702535_9PSkmTb7",
+      "image_url": "https://tble.kr/data/campaign/3551702535_TX29QjGD",
       "application_deadline_at": "2026-07-01T14:59:59+00:00",
-      "reward_summary": "더 가든 샤워젤",
+      "reward_summary": "더 가든 바디로션",
       "location_text": null,
-      "content_hash": "37e3ac26e9cead09d8162d36a879c0fff5567e1f9ea9248b5baf85275a042cd5",
-      "dedup_key": "f43462b75d8641a46ce30d01c4329dec3fb080c0072e9b2e651dafae4f280b76",
+      "content_hash": "3f552b1ad750bbd496f73c131b90759c267820a512e33ded5830c039bd7872f5",
+      "dedup_key": "461f314c07c6a99a01bb7b77cba3130d2c477fd99978897e4715f79d1dcc10a8",
       "raw_payload": {
-        "homepage_text": "-1일 남음 [배송] 녹 nowk - 더 가든 샤워젤 더 가든 샤워젤 신청 213 명 / 모집 3 명",
+        "homepage_text": "-1일 남음 [배송] 녹 nowk - 더 가든 바디로션 더 가든 바디로션 신청 176 명 / 모집 3 명",
         "homepage_url": "https://tble.kr/",
         "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
       },
@@ -3912,7 +3023,7 @@
           "배송"
         ],
         "deadline_text": "-1일 남음",
-        "applicant_count": 213,
+        "applicant_count": 176,
         "recruit_count": 3,
         "reward_points": null
       }
@@ -3920,20 +3031,20 @@
     {
       "source_code": "tble",
       "source_name": "티블",
-      "external_id": "413416",
-      "source_url": "https://tble.kr/view.php?cp_id=413416",
-      "normalized_url": "https://tble.kr/view.php?cp_id=413416",
-      "title": "스댕연구소 스테인리스 궁중팬&프라이팬 세트 ( 네이버 라이브쇼핑)",
+      "external_id": "412952",
+      "source_url": "https://tble.kr/view.php?cp_id=412952",
+      "normalized_url": "https://tble.kr/view.php?cp_id=412952",
+      "title": "한닢쿡",
       "brand_name": null,
       "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3551702535_QIyrFPHR",
-      "application_deadline_at": "2026-07-08T14:59:59+00:00",
-      "reward_summary": "49,800원 상당의 스댕연구소 스테인리스 통3중 웍 궁중팬 26cm & 프라이팬 28cm 인덕션 IH세트 제공",
+      "image_url": "https://tble.kr/data/campaign/3551702535_B4fY5c3U",
+      "application_deadline_at": "2026-07-02T14:59:59+00:00",
+      "reward_summary": "국대육수 50알",
       "location_text": null,
-      "content_hash": "c63bb661315fb569f00c1bee22d702b92e32e2217c2b9a711970e2cb9068bf4a",
-      "dedup_key": "73ac320f408494c66f9792e8ea67325db291089a61e62388ebe13242954921bd",
+      "content_hash": "6a3ec798f46f4f485163a55935b2d5038e570e385a848a6410a62fa56531125d",
+      "dedup_key": "b654c76b6cf026ffad4676ce88a50ee3d3d27f8435c7bc0520ba78d84f7ccba3",
       "raw_payload": {
-        "homepage_text": "7일 남음 [구매평] 스댕연구소 스테인리스 궁중팬&프라이팬 세트 ( 네이버 라이브쇼핑) 49,800원 상당의 스댕연구소 스테인리스 통3중 웍 궁중팬 26cm & 프라이팬 28cm 인덕션 IH세트 제공 신청 275 명 / 모집 10 명",
+        "homepage_text": "1일 남음 [배송] 한닢쿡 국대육수 50알 신청 190 명 / 모집 10 명",
         "homepage_url": "https://tble.kr/",
         "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
       },
@@ -3941,13 +3052,48 @@
         "platform_tags": [],
         "region_tags": [],
         "benefit_tags": [
-          "purchase_review"
+          "delivery"
         ],
         "source_categories": [
-          "구매평"
+          "배송"
+        ],
+        "deadline_text": "1일 남음",
+        "applicant_count": 190,
+        "recruit_count": 10,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "412880",
+      "source_url": "https://tble.kr/view.php?cp_id=412880",
+      "normalized_url": "https://tble.kr/view.php?cp_id=412880",
+      "title": "산내들우복당 - 영양 갈비탕",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://tble.kr/data/campaign/3076909346_DQZtVBR5",
+      "application_deadline_at": "2026-07-08T14:59:59+00:00",
+      "reward_summary": "우복당 영양 갈비탕 700g 2개 제공",
+      "location_text": null,
+      "content_hash": "b1ef501507843e5b4c941fbdf776ad734fca3dec59d3c1231c6f1d3e23e37849",
+      "dedup_key": "1fcdfe9d356cadaa241eb29252d6d2cb765c7f0d977b09efa98979226d708df2",
+      "raw_payload": {
+        "homepage_text": "7일 남음 [배송] 산내들우복당 - 영양 갈비탕 우복당 영양 갈비탕 700g 2개 제공 신청 488 명 / 모집 10 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [
+          "delivery"
+        ],
+        "source_categories": [
+          "배송"
         ],
         "deadline_text": "7일 남음",
-        "applicant_count": 275,
+        "applicant_count": 488,
         "recruit_count": 10,
         "reward_points": null
       }
@@ -3990,20 +3136,20 @@
     {
       "source_code": "tble",
       "source_name": "티블",
-      "external_id": "413267",
-      "source_url": "https://tble.kr/view.php?cp_id=413267",
-      "normalized_url": "https://tble.kr/view.php?cp_id=413267",
-      "title": "녹 nowk - 더 가든 바디로션",
+      "external_id": "413416",
+      "source_url": "https://tble.kr/view.php?cp_id=413416",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413416",
+      "title": "스댕연구소 스테인리스 궁중팬&프라이팬 세트 ( 네이버 라이브쇼핑)",
       "brand_name": null,
       "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3551702535_TX29QjGD",
-      "application_deadline_at": "2026-07-01T14:59:59+00:00",
-      "reward_summary": "더 가든 바디로션",
+      "image_url": "https://tble.kr/data/campaign/3551702535_QIyrFPHR",
+      "application_deadline_at": "2026-07-08T14:59:59+00:00",
+      "reward_summary": "49,800원 상당의 스댕연구소 스테인리스 통3중 웍 궁중팬 26cm & 프라이팬 28cm 인덕션 IH세트 제공",
       "location_text": null,
-      "content_hash": "3f552b1ad750bbd496f73c131b90759c267820a512e33ded5830c039bd7872f5",
-      "dedup_key": "461f314c07c6a99a01bb7b77cba3130d2c477fd99978897e4715f79d1dcc10a8",
+      "content_hash": "8bc835de1ddb9ea482f246d7465f28c6449dfeac401394f90fd99c558115f774",
+      "dedup_key": "73ac320f408494c66f9792e8ea67325db291089a61e62388ebe13242954921bd",
       "raw_payload": {
-        "homepage_text": "-1일 남음 [배송] 녹 nowk - 더 가든 바디로션 더 가든 바디로션 신청 176 명 / 모집 3 명",
+        "homepage_text": "7일 남음 [구매평] 스댕연구소 스테인리스 궁중팬&프라이팬 세트 ( 네이버 라이브쇼핑) 49,800원 상당의 스댕연구소 스테인리스 통3중 웍 궁중팬 26cm & 프라이팬 28cm 인덕션 IH세트 제공 신청 276 명 / 모집 10 명",
         "homepage_url": "https://tble.kr/",
         "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
       },
@@ -4011,154 +3157,14 @@
         "platform_tags": [],
         "region_tags": [],
         "benefit_tags": [
-          "delivery"
+          "purchase_review"
         ],
         "source_categories": [
-          "배송"
+          "구매평"
         ],
-        "deadline_text": "-1일 남음",
-        "applicant_count": 176,
-        "recruit_count": 3,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "tble",
-      "source_name": "티블",
-      "external_id": "412832",
-      "source_url": "https://tble.kr/view.php?cp_id=412832",
-      "normalized_url": "https://tble.kr/view.php?cp_id=412832",
-      "title": "피부관리 한의원",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://tble.kr/data/campaign/1993884802_L7akZHIy",
-      "application_deadline_at": "2026-07-01T14:59:59+00:00",
-      "reward_summary": "색소레이저, 모공관리, 여드름흉터, 얼굴미백, 안면홍조, 안면비대칭리프팅, 윤곽약침 중 택 1 제공",
-      "location_text": "경남 창원",
-      "content_hash": "e6fc97a6ef44cc8bc0a47479709389f19573f36fbd50c653141768eefd5cfc17",
-      "dedup_key": "a705461c6dc4df4a23ee9b07641fe57efa65dd91b06e23b893b698f260acf3ad",
-      "raw_payload": {
-        "homepage_text": "오늘 마감 [경남 창원] 피부관리 한의원 색소레이저, 모공관리, 여드름흉터, 얼굴미백, 안면홍조, 안면비대칭리프팅, 윤곽약침 중 택 1 제공 신청 33 명 / 모집 10 명",
-        "homepage_url": "https://tble.kr/",
-        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "경남"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "경남 창원"
-        ],
-        "deadline_text": "오늘마감",
-        "applicant_count": 33,
+        "deadline_text": "7일 남음",
+        "applicant_count": 276,
         "recruit_count": 10,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "tble",
-      "source_name": "티블",
-      "external_id": "412882",
-      "source_url": "https://tble.kr/view.php?cp_id=412882",
-      "normalized_url": "https://tble.kr/view.php?cp_id=412882",
-      "title": "세르프",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3659934777_1PjKcbDu",
-      "application_deadline_at": "2026-07-01T14:59:59+00:00",
-      "reward_summary": "100만원 상당의 세르프 이용권 제공",
-      "location_text": "경기 성남",
-      "content_hash": "3aea27e98b9a62bdacc6df5e5cdadddceae4c9b631096532539a9c3973d756ba",
-      "dedup_key": "88ecae7afd08b254da3844cd4b18877e9bffc53c720272009eafa1e8fbdf6674",
-      "raw_payload": {
-        "homepage_text": "오늘 마감 [경기 성남] 세르프 100만원 상당의 세르프 이용권 제공 신청 59 명 / 모집 2 명",
-        "homepage_url": "https://tble.kr/",
-        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "경기"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "경기 성남"
-        ],
-        "deadline_text": "오늘마감",
-        "applicant_count": 59,
-        "recruit_count": 2,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "tble",
-      "source_name": "티블",
-      "external_id": "413451",
-      "source_url": "https://tble.kr/view.php?cp_id=413451",
-      "normalized_url": "https://tble.kr/view.php?cp_id=413451",
-      "title": "세르프",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3551702535_MXYNmDqH",
-      "application_deadline_at": "2026-07-09T14:59:59+00:00",
-      "reward_summary": "100만원 상당의 세르프 이용권 제공",
-      "location_text": null,
-      "content_hash": "ad68b3a1f35b6349205b496c57e0a18b8a940fd2c91fa50e62a76f771213b7ba",
-      "dedup_key": "1afbe6c777e93318733eefb7f43a7f23696d1d2a7776037000cfc06a742064cc",
-      "raw_payload": {
-        "homepage_text": "8일 남음 [강남] 세르프 100만원 상당의 세르프 이용권 제공 신청 68 명 / 모집 10 명",
-        "homepage_url": "https://tble.kr/",
-        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [],
-        "source_categories": [
-          "강남"
-        ],
-        "deadline_text": "8일 남음",
-        "applicant_count": 68,
-        "recruit_count": 10,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "tble",
-      "source_name": "티블",
-      "external_id": "412857",
-      "source_url": "https://tble.kr/view.php?cp_id=412857",
-      "normalized_url": "https://tble.kr/view.php?cp_id=412857",
-      "title": "세르프",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3551702535_IBtxH5Of",
-      "application_deadline_at": "2026-07-01T14:59:59+00:00",
-      "reward_summary": "100만원 상당의 세르프 이용권 제공",
-      "location_text": null,
-      "content_hash": "b209b35c7158f3137aa73dcbc43fb33f4a177f3bc47d97070b13fa06b66a5471",
-      "dedup_key": "45971d541f1a3e605dfc60ff0f0de68d8507ee9d65191d3a771eba0e049dceee",
-      "raw_payload": {
-        "homepage_text": "오늘 마감 [신논현] 세르프 100만원 상당의 세르프 이용권 제공 신청 116 명 / 모집 2 명",
-        "homepage_url": "https://tble.kr/",
-        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [],
-        "source_categories": [
-          "신논현"
-        ],
-        "deadline_text": "오늘마감",
-        "applicant_count": 116,
-        "recruit_count": 2,
         "reward_points": null
       }
     },
@@ -4198,6 +3204,39 @@
     {
       "source_code": "tble",
       "source_name": "티블",
+      "external_id": "413451",
+      "source_url": "https://tble.kr/view.php?cp_id=413451",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413451",
+      "title": "세르프",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://tble.kr/data/campaign/3551702535_MXYNmDqH",
+      "application_deadline_at": "2026-07-09T14:59:59+00:00",
+      "reward_summary": "100만원 상당의 세르프 이용권 제공",
+      "location_text": null,
+      "content_hash": "ad68b3a1f35b6349205b496c57e0a18b8a940fd2c91fa50e62a76f771213b7ba",
+      "dedup_key": "1afbe6c777e93318733eefb7f43a7f23696d1d2a7776037000cfc06a742064cc",
+      "raw_payload": {
+        "homepage_text": "8일 남음 [강남] 세르프 100만원 상당의 세르프 이용권 제공 신청 68 명 / 모집 10 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [],
+        "source_categories": [
+          "강남"
+        ],
+        "deadline_text": "8일 남음",
+        "applicant_count": 68,
+        "recruit_count": 10,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
       "external_id": "412864",
       "source_url": "https://tble.kr/view.php?cp_id=412864",
       "normalized_url": "https://tble.kr/view.php?cp_id=412864",
@@ -4225,43 +3264,6 @@
         "deadline_text": "오늘마감",
         "applicant_count": 58,
         "recruit_count": 1,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "tble",
-      "source_name": "티블",
-      "external_id": "413155",
-      "source_url": "https://tble.kr/view.php?cp_id=413155",
-      "normalized_url": "https://tble.kr/view.php?cp_id=413155",
-      "title": "어울림산장",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3076909346_9PELrfX2",
-      "application_deadline_at": "2026-07-06T14:59:59+00:00",
-      "reward_summary": "4인 기준 셀프바베큐장 당일권 + 삼겹살 + 밀키트 제공",
-      "location_text": "경기 포천",
-      "content_hash": "0c6a3f0f46e0e8a6febff317419709c9470b7599fd340ba6c37fd4b3f154ab66",
-      "dedup_key": "988b27076483d5ccc90fd5b46292f7231f67fb19eb5971f6799474729a247060",
-      "raw_payload": {
-        "homepage_text": "5일 남음 [경기 포천] 어울림산장 4인 기준 셀프바베큐장 당일권 + 삼겹살 + 밀키트 제공 신청 39 명 / 모집 3 명",
-        "homepage_url": "https://tble.kr/",
-        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "경기"
-        ],
-        "benefit_tags": [
-          "visit"
-        ],
-        "source_categories": [
-          "경기 포천"
-        ],
-        "deadline_text": "5일 남음",
-        "applicant_count": 39,
-        "recruit_count": 3,
         "reward_points": null
       }
     },
@@ -4305,73 +3307,73 @@
     {
       "source_code": "tble",
       "source_name": "티블",
-      "external_id": "413728",
-      "source_url": "https://tble.kr/view.php?cp_id=413728",
-      "normalized_url": "https://tble.kr/view.php?cp_id=413728",
-      "title": "단경작명연구소 - 작명 or 출산",
+      "external_id": "413155",
+      "source_url": "https://tble.kr/view.php?cp_id=413155",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413155",
+      "title": "어울림산장",
       "brand_name": null,
       "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3551702535_cAYZt3Gp",
-      "application_deadline_at": "2026-07-14T14:59:59+00:00",
-      "reward_summary": "30만원 상당의 작명 or 출산택일 1인 이용권",
-      "location_text": "부산",
-      "content_hash": "56cb3f57018a6d3163482691d571236ea99e147383174acbaba47cb29292ff1e",
-      "dedup_key": "e7d7a745e14cb0f3142e608059c3419d9b676fdb9168315cfac2ce53def6da89",
+      "image_url": "https://tble.kr/data/campaign/3076909346_9PELrfX2",
+      "application_deadline_at": "2026-07-06T14:59:59+00:00",
+      "reward_summary": "4인 기준 셀프바베큐장 당일권 + 삼겹살 + 밀키트 제공",
+      "location_text": "경기 포천",
+      "content_hash": "0c6a3f0f46e0e8a6febff317419709c9470b7599fd340ba6c37fd4b3f154ab66",
+      "dedup_key": "988b27076483d5ccc90fd5b46292f7231f67fb19eb5971f6799474729a247060",
       "raw_payload": {
-        "homepage_text": "13일 남음 [부산] 단경작명연구소 - 작명 or 출산 30만원 상당의 작명 or 출산택일 1인 이용권 신청 0 명 / 모집 1 명 -->",
+        "homepage_text": "5일 남음 [경기 포천] 어울림산장 4인 기준 셀프바베큐장 당일권 + 삼겹살 + 밀키트 제공 신청 39 명 / 모집 3 명",
         "homepage_url": "https://tble.kr/",
         "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
       },
       "parsed_payload": {
         "platform_tags": [],
         "region_tags": [
-          "부산"
+          "경기"
         ],
         "benefit_tags": [
           "visit"
         ],
         "source_categories": [
-          "부산"
+          "경기 포천"
         ],
-        "deadline_text": "13일 남음",
-        "applicant_count": 0,
-        "recruit_count": 1,
+        "deadline_text": "5일 남음",
+        "applicant_count": 39,
+        "recruit_count": 3,
         "reward_points": null
       }
     },
     {
       "source_code": "tble",
       "source_name": "티블",
-      "external_id": "413729",
-      "source_url": "https://tble.kr/view.php?cp_id=413729",
-      "normalized_url": "https://tble.kr/view.php?cp_id=413729",
-      "title": "단경작명연구소 - 사주 타로 궁합",
+      "external_id": "412882",
+      "source_url": "https://tble.kr/view.php?cp_id=412882",
+      "normalized_url": "https://tble.kr/view.php?cp_id=412882",
+      "title": "세르프",
       "brand_name": null,
       "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3551702535_wTBQkIb0",
-      "application_deadline_at": "2026-07-14T14:59:59+00:00",
-      "reward_summary": "10만원 상당의 사주 or 타로 or 궁합 이용권 (최대 2인 1팀 가능) 이용권",
-      "location_text": "부산",
-      "content_hash": "ab9b5f20c365d30576c02f722dd7ece74377b5cd3aae917b15847cbbe52e33a2",
-      "dedup_key": "fdd894a06a71f9b5bc6d3fccb59d41c8930a3fd131c341d172f3a66235e6bd3b",
+      "image_url": "https://tble.kr/data/campaign/3659934777_1PjKcbDu",
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "100만원 상당의 세르프 이용권 제공",
+      "location_text": "경기 성남",
+      "content_hash": "3aea27e98b9a62bdacc6df5e5cdadddceae4c9b631096532539a9c3973d756ba",
+      "dedup_key": "88ecae7afd08b254da3844cd4b18877e9bffc53c720272009eafa1e8fbdf6674",
       "raw_payload": {
-        "homepage_text": "13일 남음 [부산] 단경작명연구소 - 사주 타로 궁합 10만원 상당의 사주 or 타로 or 궁합 이용권 (최대 2인 1팀 가능) 이용권 신청 0 명 / 모집 2 명 -->",
+        "homepage_text": "오늘 마감 [경기 성남] 세르프 100만원 상당의 세르프 이용권 제공 신청 59 명 / 모집 2 명",
         "homepage_url": "https://tble.kr/",
         "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
       },
       "parsed_payload": {
         "platform_tags": [],
         "region_tags": [
-          "부산"
+          "경기"
         ],
         "benefit_tags": [
           "visit"
         ],
         "source_categories": [
-          "부산"
+          "경기 성남"
         ],
-        "deadline_text": "13일 남음",
-        "applicant_count": 0,
+        "deadline_text": "오늘마감",
+        "applicant_count": 59,
         "recruit_count": 2,
         "reward_points": null
       }
@@ -4379,38 +3381,105 @@
     {
       "source_code": "tble",
       "source_name": "티블",
-      "external_id": "413724",
-      "source_url": "https://tble.kr/view.php?cp_id=413724",
-      "normalized_url": "https://tble.kr/view.php?cp_id=413724",
-      "title": "주도락 강남점",
+      "external_id": "412832",
+      "source_url": "https://tble.kr/view.php?cp_id=412832",
+      "normalized_url": "https://tble.kr/view.php?cp_id=412832",
+      "title": "피부관리 한의원",
       "brand_name": null,
       "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3076909346_w42mjQuP",
-      "application_deadline_at": "2026-07-15T14:59:59+00:00",
-      "reward_summary": "5만원 이용권 제공",
-      "location_text": null,
-      "content_hash": "f25db999453d21756d840651db9d630a25153d1fd024091273591167a9aeec16",
-      "dedup_key": "a593dd93bc39bb1389a6a5ec289afc54db07855bfb883b65096e0c3bebcea10f",
+      "image_url": "https://tble.kr/data/campaign/1993884802_L7akZHIy",
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "색소레이저, 모공관리, 여드름흉터, 얼굴미백, 안면홍조, 안면비대칭리프팅, 윤곽약침 중 택 1 제공",
+      "location_text": "경남 창원",
+      "content_hash": "e6fc97a6ef44cc8bc0a47479709389f19573f36fbd50c653141768eefd5cfc17",
+      "dedup_key": "a705461c6dc4df4a23ee9b07641fe57efa65dd91b06e23b893b698f260acf3ad",
       "raw_payload": {
-        "homepage_text": "14일 남음 [영수증/블로그][강남] 주도락 강남점 5만원 이용권 제공 신청 0 명 / 모집 30 명 -->",
+        "homepage_text": "오늘 마감 [경남 창원] 피부관리 한의원 색소레이저, 모공관리, 여드름흉터, 얼굴미백, 안면홍조, 안면비대칭리프팅, 윤곽약침 중 택 1 제공 신청 33 명 / 모집 10 명",
         "homepage_url": "https://tble.kr/",
         "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
       },
       "parsed_payload": {
-        "platform_tags": [
-          "blog",
-          "receipt"
+        "platform_tags": [],
+        "region_tags": [
+          "경남"
         ],
+        "benefit_tags": [
+          "visit"
+        ],
+        "source_categories": [
+          "경남 창원"
+        ],
+        "deadline_text": "오늘마감",
+        "applicant_count": 33,
+        "recruit_count": 10,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "412857",
+      "source_url": "https://tble.kr/view.php?cp_id=412857",
+      "normalized_url": "https://tble.kr/view.php?cp_id=412857",
+      "title": "세르프",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://tble.kr/data/campaign/3551702535_IBtxH5Of",
+      "application_deadline_at": "2026-07-01T14:59:59+00:00",
+      "reward_summary": "100만원 상당의 세르프 이용권 제공",
+      "location_text": null,
+      "content_hash": "b209b35c7158f3137aa73dcbc43fb33f4a177f3bc47d97070b13fa06b66a5471",
+      "dedup_key": "45971d541f1a3e605dfc60ff0f0de68d8507ee9d65191d3a771eba0e049dceee",
+      "raw_payload": {
+        "homepage_text": "오늘 마감 [신논현] 세르프 100만원 상당의 세르프 이용권 제공 신청 116 명 / 모집 2 명",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
         "region_tags": [],
         "benefit_tags": [],
         "source_categories": [
-          "강남",
-          "블로그",
-          "영수증"
+          "신논현"
+        ],
+        "deadline_text": "오늘마감",
+        "applicant_count": 116,
+        "recruit_count": 2,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "413720",
+      "source_url": "https://tble.kr/view.php?cp_id=413720",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413720",
+      "title": "아이세이버",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://tble.kr/data/campaign/3076909346_saP8uIhw",
+      "application_deadline_at": "2026-07-15T14:59:59+00:00",
+      "reward_summary": "[70,000원 이용권] 안경테 or 선글라스 택 1 + 도수렌즈 제공",
+      "location_text": null,
+      "content_hash": "b38736206637c78712921e2db1f96919da49421ea0d64abfc8144ac5b51d7327",
+      "dedup_key": "42e8935273ce35b7fc4d7531f8dc327930fb0601f1eaaa5d090f23c40b779965",
+      "raw_payload": {
+        "homepage_text": "14일 남음 [전주_효자점] 아이세이버 [70,000원 이용권] 안경테 or 선글라스 택 1 + 도수렌즈 제공 신청 0 명 / 모집 3 명 -->",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [],
+        "benefit_tags": [],
+        "source_categories": [
+          "000원 이용권",
+          "70",
+          "전주_효자점"
         ],
         "deadline_text": "14일 남음",
         "applicant_count": 0,
-        "recruit_count": 30,
+        "recruit_count": 3,
         "reward_points": null
       }
     },
@@ -4449,41 +3518,6 @@
         "deadline_text": "14일 남음",
         "applicant_count": 0,
         "recruit_count": 2,
-        "reward_points": null
-      }
-    },
-    {
-      "source_code": "tble",
-      "source_name": "티블",
-      "external_id": "413720",
-      "source_url": "https://tble.kr/view.php?cp_id=413720",
-      "normalized_url": "https://tble.kr/view.php?cp_id=413720",
-      "title": "아이세이버",
-      "brand_name": null,
-      "status": "active",
-      "image_url": "https://tble.kr/data/campaign/3076909346_saP8uIhw",
-      "application_deadline_at": "2026-07-15T14:59:59+00:00",
-      "reward_summary": "[70,000원 이용권] 안경테 or 선글라스 택 1 + 도수렌즈 제공",
-      "location_text": null,
-      "content_hash": "b38736206637c78712921e2db1f96919da49421ea0d64abfc8144ac5b51d7327",
-      "dedup_key": "42e8935273ce35b7fc4d7531f8dc327930fb0601f1eaaa5d090f23c40b779965",
-      "raw_payload": {
-        "homepage_text": "14일 남음 [전주_효자점] 아이세이버 [70,000원 이용권] 안경테 or 선글라스 택 1 + 도수렌즈 제공 신청 0 명 / 모집 3 명 -->",
-        "homepage_url": "https://tble.kr/",
-        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
-      },
-      "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [],
-        "benefit_tags": [],
-        "source_categories": [
-          "000원 이용권",
-          "70",
-          "전주_효자점"
-        ],
-        "deadline_text": "14일 남음",
-        "applicant_count": 0,
-        "recruit_count": 3,
         "reward_points": null
       }
     },
@@ -4567,6 +3601,80 @@
     {
       "source_code": "tble",
       "source_name": "티블",
+      "external_id": "413729",
+      "source_url": "https://tble.kr/view.php?cp_id=413729",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413729",
+      "title": "단경작명연구소 - 사주 타로 궁합",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://tble.kr/data/campaign/3551702535_wTBQkIb0",
+      "application_deadline_at": "2026-07-14T14:59:59+00:00",
+      "reward_summary": "10만원 상당의 사주 or 타로 or 궁합 이용권 (최대 2인 1팀 가능) 이용권",
+      "location_text": "부산",
+      "content_hash": "ab9b5f20c365d30576c02f722dd7ece74377b5cd3aae917b15847cbbe52e33a2",
+      "dedup_key": "fdd894a06a71f9b5bc6d3fccb59d41c8930a3fd131c341d172f3a66235e6bd3b",
+      "raw_payload": {
+        "homepage_text": "13일 남음 [부산] 단경작명연구소 - 사주 타로 궁합 10만원 상당의 사주 or 타로 or 궁합 이용권 (최대 2인 1팀 가능) 이용권 신청 0 명 / 모집 2 명 -->",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "부산"
+        ],
+        "benefit_tags": [
+          "visit"
+        ],
+        "source_categories": [
+          "부산"
+        ],
+        "deadline_text": "13일 남음",
+        "applicant_count": 0,
+        "recruit_count": 2,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "413728",
+      "source_url": "https://tble.kr/view.php?cp_id=413728",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413728",
+      "title": "단경작명연구소 - 작명 or 출산",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://tble.kr/data/campaign/3551702535_cAYZt3Gp",
+      "application_deadline_at": "2026-07-14T14:59:59+00:00",
+      "reward_summary": "30만원 상당의 작명 or 출산택일 1인 이용권",
+      "location_text": "부산",
+      "content_hash": "56cb3f57018a6d3163482691d571236ea99e147383174acbaba47cb29292ff1e",
+      "dedup_key": "e7d7a745e14cb0f3142e608059c3419d9b676fdb9168315cfac2ce53def6da89",
+      "raw_payload": {
+        "homepage_text": "13일 남음 [부산] 단경작명연구소 - 작명 or 출산 30만원 상당의 작명 or 출산택일 1인 이용권 신청 0 명 / 모집 1 명 -->",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "부산"
+        ],
+        "benefit_tags": [
+          "visit"
+        ],
+        "source_categories": [
+          "부산"
+        ],
+        "deadline_text": "13일 남음",
+        "applicant_count": 0,
+        "recruit_count": 1,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
       "external_id": "413722",
       "source_url": "https://tble.kr/view.php?cp_id=413722",
       "normalized_url": "https://tble.kr/view.php?cp_id=413722",
@@ -4602,37 +3710,38 @@
     {
       "source_code": "tble",
       "source_name": "티블",
-      "external_id": "413342",
-      "source_url": "https://tble.kr/view.php?cp_id=413342",
-      "normalized_url": "https://tble.kr/view.php?cp_id=413342",
-      "title": "탐나쑥빵",
+      "external_id": "413724",
+      "source_url": "https://tble.kr/view.php?cp_id=413724",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413724",
+      "title": "주도락 강남점",
       "brand_name": null,
       "status": "active",
-      "image_url": "https://tble.kr/data/campaign/thumb2/thumb-2948929343_S3Dr1RJN_273x273.jpg",
-      "application_deadline_at": "2026-07-08T14:59:59+00:00",
-      "reward_summary": "쑥빵 + 찰보리빵 1상자(30개) 제공(30,000원 상당)",
-      "location_text": "제주 한림",
-      "content_hash": "f8da9ccf65dae7fbe2a99bfe8445b14b2e8984d0b752323ac3d554e06f8584d3",
-      "dedup_key": "c855b1af4678ccc26a9d200eea1570b8e634429e139d1959b02b4ecf1ab58aa5",
+      "image_url": "https://tble.kr/data/campaign/3076909346_w42mjQuP",
+      "application_deadline_at": "2026-07-15T14:59:59+00:00",
+      "reward_summary": "5만원 이용권 제공",
+      "location_text": null,
+      "content_hash": "602a30d698915a14650d71c564c8808afcd206bba7fcedd87fa3e492ccade643",
+      "dedup_key": "a593dd93bc39bb1389a6a5ec289afc54db07855bfb883b65096e0c3bebcea10f",
       "raw_payload": {
-        "homepage_text": "7일 남음 [제주 한림] 탐나쑥빵 쑥빵 + 찰보리빵 1상자(30개) 제공(30,000원 상당)",
+        "homepage_text": "14일 남음 [영수증/블로그][강남] 주도락 강남점 5만원 이용권 제공 신청 1 명 / 모집 30 명 -->",
         "homepage_url": "https://tble.kr/",
         "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
       },
       "parsed_payload": {
-        "platform_tags": [],
-        "region_tags": [
-          "제주"
+        "platform_tags": [
+          "blog",
+          "receipt"
         ],
-        "benefit_tags": [
-          "visit"
-        ],
+        "region_tags": [],
+        "benefit_tags": [],
         "source_categories": [
-          "제주 한림"
+          "강남",
+          "블로그",
+          "영수증"
         ],
-        "deadline_text": "7일 남음",
-        "applicant_count": null,
-        "recruit_count": null,
+        "deadline_text": "14일 남음",
+        "applicant_count": 1,
+        "recruit_count": 30,
         "reward_points": null
       }
     },
@@ -4672,6 +3781,43 @@
           "클립"
         ],
         "deadline_text": "오늘마감",
+        "applicant_count": null,
+        "recruit_count": null,
+        "reward_points": null
+      }
+    },
+    {
+      "source_code": "tble",
+      "source_name": "티블",
+      "external_id": "413342",
+      "source_url": "https://tble.kr/view.php?cp_id=413342",
+      "normalized_url": "https://tble.kr/view.php?cp_id=413342",
+      "title": "탐나쑥빵",
+      "brand_name": null,
+      "status": "active",
+      "image_url": "https://tble.kr/data/campaign/thumb2/thumb-2948929343_S3Dr1RJN_273x273.jpg",
+      "application_deadline_at": "2026-07-08T14:59:59+00:00",
+      "reward_summary": "쑥빵 + 찰보리빵 1상자(30개) 제공(30,000원 상당)",
+      "location_text": "제주 한림",
+      "content_hash": "f8da9ccf65dae7fbe2a99bfe8445b14b2e8984d0b752323ac3d554e06f8584d3",
+      "dedup_key": "c855b1af4678ccc26a9d200eea1570b8e634429e139d1959b02b4ecf1ab58aa5",
+      "raw_payload": {
+        "homepage_text": "7일 남음 [제주 한림] 탐나쑥빵 쑥빵 + 찰보리빵 1상자(30개) 제공(30,000원 상당)",
+        "homepage_url": "https://tble.kr/",
+        "policy_note": "robots.txt disallows view/category paths. Fetch only the allowed homepage."
+      },
+      "parsed_payload": {
+        "platform_tags": [],
+        "region_tags": [
+          "제주"
+        ],
+        "benefit_tags": [
+          "visit"
+        ],
+        "source_categories": [
+          "제주 한림"
+        ],
+        "deadline_text": "7일 남음",
         "applicant_count": null,
         "recruit_count": null,
         "reward_points": null
