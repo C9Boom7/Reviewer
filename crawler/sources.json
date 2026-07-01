@@ -52,24 +52,24 @@
     "name": "모블",
     "target_url": "https://www.modublog.co.kr/",
     "robots_url": "https://www.modublog.co.kr/robots.txt",
-    "active": true,
-    "source_mode": "summary_only",
+    "active": false,
+    "source_mode": "candidate",
     "parser": "modublog_homepage",
     "allowed_link_patterns": ["/product/"],
     "detail_fetch": false,
-    "policy_note": "robots.txt allows the homepage. Fetch the homepage only and store product campaign snippets already rendered there."
+    "policy_note": "Local HTML has product snippets, but GitHub Actions returned empty_parse. Keep inactive until fetch/parser behavior is analyzed."
   },
   {
     "code": "gangnammatzip",
     "name": "강남맛집 체험단",
     "target_url": "https://xn--939au0g4vj8sq.net/",
     "robots_url": "https://xn--939au0g4vj8sq.net/robots.txt",
-    "active": true,
-    "source_mode": "summary_only",
+    "active": false,
+    "source_mode": "blocked",
     "parser": "gangnammatzip_homepage",
     "allowed_link_patterns": ["/cp/?id="],
     "detail_fetch": false,
-    "policy_note": "Fetch homepage snippets only."
+    "policy_note": "GitHub Actions robots check blocks the homepage target. Keep inactive until robots policy changes or a permitted source is available."
   },
   {
     "code": "ringble",

@@ -70,11 +70,11 @@ insert into public.sources (
   'https://www.modublog.co.kr/robots.txt',
   5,
   50,
-  true,
+  false,
   120,
-  '{"source_mode":"summary_only","status":"crawlable","reason":"robots.txt allows the homepage. Fetch the homepage only and store product campaign snippets already rendered there.","detail_fetch":false}'::jsonb,
-  '{"parser":"modublog_homepage","target_url":"https://www.modublog.co.kr/","allowed_link_patterns":["/product/"],"detail_fetch":false,"source_mode":"summary_only"}'::jsonb,
-  '홈 요약 수집. 제품 상세 자동 접근 금지.'
+  '{"source_mode":"candidate","status":"candidate","reason":"Local HTML has product snippets, but GitHub Actions returned empty_parse. Keep inactive until fetch/parser behavior is analyzed.","detail_fetch":false}'::jsonb,
+  '{"parser":"modublog_homepage","target_url":"https://www.modublog.co.kr/","allowed_link_patterns":["/product/"],"detail_fetch":false,"source_mode":"candidate"}'::jsonb,
+  'GitHub Actions에서 empty_parse 발생. fetch/parser 분석 전 비활성.'
 ),
 (
   'gangnammatzip',
@@ -83,11 +83,11 @@ insert into public.sources (
   'https://xn--939au0g4vj8sq.net/robots.txt',
   6,
   60,
-  true,
+  false,
   120,
-  '{"source_mode":"summary_only","status":"crawlable","reason":"Fetch homepage snippets only.","detail_fetch":false}'::jsonb,
-  '{"parser":"gangnammatzip_homepage","target_url":"https://xn--939au0g4vj8sq.net/","allowed_link_patterns":["/cp/?id="],"detail_fetch":false,"source_mode":"summary_only"}'::jsonb,
-  '홈페이지 인기/마감임박 카드 수집.'
+  '{"source_mode":"blocked","status":"blocked","reason":"GitHub Actions robots check blocks the homepage target. Keep inactive until robots policy changes or a permitted source is available.","detail_fetch":false}'::jsonb,
+  '{"parser":"gangnammatzip_homepage","target_url":"https://xn--939au0g4vj8sq.net/","allowed_link_patterns":["/cp/?id="],"detail_fetch":false,"source_mode":"blocked"}'::jsonb,
+  'GitHub Actions robots check 차단. 허용 경로 확인 전 비활성.'
 ),
 (
   'ringble',
