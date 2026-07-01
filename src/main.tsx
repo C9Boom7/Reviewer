@@ -51,6 +51,14 @@ type FilterState = {
 };
 
 type CampaignTone = "mint" | "amber" | "violet" | "slate" | "coral" | "blue";
+type DeadlineTone = "open" | "urgent" | "today" | "closed" | "unknown";
+
+type DeadlineInfo = {
+  label: string;
+  detail: string;
+  days: number | null;
+  tone: DeadlineTone;
+};
 
 const emptyFilters: FilterState = {
   query: "",
@@ -71,6 +79,14 @@ const benefitLabels: Record<string, string> = {
   visit: "방문",
   reporter: "기자단",
   purchase_review: "구매평",
+};
+
+const sourceStatusLabels: Record<string, string> = {
+  active: "수집중",
+  removed: "종료",
+  draft: "대기",
+  closed: "마감",
+  archived: "보관",
 };
 
 const quickFilters: Array<{ id: QuickFilter; label: string; icon: LucideIcon }> = [
@@ -118,8 +134,18 @@ function labelFor(value: string, labels: Record<string, string>): string {
   return labels[value] ?? value;
 }
 
+function confirmedSources(campaign: CampaignCard) {
+  const active = campaign.source_listings.filter((source) => source.status === "active");
+  return active.length > 0 ? active : campaign.source_listings;
+}
+
+function confirmedSourceCount(campaign: CampaignCard): number {
+  const count = confirmedSources(campaign).length;
+  return count > 0 ? count : campaign.source_count;
+}
+
 function primarySource(campaign: CampaignCard) {
-  return campaign.source_listings[0] ?? null;
+  return confirmedSources(campaign)[0] ?? null;
 }
 
 function sourceName(campaign: CampaignCard): string {
@@ -158,26 +184,59 @@ function getDeadlineDate(campaign: CampaignCard): Date | null {
   return Number.isNaN(date.getTime()) ? null : date;
 }
 
-function getDday(campaign: CampaignCard, index: number): string {
+function getDeadlineInfo(campaign: CampaignCard): DeadlineInfo {
   const deadline = getDeadlineDate(campaign);
-  if (!deadline) return index % 4 === 0 ? "NEW" : "상시";
+  if (!deadline) {
+    return {
+      label: "상시",
+      detail: "마감일 미정",
+      days: null,
+      tone: "unknown",
+    };
+  }
+
   const today = new Date();
   today.setHours(0, 0, 0, 0);
   deadline.setHours(0, 0, 0, 0);
   const days = Math.ceil((deadline.getTime() - today.getTime()) / 86_400_000);
-  if (days < 0) return "마감";
-  if (days === 0) return "D-DAY";
-  return `D-${days}`;
+  const dateLabel = formatDate(campaign.application_deadline_at);
+  if (days < 0) {
+    return {
+      label: "마감",
+      detail: `${dateLabel} 종료`,
+      days,
+      tone: "closed",
+    };
+  }
+  if (days === 0) {
+    return {
+      label: "오늘마감",
+      detail: `${dateLabel} 오늘 마감`,
+      days,
+      tone: "today",
+    };
+  }
+  return {
+    label: `D-${days}`,
+    detail: `${dateLabel} 마감${days <= 3 ? " 임박" : ""}`,
+    days,
+    tone: days <= 3 ? "urgent" : "open",
+  };
 }
 
-function getScheduleDate(campaign: CampaignCard, index: number): Date {
-  const deadline = getDeadlineDate(campaign);
-  if (deadline) return deadline;
-  const base = new Date(campaign.last_seen_at);
-  const safeBase = Number.isNaN(base.getTime()) ? new Date() : base;
-  const date = new Date(safeBase);
-  date.setDate(safeBase.getDate() + (index % 18));
-  return date;
+function getScheduleDate(campaign: CampaignCard): Date | null {
+  return getDeadlineDate(campaign);
+}
+
+function getConditionText(campaign: CampaignCard): string {
+  const benefits = campaign.benefit_tags.map((tag) => labelFor(tag, benefitLabels));
+  const platforms = campaign.platform_tags.map((tag) => labelFor(tag, platformLabels));
+  const labels = uniqueSorted([...benefits, ...platforms]);
+  return labels.length > 0 ? labels.join(", ") : "원문에서 확인";
+}
+
+function sourceStatusLabel(status: string): string {
+  return sourceStatusLabels[status] ?? status;
 }
 
 function campaignSearchText(campaign: CampaignCard): string {
@@ -191,7 +250,7 @@ function campaignSearchText(campaign: CampaignCard): string {
     campaign.platform_tags.join(" "),
     campaign.benefit_tags.join(" "),
     campaign.region_tags.join(" "),
-    campaign.source_listings.map((source) => source.source_name).join(" "),
+    confirmedSources(campaign).map((source) => source.source_name).join(" "),
   ]
     .filter(Boolean)
     .join(" ")
@@ -202,12 +261,12 @@ function applyFilters(campaigns: CampaignCard[], filters: FilterState): Campaign
   const query = filters.query.trim().toLowerCase();
   return campaigns.filter((campaign) => {
     if (query && !campaignSearchText(campaign).includes(query)) return false;
-    if (filters.source !== "all" && !campaign.source_listings.some((source) => source.source_code === filters.source)) {
+    if (filters.source !== "all" && !confirmedSources(campaign).some((source) => source.source_code === filters.source)) {
       return false;
     }
     if (filters.quick === "delivery" && !campaign.benefit_tags.includes("delivery")) return false;
     if (filters.quick === "visit" && !campaign.benefit_tags.includes("visit")) return false;
-    if (filters.quick === "multi" && campaign.source_count < 2) return false;
+    if (filters.quick === "multi" && confirmedSourceCount(campaign) < 2) return false;
     if (filters.quick === "recent") {
       const seenAt = new Date(campaign.last_seen_at).getTime();
       const twoDays = 1000 * 60 * 60 * 24 * 2;
@@ -301,16 +360,18 @@ function CampaignTile({
   onToggleSave: () => void;
 }) {
   const tone = campaignTone(campaign, index);
+  const deadline = getDeadlineInfo(campaign);
+  const sourceCount = confirmedSourceCount(campaign);
   return (
     <article className={`campaignTile tone-${tone}`} onClick={onOpen} role="button" tabIndex={0}>
       <div className="tileBanner">
         <CampaignArt campaign={campaign} />
-        <span className="dayPill">{getDday(campaign, index)}</span>
+        <span className={`dayPill deadline-${deadline.tone}`}>{deadline.label}</span>
       </div>
       <div className="tileBody">
         <div className="tileMeta">
           <span className="sourceChip">{getCategoryLabel(campaign)}</span>
-          {campaign.source_count > 1 && <span className="plainChip">출처 {campaign.source_count}</span>}
+          {sourceCount > 1 && <span className="plainChip">출처 {sourceCount}</span>}
           <button
             className={`heartButton ${saved ? "isSaved" : ""}`}
             type="button"
@@ -461,6 +522,9 @@ function DetailView({
   const tone = campaignTone(campaign, index);
   const link = sourceUrl(campaign);
   const source = primarySource(campaign);
+  const sources = confirmedSources(campaign);
+  const sourceCount = confirmedSourceCount(campaign);
+  const deadline = getDeadlineInfo(campaign);
   return (
     <section className="detailScreen">
       <div className={`detailHeroMobile tone-${tone}`}>
@@ -491,16 +555,16 @@ function DetailView({
           </div>
           <div className="statusLine">
             <CalendarDays size={17} />
-            신청 마감: {formatDate(campaign.application_deadline_at)}
+            신청 마감: {deadline.detail}
           </div>
         </section>
 
         <section className="infoPanel">
           <InfoRow icon={Gift} label="혜택" value={getBenefitText(campaign)} tone="green" />
           <InfoRow icon={MapPin} label="위치" value={getLocationText(campaign)} tone="blue" />
-          <InfoRow icon={CalendarDays} label="마감" value={getDday(campaign, index)} tone="amber" />
-          <InfoRow icon={Users} label="출처" value={`${sourceName(campaign)}${campaign.source_count > 1 ? ` 외 ${campaign.source_count - 1}곳` : ""}`} tone="violet" />
-          <InfoRow icon={ClipboardList} label="조건" value={campaign.platform_tags.map((tag) => labelFor(tag, platformLabels)).join(", ") || "원문에서 확인"} tone="gray" />
+          <InfoRow icon={CalendarDays} label="마감" value={deadline.detail} tone="amber" />
+          <InfoRow icon={Users} label="출처" value={`${sourceName(campaign)}${sourceCount > 1 ? ` 외 ${sourceCount - 1}곳` : ""}`} tone="violet" />
+          <InfoRow icon={ClipboardList} label="조건" value={getConditionText(campaign)} tone="gray" />
         </section>
 
         <section className="detailSection">
@@ -513,13 +577,14 @@ function DetailView({
           이 정보는 {source?.source_name ?? "수집 출처"}에서 가져왔어요
         </section>
 
-        {campaign.source_listings.length > 1 && (
+        {sources.length > 1 && (
           <section className="detailSection">
             <h2>다른 출처</h2>
             <div className="sourceLinkList">
-              {campaign.source_listings.map((listing) => (
+              {sources.map((listing) => (
                 <a href={listing.source_url} target="_blank" rel="noreferrer" key={`${listing.source_code}-${listing.source_url}`}>
-                  {listing.source_name}
+                  <span>{listing.source_name}</span>
+                  <small>{sourceStatusLabel(listing.status)}</small>
                   <ArrowUpRight size={15} />
                 </a>
               ))}
@@ -567,12 +632,18 @@ function ScheduleView({ campaigns, onOpenCampaign }: { campaigns: CampaignCard[]
 
   const entries = useMemo(
     () =>
-      campaigns.slice(0, 80).map((campaign, index) => ({
-        campaign,
-        index,
-        date: getScheduleDate(campaign, index),
-        hasRealDeadline: Boolean(getDeadlineDate(campaign)),
-      })),
+      campaigns.flatMap((campaign, index) => {
+        const date = getScheduleDate(campaign);
+        if (!date) return [];
+        return [
+          {
+            campaign,
+            index,
+            date,
+            deadline: getDeadlineInfo(campaign),
+          },
+        ];
+      }),
     [campaigns],
   );
 
@@ -580,6 +651,8 @@ function ScheduleView({ campaigns, onOpenCampaign }: { campaigns: CampaignCard[]
   const month = monthCursor.getMonth();
   const monthEntries = entries.filter((entry) => entry.date.getFullYear() === year && entry.date.getMonth() === month);
   const selectedEntries = monthEntries.filter((entry) => entry.date.getDate() === selectedDay);
+  const urgentCount = entries.filter((entry) => entry.deadline.days !== null && entry.deadline.days >= 0 && entry.deadline.days <= 3).length;
+  const unknownDeadlineCount = Math.max(0, campaigns.length - entries.length);
   const firstDay = new Date(year, month, 1).getDay();
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   const calendarCells = [...Array.from({ length: firstDay }, () => null), ...Array.from({ length: daysInMonth }, (_, index) => index + 1)];
@@ -604,9 +677,9 @@ function ScheduleView({ campaigns, onOpenCampaign }: { campaigns: CampaignCard[]
       </div>
 
       <div className="scheduleStats">
-        <StatBox value={campaigns.length} label="신청 대기" />
-        <StatBox value={Math.min(2, campaigns.length)} label="진행 중" active />
-        <StatBox value={campaigns.filter((campaign) => campaign.source_count > 1).length} label="중복 출처" />
+        <StatBox value={entries.length} label="마감 확인" active />
+        <StatBox value={urgentCount} label="임박" />
+        <StatBox value={unknownDeadlineCount} label="마감 미정" />
       </div>
 
       <section className="calendarPanel">
@@ -632,7 +705,7 @@ function ScheduleView({ campaigns, onOpenCampaign }: { campaigns: CampaignCard[]
             return (
               <button className={`dayCell ${isSelected ? "isSelected" : ""}`} type="button" key={day} onClick={() => setSelectedDay(day)}>
                 <span>{day}</span>
-                {dayEntries.length > 0 && <i className={dayEntries.some((entry) => entry.hasRealDeadline) ? "deadlineDot" : "updateDot"} />}
+                {dayEntries.length > 0 && <i className={dayEntries.some((entry) => entry.deadline.tone === "urgent" || entry.deadline.tone === "today") ? "deadlineDot" : "updateDot"} />}
               </button>
             );
           })}
@@ -743,7 +816,7 @@ function MyView({ data, campaigns, sources }: { data: DataState; campaigns: Camp
         {sources.map((source) => (
           <div className="sourceSummaryItem" key={source}>
             <span>{source}</span>
-            <strong>{campaigns.filter((campaign) => campaign.source_listings.some((listing) => listing.source_name === source)).length}개</strong>
+            <strong>{campaigns.filter((campaign) => confirmedSources(campaign).some((listing) => listing.source_name === source)).length}개</strong>
           </div>
         ))}
       </section>
@@ -811,10 +884,11 @@ function App() {
 
   const options = useMemo(() => {
     const campaigns = data?.campaigns ?? [];
+    const sourceListings = campaigns.flatMap((campaign) => confirmedSources(campaign));
     return {
-      sources: uniqueSorted(campaigns.flatMap((campaign) => campaign.source_listings.map((source) => source.source_code))),
-      sourceLabels: Object.fromEntries(campaigns.flatMap((campaign) => campaign.source_listings.map((source) => [source.source_code, source.source_name]))),
-      sourceNames: uniqueSorted(campaigns.flatMap((campaign) => campaign.source_listings.map((source) => source.source_name))),
+      sources: uniqueSorted(sourceListings.map((source) => source.source_code)),
+      sourceLabels: Object.fromEntries(sourceListings.map((source) => [source.source_code, source.source_name])),
+      sourceNames: uniqueSorted(sourceListings.map((source) => source.source_name)),
     };
   }, [data]);
 

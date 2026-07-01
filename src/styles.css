@@ -369,6 +369,23 @@ p {
   font-weight: 900;
 }
 
+.dayPill.deadline-open {
+  background: #111827;
+}
+
+.dayPill.deadline-urgent,
+.dayPill.deadline-today {
+  background: #d2442f;
+}
+
+.dayPill.deadline-closed {
+  background: #6f7672;
+}
+
+.dayPill.deadline-unknown {
+  background: #2f6b52;
+}
+
 .tileBody {
   padding: 13px 13px 14px;
 }
@@ -681,7 +698,7 @@ p {
 .sourceLinkList a {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 10px;
   min-height: 42px;
   padding: 0 13px;
   border: 1px solid #e3e8e4;
@@ -689,6 +706,23 @@ p {
   color: #1c2420;
   text-decoration: none;
   font-weight: 800;
+}
+
+.sourceLinkList a span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sourceLinkList a small {
+  margin-left: auto;
+  padding: 4px 7px;
+  border-radius: 999px;
+  color: #4f5a55;
+  background: #eef2ef;
+  font-size: 11px;
+  font-weight: 900;
 }
 
 .stickyCta {
@@ -1107,6 +1141,16 @@ p {
   background: transparent;
   font-size: 12px;
   font-weight: 900;
+}
+
+.bottomNav button:focus {
+  outline: none;
+}
+
+.bottomNav button:focus-visible {
+  border-radius: 8px;
+  outline: 3px solid rgba(22, 91, 181, 0.26);
+  outline-offset: -8px;
 }
 
 .bottomNav button.isActive {
