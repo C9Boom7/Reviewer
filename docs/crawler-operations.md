@@ -82,7 +82,16 @@ python3 crawler/sync_supabase.py --dry-run --input data/samples/campaigns.sample
 ## 차단/실패 정책
 
 - `robots.txt`가 대상 URL을 막으면 `blocked_by_robots`로 기록하고 요청하지 않는다.
+- `blocked_by_robots` source는 자동 비활성화하지 않고 `sources.crawl_policy.status=blocked_by_robots_candidate`로 기록한다.
 - 1회 실패: 다음 run에서 재시도.
 - 3회 연속 실패: `sources.is_active=false` 전환 후보.
 - HTML 구조 변경으로 파싱 결과가 0건이면 실패가 아니라 `empty_parse`로 분리한다.
 - 대량 상세 fetch가 필요해지면 사이트별 허가 또는 제휴/API를 먼저 검토한다.
+
+## Stale 정리 정책
+
+- 최신 run에서 `status=ok`이고 `item_count > 0`인 source만 stale 정리 대상이다.
+- 해당 source의 기존 `active` listing 중 이번 run에 다시 보이지 않은 항목은 `removed`로 바꾼다.
+- 연결된 active listing이 하나도 남지 않은 campaign은 `closed`로 바꾼다.
+- `blocked_by_robots`, `error`, `skipped`, 0건 parse source는 stale 정리를 하지 않는다.
+- source별 제거 수는 `crawler_runs.closed_count`에 기록한다.
