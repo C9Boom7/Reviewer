@@ -229,36 +229,76 @@ class HomepageParserTest(unittest.TestCase):
             """
             <a href="/taste?ct=%EB%A7%9B%EC%A7%91">맛집</a>
             <a href="/taste/1431298">메인 캐러셀 링크</a>
-            <a href="/taste/1420173">
-              <img src="/uploads/fan.jpg">
-              <strong>시코 미니 선풍기</strong>
-              <span>D-6</span>
-            </a>
+            <a href="/taste/1431299">캐러셀 링크</a>
+            <div class="qz-col pc2 lt3 tb2 mb2 mr-b7 mb-mr-b5">
+              <div class="qz-dq-card qz-button fluid hover">
+                <a class="qz-dq-card__link" href="/taste/1420173" title="[랜덤픽] 시코 미니 선풍기 신청하기">
+                  <div class="qz-dq-card__link__img">
+                    <img src="/uploads/fan.jpg" alt="[랜덤픽] 시코 미니 선풍기">
+                  </div>
+                </a>
+                <div class="qz-dq-card__text">
+                  <div class="layer-primary"><p><strong>D-6</strong></p></div>
+                  <div><p><strong>배송</strong></p></div>
+                  <p class="qz-body2-kr--line ellipsis color-title">
+                    <span>[랜덤픽] 시코 미니 선풍기</span>
+                  </p>
+                  <p class="apply_badge">
+                    <span><span class="color-subtitle">신청 367</span><span> / 모집 1</span></span>
+                  </p>
+                </div>
+              </div>
+            </div>
             """,
             limit=3,
         )
         self.assertEqual(1, len(items), items)
         self.assertEqual("1420173", items[0]["external_id"])
         self.assertEqual("시코 미니 선풍기", items[0]["title"])
+        self.assertIsNone(items[0]["reward_summary"])
         self.assertTrue(items[0]["application_deadline_at"])
+        self.assertEqual(367, items[0]["parsed_payload"]["applicant_count"])
+        self.assertEqual(1, items[0]["parsed_payload"]["recruit_count"])
+        self.assertIn("delivery", items[0]["parsed_payload"]["benefit_tags"])
+        self.assertEqual("https://dinnerqueen.net/uploads/fan.jpg", items[0]["image_url"])
 
     def test_seoulouba_parser_extracts_homepage_campaign_links(self) -> None:
         item = self.assert_single_item(
             "seoulouba",
             """
             <a href="https://www.seoulouba.co.kr/campaign/?cat=377">방문형</a>
-            <a href="https://www.seoulouba.co.kr/campaign/?c=415627">
-              [배송형] 은혜로운팜
-              <span>모집 5명</span>
-              <span>D-3</span>
-            </a>
+            <li class="campaign_content">
+              <div class="load_campaign">
+                <a href="https://www.seoulouba.co.kr/campaign/?c=415627" class="tum_img">
+                  <img src="/data/file/campaign/thumb.jpg">
+                </a>
+              </div>
+              <div class="load_info">
+                <div class="com_icon"><div class="icon_tag"><span>배송형</span></div></div>
+                <div class="t_ttl">
+                  <a href="https://www.seoulouba.co.kr/campaign/?c=415627">
+                    <strong class="s_campaign_title">[배송형] 은혜로운팜</strong>
+                  </a>
+                </div>
+                <div class="t_basic">
+                  <span class="basic_blue">대극천 복숭아 500g 제공</span>
+                </div>
+                <div class="campaign_day_people">
+                  <div class="d_day"><span>D-3</span></div>
+                  <div class="recruit"><span>신청 285 <span class="span_gray">/ 모집 5</span></span></div>
+                </div>
+              </div>
+            </li>
             """,
             "415627",
             "은혜로운팜",
-            None,
+            "대극천 복숭아 500g 제공",
         )
         self.assertIn("delivery", item["parsed_payload"]["benefit_tags"])
         self.assertTrue(item["application_deadline_at"])
+        self.assertEqual(285, item["parsed_payload"]["applicant_count"])
+        self.assertEqual(5, item["parsed_payload"]["recruit_count"])
+        self.assertEqual("https://www.seoulouba.co.kr/data/file/campaign/thumb.jpg", item["image_url"])
 
     def test_modublog_parser_extracts_product_cards(self) -> None:
         items = extract_campaigns(
