@@ -26,6 +26,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Run crawler parser tests
+        run: python3 -m unittest discover -s crawler/tests
+
       - name: Crawl homepage campaign snippets
         run: |
           python3 crawler/crawl_sample.py \

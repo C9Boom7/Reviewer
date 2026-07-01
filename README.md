@@ -34,6 +34,16 @@ pnpm run build
 
 Supabase env가 없으면 `public/data/campaigns.sample.json` 샘플 데이터로 동작합니다.
 
+## Crawler
+
+사이트별 parser 회귀 테스트:
+
+```bash
+python3 -m unittest discover -s crawler/tests
+```
+
+실제 수집은 GitHub Actions에서 주기적으로 실행합니다. 로컬에서 수집 로직만 확인할 때는 대상 사이트에 요청이 나가므로 필요한 경우에만 실행합니다.
+
 ## Deploy
 
 `main` 브랜치에 프론트 변경이 push되면 GitHub Pages 배포 워크플로가 실행됩니다.

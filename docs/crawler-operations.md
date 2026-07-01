@@ -45,6 +45,14 @@ python3 crawler/crawl_sample.py --limit-per-source 12 --sleep 1.5
 data/samples/campaigns.sample.json
 ```
 
+parser 회귀 테스트:
+
+```bash
+python3 -m unittest discover -s crawler/tests
+```
+
+GitHub Actions는 실제 크롤링 전에 이 테스트를 먼저 실행한다. 사이트별 HTML 해석 규칙이 깨지면 대상 사이트에 요청하거나 Supabase에 반영하기 전에 job이 중단된다.
+
 ## GitHub Actions 주기
 
 MVP 권장값:
