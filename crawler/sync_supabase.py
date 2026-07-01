@@ -265,6 +265,7 @@ def listing_row(item: dict[str, Any], source_id: str, crawled_at: str) -> dict[s
         "title": item["title"],
         "brand_name": item.get("brand_name"),
         "status": item.get("status", "active"),
+        "application_deadline_at": item.get("application_deadline_at"),
         "image_url": item.get("image_url"),
         "reward_summary": item.get("reward_summary"),
         "location_text": item.get("location_text"),
@@ -290,6 +291,7 @@ def campaign_row(item: dict[str, Any], crawled_at: str) -> dict[str, Any]:
         "brand_name": item.get("brand_name"),
         "summary": item.get("reward_summary"),
         "status": "active",
+        "application_deadline_at": item.get("application_deadline_at"),
         "reward_summary": item.get("reward_summary"),
         "location_text": item.get("location_text"),
         "primary_image_url": item.get("image_url"),
@@ -300,6 +302,11 @@ def campaign_row(item: dict[str, Any], crawled_at: str) -> dict[str, Any]:
         "details": {
             "latest_source_code": item.get("source_code"),
             "latest_external_id": item.get("external_id"),
+            "deadline_text": parsed.get("deadline_text"),
+            "applicant_count": parsed.get("applicant_count"),
+            "recruit_count": parsed.get("recruit_count"),
+            "reward_points": parsed.get("reward_points"),
+            "source_categories": parsed.get("source_categories") or [],
         },
         "dedup_meta": {
             "strategy": "normalized_title_reward_location_v1",

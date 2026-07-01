@@ -11,7 +11,7 @@ import urllib.parse
 import urllib.request
 import urllib.robotparser
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import datetime, time as datetime_time, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
@@ -82,7 +82,7 @@ def normalize_title(value: str) -> str:
     value = html.unescape(value)
     value = re.sub(r"\[[^\]]+\]", " ", value)
     value = re.sub(r"\bD\s*[-+]?\s*\d+\b", " ", value, flags=re.I)
-    value = re.sub(r"\d+\s*일\s*남음", " ", value)
+    value = re.sub(r"-?\d+\s*일\s*남음", " ", value)
     value = re.sub(r"신청\s*\d[\d,]*\s*명?\s*/\s*(모집\s*)?\d[\d,]*\s*명?", " ", value)
     value = re.sub(r"\d[\d,]*\s*P\b", " ", value, flags=re.I)
     value = re.sub(r"\s+", " ", value)
@@ -135,7 +135,7 @@ def infer_tags(text: str) -> tuple[list[str], list[str], list[str]]:
         "delivery": ["배송", "재택", "제품"],
         "visit": ["방문", "지역", "맛집", "카페", "숙박"],
         "reporter": ["기자단"],
-        "purchase_review": ["구매평"],
+        "purchase_review": ["구매평", "스마트스토어", "쿠팡", "로켓프레시"],
     }
     for tag, needles in benefit_rules.items():
         if any(needle in text for needle in needles):
@@ -149,10 +149,159 @@ def infer_tags(text: str) -> tuple[list[str], list[str], list[str]]:
 
 
 def extract_image(block: str, base_url: str) -> str | None:
-    match = re.search(r"<img\b[^>]*\bsrc=[\"']([^\"']+)[\"']", block, flags=re.I)
-    if not match:
+    candidates: list[str] = []
+    candidates.extend(re.findall(r"<img\b[^>]*\bsrc=[\"']([^\"']+)[\"']", block, flags=re.I))
+    for srcset in re.findall(r"\bsrcset=[\"']([^\"']+)[\"']", block, flags=re.I):
+        for candidate in srcset.split(","):
+            url = candidate.strip().split(" ")[0]
+            if url:
+                candidates.append(url)
+    candidates.extend(
+        re.findall(
+            r"background-image:\s*url\((?:&quot;|[\"']?)(.*?)(?:&quot;|[\"']?)\)",
+            block,
+            flags=re.I,
+        )
+    )
+
+    for candidate in candidates:
+        image_url = usable_image_url(candidate, base_url)
+        if image_url:
+            return image_url
+    return None
+
+
+def usable_image_url(value: str, base_url: str) -> str | None:
+    value = html.unescape(value).strip()
+    if not value or value.startswith("data:") or value == "/empty.webp":
         return None
-    return normalize_url(base_url, match.group(1))
+
+    absolute = normalize_url(base_url, value)
+    parsed = urllib.parse.urlsplit(absolute)
+    query = urllib.parse.parse_qs(parsed.query)
+    if parsed.path.endswith("/_next/image") and query.get("url"):
+        return normalize_url(base_url, query["url"][0])
+    return absolute
+
+
+def bracket_groups(text: str) -> list[str]:
+    return [clean_text(group) for group in re.findall(r"\[([^\]]+)\]", text) if clean_text(group)]
+
+
+def split_category_tokens(groups: list[str]) -> list[str]:
+    tokens: list[str] = []
+    for group in groups:
+        tokens.extend(token.strip() for token in re.split(r"[/,·|]", group) if token.strip())
+    return tokens
+
+
+def region_from_token(token: str) -> str | None:
+    for region in ["서울", "경기", "인천", "부산", "대구", "광주", "대전", "울산", "제주", "강원", "충북", "충남", "전북", "전남", "경북", "경남"]:
+        if token.startswith(region) or token == region:
+            return region
+    return None
+
+
+def metadata_from_text(text: str) -> dict[str, Any]:
+    groups = bracket_groups(text)
+    tokens = split_category_tokens(groups)
+    platform_tags: set[str] = set()
+    region_tags: set[str] = set()
+    benefit_tags: set[str] = set()
+    location_parts: list[str] = []
+    source_categories: list[str] = []
+
+    category_words = {"블로그", "인스타", "릴스", "유튜브", "쇼츠", "클립", "재택", "배송", "방문", "맛집", "카페", "숙박", "구매평", "스마트스토어", "쿠팡", "로켓프레시", "기자단"}
+    for group in groups:
+        group_tokens = [token.strip() for token in re.split(r"[/,·|]", group) if token.strip()]
+        if group_tokens and region_from_token(group_tokens[0]):
+            location_tokens = [token for token in group_tokens if token.replace(" ", "") not in category_words]
+            if location_tokens:
+                location_parts.append(" ".join(location_tokens))
+
+    for token in tokens:
+        normalized = token.replace(" ", "")
+        source_categories.append(token)
+        if normalized in {"재택", "배송"}:
+            benefit_tags.add("delivery")
+            if normalized == "재택":
+                location_parts.append("재택")
+        if normalized in {"방문", "맛집", "카페", "숙박"}:
+            benefit_tags.add("visit")
+        if normalized in {"구매평", "스마트스토어", "쿠팡", "로켓프레시"}:
+            benefit_tags.add("purchase_review")
+        if normalized == "기자단":
+            benefit_tags.add("reporter")
+        if "블로그" in normalized:
+            platform_tags.add("blog")
+        if "인스타" in normalized or "릴스" in normalized:
+            platform_tags.add("instagram")
+        if "유튜브" in normalized or "쇼츠" in normalized:
+            platform_tags.add("youtube")
+        if "클립" in normalized:
+            platform_tags.add("naver_clip")
+
+        region = region_from_token(token)
+        if region:
+            region_tags.add(region)
+            benefit_tags.add("visit")
+            if " " in token:
+                location_parts.append(token)
+
+    deadline_text = None
+    if re.search(r"오늘\s*마감|오늘마감", text):
+        deadline_text = "오늘마감"
+    else:
+        deadline_match = re.search(r"\bD\s*[-–]\s*(\d+)\b|-?\d+\s*일\s*남음", text, flags=re.I)
+        if deadline_match:
+            deadline_text = deadline_match.group(0)
+
+    applicant_count = None
+    recruit_count = None
+    count_match = re.search(r"신청\s*([\d,]+)\s*명?\s*/\s*(?:모집\s*)?([\d,]+)\s*명", text)
+    if count_match:
+        applicant_count = int(count_match.group(1).replace(",", ""))
+        recruit_count = int(count_match.group(2).replace(",", ""))
+
+    reward_points = None
+    points_match = re.search(r"(\d[\d,]*)\s*P\b", text, flags=re.I)
+    if points_match:
+        reward_points = int(points_match.group(1).replace(",", ""))
+
+    return {
+        "source_categories": sorted(set(source_categories)),
+        "platform_tags": sorted(platform_tags),
+        "region_tags": sorted(region_tags),
+        "benefit_tags": sorted(benefit_tags),
+        "location_text": " ".join(dict.fromkeys(location_parts)) if location_parts else None,
+        "deadline_text": deadline_text,
+        "applicant_count": applicant_count,
+        "recruit_count": recruit_count,
+        "reward_points": reward_points,
+    }
+
+
+def deadline_at_from_text(text: str, base: datetime | None = None) -> str | None:
+    days: int | None = None
+    if re.search(r"오늘\s*마감|오늘마감|D\s*[-–]\s*DAY", text, flags=re.I):
+        days = 0
+    else:
+        dday_match = re.search(r"\bD\s*[-–]\s*(\d+)\b", text, flags=re.I)
+        if dday_match:
+            days = int(dday_match.group(1))
+        else:
+            remain_match = re.search(r"(-?\d+)\s*일\s*남음", text)
+            if remain_match:
+                days = max(0, int(remain_match.group(1)))
+
+    if days is None:
+        return None
+
+    base_date = (base or datetime.now(timezone.utc)).date()
+    target_date = base_date + timedelta(days=days)
+    # Treat campaign deadlines as end-of-day Korea time, represented in UTC.
+    deadline = datetime.combine(target_date, datetime_time(14, 59, 59), tzinfo=timezone.utc)
+    return deadline.isoformat()
 
 
 def first_class_text(block: str, class_name: str) -> str | None:
@@ -185,6 +334,7 @@ def preferred_title_and_reward(source_code: str, block: str, fallback_text: str)
 
 def extract_campaigns(source: Source, page_html: str, limit: int) -> list[dict[str, Any]]:
     grouped: dict[str, dict[str, Any]] = {}
+    image_by_url: dict[str, str] = {}
     anchor_pattern = re.compile(
         r"<a\b(?P<attrs>[^>]*\bhref=[\"'](?P<href>[^\"']+)[\"'][^>]*)>(?P<body>.*?)</a>",
         flags=re.I | re.S,
@@ -199,6 +349,10 @@ def extract_campaigns(source: Source, page_html: str, limit: int) -> list[dict[s
         body = match.group("body")
         text = clean_text(body)
         image_url = extract_image(body, source.target_url)
+        if image_url:
+            image_by_url[normalized_url] = image_url
+            if normalized_url in grouped and not grouped[normalized_url].get("image_url"):
+                grouped[normalized_url]["image_url"] = image_url
 
         if not text:
             alt_match = re.search(r"\balt=[\"']([^\"']+)[\"']", body, flags=re.I)
@@ -217,6 +371,13 @@ def extract_campaigns(source: Source, page_html: str, limit: int) -> list[dict[s
 
         external_id = external_id_for(source.code, normalized_url)
         platform_tags, region_tags, benefit_tags = infer_tags(text)
+        metadata = metadata_from_text(text)
+        platform_tags = sorted(set(platform_tags) | set(metadata["platform_tags"]))
+        region_tags = sorted(set(region_tags) | set(metadata["region_tags"]))
+        benefit_tags = sorted(set(benefit_tags) | set(metadata["benefit_tags"]))
+        location_text = metadata["location_text"] or (", ".join(region_tags) if region_tags else None)
+        application_deadline_at = deadline_at_from_text(text)
+        final_image_url = image_url or image_by_url.get(normalized_url)
         dedup_basis = "|".join([source.code, title.lower(), external_id or normalized_url])
 
         grouped[normalized_url] = {
@@ -228,10 +389,11 @@ def extract_campaigns(source: Source, page_html: str, limit: int) -> list[dict[s
             "title": title,
             "brand_name": None,
             "status": "active",
-            "image_url": image_url,
+            "image_url": final_image_url,
+            "application_deadline_at": application_deadline_at,
             "reward_summary": reward_summary,
-            "location_text": ", ".join(region_tags) if region_tags else None,
-            "content_hash": sha256_text(text + "|" + (image_url or "")),
+            "location_text": location_text,
+            "content_hash": sha256_text(text + "|" + (final_image_url or "")),
             "dedup_key": sha256_text(dedup_basis),
             "raw_payload": {
                 "homepage_text": text,
@@ -242,6 +404,11 @@ def extract_campaigns(source: Source, page_html: str, limit: int) -> list[dict[s
                 "platform_tags": platform_tags,
                 "region_tags": region_tags,
                 "benefit_tags": benefit_tags,
+                "source_categories": metadata["source_categories"],
+                "deadline_text": metadata["deadline_text"],
+                "applicant_count": metadata["applicant_count"],
+                "recruit_count": metadata["recruit_count"],
+                "reward_points": metadata["reward_points"],
             },
         }
 

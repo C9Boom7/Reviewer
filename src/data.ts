@@ -24,7 +24,7 @@ function mapSampleCampaigns(payload: SamplePayload): CampaignCard[] {
       summary: item.reward_summary ?? null,
       category: null,
       status: item.status,
-      application_deadline_at: null,
+      application_deadline_at: item.application_deadline_at ?? null,
       reward_summary: item.reward_summary ?? null,
       location_text: item.location_text ?? null,
       primary_image_url: item.image_url ?? null,

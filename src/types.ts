@@ -36,6 +36,7 @@ export type SampleCampaign = {
   title: string;
   brand_name: string | null;
   status: "active" | "draft" | "closed" | "archived";
+  application_deadline_at?: string | null;
   image_url: string | null;
   reward_summary: string | null;
   location_text: string | null;
