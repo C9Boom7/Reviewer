@@ -115,14 +115,42 @@ class SupabaseClient:
         rows = self.request("GET", f"/sources?select=id,code&code=in.({encoded_codes})")
         return {row["code"]: row["id"] for row in rows}
 
+    def select_paginated(self, path: str, page_size: int = 1000) -> list[dict[str, Any]]:
+        if self.dry_run:
+            return []
+
+        rows: list[dict[str, Any]] = []
+        offset = 0
+        separator = "&" if "?" in path else "?"
+        while True:
+            page = self.request("GET", f"{path}{separator}limit={page_size}&offset={offset}")
+            if not page:
+                break
+            rows.extend(page)
+            if len(page) < page_size:
+                break
+            offset += page_size
+        return rows
+
     def select_active_listings(self, source_id: str) -> list[dict[str, Any]]:
         if self.dry_run:
             return []
         encoded_source_id = urllib.parse.quote(source_id, safe="")
-        return self.request(
-            "GET",
-            f"/source_listings?select=id,normalized_url&source_id=eq.{encoded_source_id}&status=eq.active&limit=5000",
+        return self.select_paginated(
+            f"/source_listings?select=id,normalized_url&source_id=eq.{encoded_source_id}&status=eq.active",
         )
+
+    def select_active_listing_ids(self) -> set[str]:
+        if self.dry_run:
+            return set()
+        rows = self.select_paginated("/source_listings?select=id&status=eq.active")
+        return {row["id"] for row in rows}
+
+    def select_active_campaign_ids(self) -> set[str]:
+        if self.dry_run:
+            return set()
+        rows = self.select_paginated("/campaigns?select=id&status=eq.active")
+        return {row["id"] for row in rows}
 
     def select_campaign_ids_for_listings(self, listing_ids: list[str]) -> set[str]:
         if not listing_ids or self.dry_run:
@@ -463,6 +491,26 @@ def close_stale_listings_and_campaigns(
     return stale_counts_by_source, closed_campaigns
 
 
+def close_orphan_campaigns(client: SupabaseClient) -> int:
+    active_campaign_ids = client.select_active_campaign_ids()
+    if not active_campaign_ids:
+        return 0
+
+    active_listing_ids = client.select_active_listing_ids()
+    campaign_ids_with_active_listings = client.select_campaign_ids_for_listings(sorted(active_listing_ids))
+    orphan_campaign_ids = sorted(active_campaign_ids - campaign_ids_with_active_listings)
+
+    for campaign_id in orphan_campaign_ids:
+        client.patch_by_id(
+            "campaigns",
+            campaign_id,
+            {"status": "closed"},
+            return_representation=False,
+        )
+
+    return len(orphan_campaign_ids)
+
+
 def sync(payload: dict[str, Any], source_configs: list[dict[str, Any]], client: SupabaseClient) -> dict[str, Any]:
     crawled_at = payload.get("generated_at") or now_iso()
     campaigns = payload.get("campaigns", [])
@@ -527,6 +575,7 @@ def sync(payload: dict[str, Any], source_configs: list[dict[str, Any]], client: 
         client,
         crawled_at,
     )
+    orphan_campaigns_closed = close_orphan_campaigns(client)
     blocked_source_candidates = mark_blocked_sources(source_summaries, source_configs, source_ids, client)
 
     run_rows = []
@@ -561,6 +610,8 @@ def sync(payload: dict[str, Any], source_configs: list[dict[str, Any]], client: 
         "links": len(links),
         "stale_source_listings": sum(stale_counts_by_source.values()),
         "closed_campaigns": closed_campaigns,
+        "orphan_campaigns_closed": orphan_campaigns_closed,
+        "total_campaigns_closed": closed_campaigns + orphan_campaigns_closed,
         "blocked_source_candidates": blocked_source_candidates,
         "crawler_runs": len(run_rows),
     }

@@ -116,11 +116,12 @@ def campaign_card_metrics(client: SupabaseClient) -> dict[str, int]:
     rows = select_all_rows(
         client,
         "campaign_cards",
-        "id,status,primary_image_url,application_deadline_at,reward_summary,location_text",
+        "id,status,source_count,primary_image_url,application_deadline_at,reward_summary,location_text",
     )
     active_rows = [row for row in rows if row.get("status") == "active"]
     return {
         "active_count": len(active_rows),
+        "without_active_sources": sum(int(row.get("source_count") or 0) == 0 for row in active_rows),
         "with_image": sum(bool(row.get("primary_image_url")) for row in active_rows),
         "with_deadline": sum(bool(row.get("application_deadline_at")) for row in active_rows),
         "with_reward": sum(bool(row.get("reward_summary")) for row in active_rows),
@@ -157,6 +158,13 @@ def build_warnings(run_rows: list[dict[str, Any]], source_metrics: list[dict[str
 
     if campaign_metrics["active_count"] > 0 and campaign_metrics["with_reward"] == 0:
         warnings.append("campaign_cards has active rows but no reward_summary values.")
+    active_listing_total = sum(metric["active_count"] for metric in source_metrics)
+    if campaign_metrics["active_count"] > active_listing_total:
+        warnings.append(
+            f"campaign_cards active rows ({campaign_metrics['active_count']}) exceed active source listings ({active_listing_total})."
+        )
+    if campaign_metrics["without_active_sources"] > 0:
+        warnings.append(f"{campaign_metrics['without_active_sources']} active campaign_cards rows have source_count=0.")
     return warnings
 
 
@@ -204,10 +212,11 @@ def build_markdown(result: dict[str, Any]) -> str:
         ],
     )
     campaign_table = markdown_table(
-        ["active", "image", "deadline", "reward", "location"],
+        ["active", "no active source", "image", "deadline", "reward", "location"],
         [
             [
                 campaign_metrics["active_count"],
+                campaign_metrics["without_active_sources"],
                 campaign_metrics["with_image"],
                 campaign_metrics["with_deadline"],
                 campaign_metrics["with_reward"],

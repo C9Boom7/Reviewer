@@ -62,6 +62,8 @@ GitHub Secrets:
 1. `supabase/schema.sql`
 2. `supabase/seed_sources.sql`
 
+스키마 변경 패치는 `supabase/migrations/` 아래 SQL 파일을 Supabase SQL Editor에서 실행한다.
+
 Actions job 흐름:
 
 1. checkout
@@ -102,5 +104,17 @@ python3 crawler/verify_supabase.py
 - 최신 run에서 `status=ok`이고 `item_count > 0`인 source만 stale 정리 대상이다.
 - 해당 source의 기존 `active` listing 중 이번 run에 다시 보이지 않은 항목은 `removed`로 바꾼다.
 - 연결된 active listing이 하나도 남지 않은 campaign은 `closed`로 바꾼다.
+- 매 sync 후 전체 active campaign을 다시 검사해 active listing이 없는 orphan campaign도 `closed`로 바꾼다.
 - `blocked_by_robots`, `error`, `skipped`, 0건 parse source는 stale 정리를 하지 않는다.
 - source별 제거 수는 `crawler_runs.closed_count`에 기록한다.
+
+## 현재 적용 필요 SQL 패치
+
+기존 Supabase DB에는 아래 파일을 SQL Editor에서 1회 실행한다.
+
+```text
+supabase/migrations/20260701_campaign_cards_active_sources.sql
+```
+
+이 패치는 `campaign_cards.source_count`와 `source_listings` JSON을 active listing 기준으로 바꾸고,
+active listing이 없는 campaign을 즉시 `closed` 처리한다.

@@ -215,7 +215,7 @@ select
   c.benefit_tags,
   c.first_seen_at,
   c.last_seen_at,
-  count(csl.source_listing_id)::integer as source_count,
+  count(sl.id)::integer as source_count,
   coalesce(
     jsonb_agg(
       jsonb_build_object(
@@ -231,7 +231,7 @@ select
   ) as source_listings
 from public.campaigns c
 left join public.campaign_source_listings csl on csl.campaign_id = c.id
-left join public.source_listings sl on sl.id = csl.source_listing_id
+left join public.source_listings sl on sl.id = csl.source_listing_id and sl.status = 'active'
 left join public.sources s on s.id = sl.source_id
 group by c.id;
 
